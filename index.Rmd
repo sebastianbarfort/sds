@@ -25,7 +25,7 @@ data.
 
 The course is build on open source software, and an important objective
 is to introduce students to the fundamentals of widely used computer
-languages such as `Python`, `R`, as well as `git` and shell
+languages such as `Python` and `R`, as well as `git` and shell
 scripts. We will introduce students to the theories underlying state of
 the art implementations such as `ggplot2`, `dplyr`, and `tidyr` for `R`
 (or `pandas` and `matplotlib` for Pythonistas), as well as widely used
@@ -47,7 +47,7 @@ This course is focused on the following main topics
 This course assumes no knowledge of any particular software or computer
 program, but while we'll try to demystify the technological side of
 things so students feel comfortable getting started and thinking
-programmatically, this **will be a technical course**, and students
+programmatically, this *will be a technical course*, and students
 should expect to spend a significant amount of time learning these
 tools. The course will be primarily taught in `R`, but students adept in
 `Python` are more than welcome to use this throughout.
