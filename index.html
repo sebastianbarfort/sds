@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Data Science</title>
+    <link rel="stylesheet" href="libraries/frameworks/minimal/stylesheets/styles.css">
+    <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans"></link>
+<link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"></link>
+
+    
+  </head>
+  <body>
+    <div class="wrapper">
+<header>
+  <h1>Data Science</h1>
+  <p>Course Description</p>
+  <p class="view">
+    <a href="http://github.com/sebastianbarfort/datascience">
+     View the Project on GitHub <small>sebastianbarfort/datascience</small>
+    </a>
+  </p>
+  <ul class='buttons'>
+    <li><a href="https://github.com/sebastianbarfort/datascience/zipball/gh-pages">
+      Download <strong>ZIP File</strong>
+    </a></li>
+    <li><a href="https://github.com/sebastianbarfort/datascience/tarball/gh-pages">
+      Download <strong>TAR Ball</strong>
+    </a></li>
+    <li><a href="http://github.com/sebastianbarfort/datascience">
+      Fork On <strong>GitHub</strong></a>
+    </li>
+  </ul>
+    <ol>
+    </ol>
+</header>
+
+      <section>
+        <h1>Data Science for Social Scientists</h1>
+<p>This repo contains an outline for a data sciency course for social
+scientists at the University of Copenhagen. The main objective is to
+learn students how to gather, analyse, and effectively present social
+data.</p>
+
+<p>The course is build on open source software, and an important objective
+is to introduce students to the fundamentals of widely used computer
+languages such as <code>Python</code>, <code>R</code>, as well as <code>git</code> and shell
+scripts. We will introduce students to the theories underlying state of
+the art implementations such as <code>ggplot2</code>, <code>dplyr</code>, and <code>tidyr</code> for <code>R</code>
+(or <code>pandas</code> and <code>matplotlib</code> for Pythonistas), as well as widely used
+tools of the trade such as version control and the command line.</p>
+
+<p>This course is focused on the following main topics</p>
+
+<ol>
+<li> <a href="#introduction-to-programming"><strong>Introduction to programming</strong></a></li>
+<li> <a href="#data-visualisation-and-communication"><strong>Data visualisation and
+communication</strong></a></li>
+<li> <a href="#automatic-data-gathering%20via-Web-scraping"><strong>Automatic data gathering via Web
+scraping</strong></a></li>
+<li> <a href="#version-control-with-git"><strong>Version control with git</strong></a></li>
+<li> <a href="#introduction-to-reproducible-research"><strong>Introduction to reproducible
+research</strong></a></li>
+<li> <a href="#computational-data-analysis-and-machine-learning"><strong>Computational data analysis and machine
+learning</strong></a></li>
+</ol>
+
+<p>This course assumes no knowledge of any particular software or computer
+program, but while we&#39;ll try to demystify the technological side of
+things so students feel comfortable getting started and thinking
+programmatically, this <strong>will be a technical course</strong>, and students
+should expect to spend a significant amount of time learning these
+tools. The course will be primarily taught in <code>R</code>, but students adept in
+<code>Python</code> are more than welcome to use this throughout.</p>
+
+<p>The curriculum borrows extensively from courses such as <a href="https://github.com/HertieDataScience2014/SyllabusAndLectures">Introduction to
+Collaborative Social Science Data
+Analysis</a>
+at the Hertie School of Governance, <a href="http://malecki.github.io/qmssviz/">QMSS Data
+Visualization</a>, <a href="http://kpq.github.io/nyu-data-journalism-2014/">Data
+Journalism</a> at NYU, and
+<a href="http://columbiadatascience.com/2012/08/29/syllabus/">Data Science</a>
+taught at Columbia University 2012.</p>
+
+<h2>Introduction to programming</h2>
+
+<blockquote>
+<p>This is the job. - Lester Freamon</p>
+</blockquote>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>practicalities: R, RStudio, Python, and Ipython Notebooks</li>
+<li>object oriented programming</li>
+<li>data types and functions</li>
+<li>natural
+language processing and regular expressions</li>
+<li>iterations, loops,
+libraries, logical statements, vectorized computations</li>
+<li>a grammar of
+data manipulation: working with data, reshaping, merging</li>
+<li>working from
+the command line</li>
+</ul>
+
+<p><strong>Browse before class</strong></p>
+
+<ul>
+<li>Lazer, David, et al. 2009. &#39;&#39;<a href="http://www.sciencemag.org/content/323/5915/721.summary">Computational Social Science</a>&#39;&#39;. <em>Science</em>. 323(5915): 721-723. (<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/">Open access version</a>).</li>
+<li>Edelman, Benjamin. 2012. <a href="http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.26.2.189">&#39;&#39;Using Internet Data for Economic Research&#39;&#39;</a>, <em>Journal of Economic Perspectives</em>, 26(2): 189-206.</li>
+</ul>
+
+<p><strong>Suggested readings</strong></p>
+
+<ul>
+<li>Ch. 1: Spraul, V. Anton. 2012. <em>Think like a
+Programmer</em>. San Francisco: No Starch Press.</li>
+<li>Blackwell, Matthew, and
+Maya Sen. 2012. <a href="http://scholar.harvard.edu/files/msen/files/blackwell_sen_tpm.pdf">&#39;&#39;Large Datasets and You: A Field Guide&#39;&#39;</a>, <em>The Political Methodologist</em> 20(1): 2-5.</li>
+<li>Wickham, Hadley. 2014. <a href="http://www.jstatsoft.org/v59/i10">&#39;&#39;Tidy Data&#39;&#39;</a>. <em>Journal of Statistical Software</em>, 59(10): 1–23.</li>
+<li>Leek, Jeff. 2014. <a href="https://github.com/jtleek/datasharing">&#39;&#39;How to share data with a statistician&#39;&#39;</a>.</li>
+<li>Shotts Jr., William E. 2012. &#39;&#39;The Linux Command Line: A complete introduction&#39;&#39;. No Starch Press, San Fransisco. </li>
+<li><a href="http://regexone.com/">RegexOne</a>.</li>
+<li><a href="http://www.mitchchn.me/2014/os-x-terminal/">Eight Terminal Utilities Every OS X Command Line User Should Know</a>.</li>
+<li><a href="http://www.diveintopython3.net/strings.html">Strings - Dive into Python 3</a>.</li>
+</ul>
+
+<p><strong>Suggested <code>R</code>eadings:</strong></p>
+
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIK9qQfztXeybpHvru-TrqAP">Intro to R videos by Google Developers</a>. Watch videos 1.1 through 2.5.</li>
+<li>Wickham, Hadley. 2010. &#39;&#39;<a href="http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf">stringr: modern, consistent string processing</a>&#39;&#39;. <em>The R Journal</em>. 2(2): 38-40.</li>
+<li><a href="https://github.com/kevinushey/rex">rex: Friendly regular expressions for R</a>.</li>
+<li><a href="http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html">introduction to dplyr</a></li>
+<li><a href="http://blog.rstudio.org/2014/07/22/introducing-tidyr/">introducing tidyr</a></li>
+<li><a href="https://github.com/trinker/tidyr_in_a_nutshell">tidyr In a Nutshell</a></li>
+<li>Wickham, Hadley. 2014. <a href="http://adv-r.had.co.nz/Style.html">Style Guide</a>. Advanced R Programming.</li>
+<li><a href="https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml">Google&#39;s R Style Guide</a></li>
+</ul>
+
+<h2>Data visualisation and communication</h2>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>A grammar of graphics (layers, scales, axes, themes)</li>
+<li>effective visualizations (examples, Tufte)</li>
+<li>Plotting distributions, annotated line plots, regression coefficients plots, network visualization, maps and spatial analysis, animated plots, small multiples</li>
+<li>Processing geographic information
+
+<ul>
+<li>making simple maps</li>
+<li>introducing and plotting shapefiles</li>
+<li>projections</li>
+<li>plotting GPS
+points</li>
+<li>introduction to zonal statistics</li>
+</ul></li>
+<li>interactive visualizations
+
+<ul>
+<li>connecting javascript and <code>R</code> using <code>ggvis</code> and <code>rCharts</code></li>
+</ul></li>
+</ul>
+
+<p><strong>Suggested readings</strong></p>
+
+<ul>
+<li>Tufte, Edward R. 2001. The Visual Display of
+Quantitative Information. Cheshire, Connecticut: Graphics Press.</li>
+<li><a href="http://kpq.github.io/chartsnthings/">chartsnthings</a> - Kevin Quealy’s blog of data sketches, process and junk from the New York Times Graphics Department. Make sure you read <a href="http://chartsnthings.tumblr.com/post/47670081904/climate-change-crowbars-and-strikeouts">&#39;&#39;Climate Change, Crowbars and Strikeouts&#39;&#39;</a>.</li>
+<li>Acharya, Avidit. Matthew Blackwell, and Maya Sen. 2014. <a href="http://www.mattblackwell.org/files/papers/slavery.pdf">&#39;&#39;The Political Legacy of American Slavery&#39;&#39;</a>.</li>
+<li>Gelman, Andrew. 2013. <a href="http://www.stat.columbia.edu/%7Egelman/presentations/vistalk_meetup_new_handout.pdf">&#39;&#39;Choices in statistical graphics: My stories&#39;&#39;</a>. Slides from presentation at New York Data Visualization Meetup.</li>
+<li>Gelman, Andrew and Antony Unwin. 2012. <a href="http://www.stat.columbia.edu/%7Egelman/research/published/vis14.pdf">&#39;&#39;Infovis and Statistical Graphics: Different Goals, Different Looks&#39;&#39;</a>.</li>
+<li>Wickham, Hadley. 2013. <a href="http://vita.had.co.nz/papers/stat-graph-hist.html">&#39;&#39;Graphical criticism: some historical notes&#39;&#39;</a>, <em>Journal of Computational and Graphical Statistics</em>, 22(1): 38–44.</li>
+</ul>
+
+<p><strong>Suggested <code>R</code>eadings:</strong></p>
+
+<ul>
+<li>Wickham, Hadley. <a href="http://ggplot2.org/">ggplot2 documentation</a></li>
+<li>Kahle, David and Hadley Wickham.
+2013.<a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">&#39;&#39;ggmap: Spatial Visualization with ggplot2&#39;&#39;</a>,
+<em>The R Journal</em>, 5(1).</li>
+<li><a href="https://github.com/yhat/ggplot/blob/master/TODO.md">python ggplot</a>.</li>
+<li>Barbera, Pablo. 2013. <a href="https://github.com/pablobarbera/Rdataviz">&#39;&#39;Data Visualization with R and ggplot2&#39;&#39;</a>.</li>
+<li><a href="http://rud.is/b/2014/09/26/overcoming-d3-cartographic-envy-with-r-ggplot/">Overcoming D3 Cartographic Envy With R + ggplot</a>.</li>
+<li><a href="http://blog.rstudio.org/2014/06/23/introducing-ggvis/">Introducing ggvis</a>.</li>
+<li><a href="http://rcharts.io/gallery/">rCharts gallery</a>.</li>
+</ul>
+
+<h2>Automatic Data Gathering via Web Scraping</h2>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>Introduction to Web API&#39;s
+
+<ul>
+<li>when a website offers a set of
+structured <em>http</em> requests that return JSON or XML files</li>
+<li>examples:
+Twitter, Facebook, Instagram, and recently Statistics Denmark,
+Folketinget, etc.</li>
+</ul></li>
+<li>Screen scraping: download and extract data from
+source code of website</li>
+</ul>
+
+<p><em>Examples</em></p>
+
+<ul>
+<li>query the Google Travel Time API for drive, walk, or bike time</li>
+<li>query the Instagram API and retrieve 20 photos with hashtag &#39;&#39;Obama&#39;&#39;</li>
+<li>scrape Airbnb Copenhagen for information about prices, rooms, etc.</li>
+<li>analyze geographic distribution of Facebook likes for Helle Thorning and Lars Løkke using Facebook&#39;s API</li>
+</ul>
+
+<p><strong>Interesting examples using Web data</strong></p>
+
+<ul>
+<li>Stephens-Davidowitz, Seth. 2014. &#39;&#39;The cost of racial animus on a black candidate: Evidence using Google search data&#39;&#39;, <em>Journal of Public Economics</em>, 118: 26–40.</li>
+<li>Barbera, Pablo. 2014. Bayesian Ideal Point Estimation Using Twitter Data, <em>Political Analysis</em>.</li>
+<li>Miguel, Edward, Sebastian M Saiegh, and Shanker Satyanath. 2011. <a href="http://www.nyudri.org/wp-content/uploads/2011/11/civilwarexposureandviolence2011.pdf">&#39;&#39;Civil War Exposure and Violence&#39;&#39;</a>, <em>Economics &amp; Politics</em> 23: 59-73.</li>
+<li>Jensen, Jacob, Ethan Kaplan, Suresh Naidu and Laurence Wilse-Samson. 2012. <a href="http://www.brookings.edu/%7E/media/projects/bpea/fall%202012/2012b_jensen.pdf">&#39;&#39;Political Polarization and the Dynamics of Political Language: Evidence from 130 Years of Partisan Speech&#39;&#39;</a>, <em>Brookings Papers on Economic Activity</em>.</li>
+<li><a href="http://www.washingtonpost.com/blogs/monkey-cage/wp/2013/12/04/strategic-use-of-facebook-and-twitter-in-ukrainian-protests/">How Ukrainian protestors are using Twitter and Facebook</a>,
+<em>Washington Post</em>, 2013.</li>
+</ul>
+
+<p><strong>Suggested <code>R</code>eadings:</strong></p>
+
+<ul>
+<li>Jackman, Simon. 2006. <a href="http://polmeth.wustl.edu/methodologist/tpm_v14_n2.pdf">&#39;&#39;Data from the Web into <code>R</code>&#39;&#39;</a>, <em>The Political Methodologist</em>.</li>
+<li>Rose, Kenneth. 2014. <a href="https://github.com/rOpenGov/dkstat">&#39;&#39;<code>dkstat</code>: API connection to the StatBank from Statistics Denmark&#39;&#39;</a>.</li>
+<li><a href="https://github.com/hadley/rvest">rvest: Simple web scraping for R</a> </li>
+<li><a href="http://pablobarbera.com/blog/archives/1.html">Introducing the streamR package</a></li>
+<li><a href="http://jplusplus.se/covering-election-night-with-r/">Covering election night with R</a></li>
+</ul>
+
+<h2>Version control with git</h2>
+
+<blockquote>
+<p>Much like James Cameron&#39;s <em>Avatar</em>, Git doesn&#39;t make any goddamn
+sense. - Zach Holman</p>
+</blockquote>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>introduction to version control - setting up a github
+account</li>
+<li>basic <code>git</code> functions (<code>touch</code>, <code>init</code>, <code>add</code>, <code>commit</code>)</li>
+<li>how to collaborate</li>
+<li>best practices</li>
+</ul>
+
+<p><strong>Suggested readings</strong></p>
+
+<ul>
+<li>Rainey, Carlisle. 2014. <a href="https://github.com/carlislerainey/git-for-political-science">&#39;&#39;How I Use Git and GitHub for Political Science Research&#39;&#39;</a></li>
+<li>Dudler, Roger. 2014. <a href="http://rogerdudler.github.io/git-guide/">&#39;&#39;<code>git</code>: the simple guide&#39;&#39;</a></li>
+<li><a href="http://skli.se/2012/10/07/git-workflow-beginner/">Git workflow for beginners</a></li>
+</ul>
+
+<h2>Reproducible research</h2>
+
+<ul>
+<li>  philosophy: what is reproducible research?</li>
+<li>  how might this make my life easier (<em>or how to avoid being Reinhart
+and Rogoff</em>)</li>
+<li>  introduction to markdown and literate programming using <code>knitR</code></li>
+</ul>
+
+<p><strong>Suggested readings:</strong></p>
+
+<ul>
+<li>Peng, Roger D. 2011. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf">&#39;&#39;Reproducible Research in Computational Science&#39;&#39;</a>. <em>Science</em>. 334(6060): 1226-1227.</li>
+<li>Herndon, Thomas, Michael Ash, and Robert Pollin. Forthcoming. <a href="http://cje.oxfordjournals.org/content/early/2013/12/17/cj%20.bet075.short">&#39;&#39;Does High Public Debt Consistently Stifle Economic Growth? A critique of Reinhart and Rogoff&#39;&#39;</a>.
+<em>The Cambridge Journal of Economics</em>.</li>
+<li>RStudio. 2014. <a href="http://rmarkdown.rstudio.com/">RMarkdown--Dynamic Documents for R</a>.</li>
+<li>Gandrud, Christopher. 2013. <em><a href="http://christophergandrud.github.io/RepResR-RStudio/">Reproducible Research with R and RStudio</a></em>. Chapman &amp; Hall/CRC Press, Oxford (<em>chapters to be decided</em>).</li>
+</ul>
+
+<h2>Computational data analysis and machine learning</h2>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>cross validation and model selection (implications for unbiasedness and consistency, prediction vs causality)</li>
+<li>classification, non-linear models, naive Bayes, support vector machines</li>
+<li>regularization, Ridge, Lasso, and elastic nets</li>
+<li>introduction to tree based methods</li>
+</ul>
+
+<p><strong>Suggested readings:</strong></p>
+
+<ul>
+<li>Hastie, Trevor. Robert Tibshirani, and Jerome Friedman. 2009. <a href="http://statweb.stanford.edu/%7Etibs/ElemStatLearn/">&#39;&#39;The Elements of Statistical Learning: Data Mining, Inference, and Prediction&#39;&#39;</a>, <em>Springer Series in Statistics</em>. Springer.</li>
+<li>Jones, Zachery M and Fridolin Linder. 2014. <a href="https://github.com/zmjones/datamining">&#39;&#39;Data Mining as Exploratory Data Analysis&#39;&#39;</a>. </li>
+<li>Breiman, Leo. 2001. <a href="http://projecteuclid.org/euclid.ss/1009213726">&#39;&#39;Statistical Modeling: The Two Cultures&#39;&#39;</a>, <em>Statistical Science</em>, Volume 16(3): 199-231.</li>
+<li>Gelman, Andrew. 2004. <a href="https://www.cs.princeton.edu/courses/archive/fall09/cos597A/papers/Gelman2004.pdf">&#39;&#39;Exploratory Data Analysis for Complex Models&#39;&#39;</a>, <em>Journal of Computational and Graphical Statistics</em>, 13(4): 755–779.</li>
+<li>Lazer, David. Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014. &#39;&#39;<a href="http://www.sciencemag.org/content/343/6176/1203.summary">The Parable of Google Flu: Traps in Big Data Analysis</a>&#39;&#39;. <em>Science</em>. 343(6176): 1203-1205.</li>
+</ul>
+
+<h2>Misc</h2>
+
+<p><strong>Topics</strong></p>
+
+<ul>
+<li>Introduction to databases</li>
+<li>how to connect to SQL, noSQL</li>
+<li>High performance computing using Amazon EC2 (you need to use just a
+little bit of Linux to do this)</li>
+<li>using <a href="https://www.pythonanywhere.com/">pythonanywhere</a></li>
+<li>interactive visualizations using <code>d3.js</code></li>
+<li>use cron to schedule jobs (commands or
+shell scripts) to run periodically at fixed times, dates, or intervals
+(of course this can also be done from
+<a href="https://github.com/kevinushey/cronR">R</a>).</li>
+</ul>
+
+      </section>
+      <footer>
+        <p>Maintained by <a href="http://github.com/sebastianbarfort">
+          Sebastian Barfort
+        </a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by 
+          <a href="https://github.com/orderedlist">orderedlist</a></small>
+        </p>
+      </footer>    </div>
+    <script src="libraries/frameworks/minimal/javascripts/scale.fix.js"></script>
+  </body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
