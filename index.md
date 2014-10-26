@@ -9,7 +9,7 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
-github: {user: sebastianbarfort, repo: datascience, branch: "gh-pages"}
+github: {user: sebastianbarfort, repo: dsss, branch: "gh-pages"}
 assets:
   css: 
     - "http://fonts.googleapis.com/css?family=Open+Sans"
