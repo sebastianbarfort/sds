@@ -218,6 +218,9 @@ account
 - Breiman, Leo. 2001. [''Statistical Modeling: The Two Cultures''](http://projecteuclid.org/euclid.ss/1009213726), *Statistical Science*, Volume 16(3): 199-231.
 - Gelman, Andrew. 2004. [''Exploratory Data Analysis for Complex Models''](https://www.cs.princeton.edu/courses/archive/fall09/cos597A/papers/Gelman2004.pdf), *Journal of Computational and Graphical Statistics*, 13(4): 755–779.
 - Lazer, David. Ryan Kennedy, Gary King, and Alessandro Vespignani. 2014. ''[The Parable of Google Flu: Traps in Big Data Analysis](http://www.sciencemag.org/content/343/6176/1203.summary)''. *Science*. 343(6176): 1203-1205.
+- Gelman, Andrew. 2013. [''Everyone’s trading bias for variance at some point''](http://andrewgelman.com/2013/03/14/everyones-trading-bias-for-variance-at-some-point-its-just-done-at-different-places-in-the-analyses/)
+- Gelman, Andrew. 2011. [''Causality and Statistical Learning''](http://www.stat.columbia.edu/~gelman/research/published/causalreview4.pdf), *American Journal of Sociology*, 117(3): 955–966.
+
 
 ## Misc
 
