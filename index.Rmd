@@ -57,9 +57,8 @@ Collaborative Social Science Data
 Analysis](https://github.com/HertieDataScience2014/SyllabusAndLectures)
 at the Hertie School of Governance, [QMSS Data
 Visualization](http://malecki.github.io/qmssviz/), [Data
-Journalism](http://kpq.github.io/nyu-data-journalism-2014/) at NYU, and
-[Data Science](http://columbiadatascience.com/2012/08/29/syllabus/)
-taught at Columbia University 2012.
+Journalism](http://kpq.github.io/nyu-data-journalism-2014/) at NYU,
+[Data Science](http://columbiadatascience.com/2012/08/29/syllabus/) and [Modeling Social Data](http://modelingsocialdata.org/), both at Columbia University.
 
 ## Introduction to programming
 
@@ -103,6 +102,10 @@ Maya Sen. 2012. [''Large Datasets and You: A Field Guide''](http://scholar.harva
 - [tidyr In a Nutshell](https://github.com/trinker/tidyr_in_a_nutshell)
 - Wickham, Hadley. 2014. [Style Guide](http://adv-r.had.co.nz/Style.html). Advanced R Programming.
 - [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+
+**Python alternatives**
+- Bird, Steven. Ewan Klein and Edward Loper. 2009. [''Natural Language Processing with Python''](http://www.nltk.org/book_1ed/). O'Reilly Media. 
+
 
 ## Data visualisation and communication
 
