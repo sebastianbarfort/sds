@@ -6,13 +6,13 @@ permalink: /syllabus/
 
 A tentative syllabus, subject to change, is below.
 
-|Topic|Keywords|Readings|
+|Topic|Keywords|Misc|
 |:----|:-----:|:-----|
-|**Introduction to Programming**| R & RStudio| [Browse before class](xxx)
-|| Git & Github| [Suggested readings](xxx)
+|**Introduction to Programming**| R & RStudio| [Topic 1 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
+|| Git & Github| [Slides](xxx)
 | | the command line|
-|**Introduction to R**| object oriented programming|
-| | data types and functions|
+|**Introduction to R**| object oriented programming| [Topic 2 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
+| | data types and functions| [Slides](http://127.0.0.1:4000/readings/#introduction-to-programming)
 | | iterations, loops, libraries, logical statements|
 | | RMarkdown|
 |**Reproducible Research**| Git & Github|
