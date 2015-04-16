@@ -12,6 +12,33 @@ R is a free software environment for statistical computing and graphics. We will
 
 If you don't have a pre-existing preference for a particular text editor I highly recommend you download and use RStudio. It's a free and modern [IDE](http://en.wikipedia.org/wiki/Integrated_development_environment). If you're new to R this will make it much easier to get started. All R coding in this course will be done in RStudio.
 
+Once installed, try to open up RStudio and type the following in the console
+
+
+{% highlight r %}
+x <- 5
+y <- 2
+x + y
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [1] 7
+{% endhighlight %}
+
+
+
+{% highlight r %}
+print("R is running on my computer")
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [1] "R is running on my computer"
+{% endhighlight %}
+
 ### A [Git](http://git-scm.com) client
 
 Git is a version control system that allows you to track modifications to files and code over time. It also facilitates collaborations so that multiple people can share and edit the same code base.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Topic 2: Introduction to R"
+title:  "Topic 3: Reproducible Research"
 categories: homework
 ---
 
