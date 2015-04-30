@@ -1,0 +1,5 @@
+---
+layout: post
+title:  "Legal and Ethical Issues in Data Collection"
+categories: homework
+---

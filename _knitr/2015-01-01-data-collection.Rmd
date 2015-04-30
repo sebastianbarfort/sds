@@ -1,0 +1,5 @@
+---
+layout: post
+title:  "Modes of Data Collection"
+categories: homework
+---
