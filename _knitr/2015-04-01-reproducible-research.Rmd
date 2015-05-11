@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Topic 3: Reproducible Research"
+title:  "Topic 6: Reproducible Research"
 categories: homework
 ---
 

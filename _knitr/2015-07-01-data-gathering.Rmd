@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Topic 6: Data Gathering"
+title:  "Topic 9: Data Gathering"
 categories: homework
 ---

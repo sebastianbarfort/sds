@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Legal and Ethical Issues in Data Collection"
+title:  "Topic 3: Legal and Ethical Issues in Data Collection"
 categories: homework
 ---

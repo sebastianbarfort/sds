@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Topic 4: Data Manipulation"
+title:  "Topic 7: Data Manipulation"
 categories: homework
 ---

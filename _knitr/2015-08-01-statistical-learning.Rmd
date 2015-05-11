@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Topic 7: Statistical Learning"
+title:  "Topic 10: Statistical Learning"
 categories: homework
 ---

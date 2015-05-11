@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Topic 5: Static Visualizations"
+title:  "Topic 8: Static Visualizations"
 categories: homework
 ---

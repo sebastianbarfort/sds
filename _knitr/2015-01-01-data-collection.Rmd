@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "Modes of Data Collection"
+title:  "Topic 2: Modes of Data Collection"
 categories: homework
 ---

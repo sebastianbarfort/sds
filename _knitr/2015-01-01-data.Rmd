@@ -1,5 +1,5 @@
 ---
 layout: post
-title:  "What is Data?"
+title:  "Topic 1: What is Quantitative and Qualitative Data?"
 categories: homework
 ---
