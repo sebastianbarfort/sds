@@ -8,7 +8,14 @@ A tentative syllabus, subject to change, is below.
 
 |Topic|Keywords|Misc|
 |:----|:-----:|:-----|
-|**Introduction to Programming**| R & RStudio| [Topic 1 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
+|**What is Data?**| qualitative vs quantitative data| Topic 1
+|**Modes of Data Collection**| survey| Topic 2
+| | administrative |
+| | big data |
+| | experiments |
+|**Legal and Ethical Issues in Data Collection**| property rights| Topic 3
+| | privacy |
+|**Introduction to Programming**| R & RStudio| Topic 4 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
 || Git & Github| [Slides](xxx)
 | | the command line|
 |**Introduction to R**| object oriented programming| [Topic 2 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
