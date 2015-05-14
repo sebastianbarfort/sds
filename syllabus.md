@@ -15,7 +15,7 @@ A tentative syllabus, subject to change, is below.
 | | experiments |
 |**Legal and Ethical Issues in Data Collection**| property rights| Topic 3
 | | privacy |
-|**Introduction to Programming**| R & RStudio| Topic 4 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
+|**Introduction to Programming**| R & RStudio| [Topic 4 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
 || Git & Github| [Slides](xxx)
 | | the command line|
 |**Introduction to R**| object oriented programming| [Topic 2 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
