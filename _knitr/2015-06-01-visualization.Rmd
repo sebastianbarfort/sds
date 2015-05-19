@@ -3,3 +3,21 @@ layout: post
 title:  "Topic 8: Static Visualizations"
 categories: homework
 ---
+
+Malecki EDAV
+
+- http://stat4701.github.io/edav/
+
+Links
+
+- https://github.com/pablobarbera/Rdataviz
+- http://rud.is/b/2015/03/30/3364/
+- http://felixhaass.github.io/drowning-in-data/
+- http://asbcllc.com/blog/2015/January/gotham_2014_weather/
+- http://asbcllc.com/blog/2015/february/nba_opp_pts/index.html
+- http://minimaxir.com/2015/02/ggplot-tutorial/
+
+Gis
+
+- http://pakillo.github.io/R-GIS-tutorial/
+- https://github.com/dkahle/ggmap

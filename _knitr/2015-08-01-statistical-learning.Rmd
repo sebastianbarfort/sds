@@ -3,3 +3,8 @@ layout: post
 title:  "Topic 10: Statistical Learning"
 categories: homework
 ---
+
+Links:
+
+- http://people.cs.umass.edu/~brenocon/smacss2015/
+- http://ann.sagepub.com/content/659/1/48.abstract

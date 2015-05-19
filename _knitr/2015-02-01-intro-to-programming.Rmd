@@ -6,6 +6,11 @@ categories: homework
 
 > This is the job. - Lester Freamon
 
+Links:
+
+- http://www.slideshare.net/jenniferbryan5811/ubc-stat545-2014-cm001-intro-tocourse?related=1
+
+
 **Browse before class**
 
 - Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*. 323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/)).

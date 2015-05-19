@@ -3,3 +3,19 @@ layout: post
 title:  "Topic 5: Introduction to R"
 categories: homework
 ---
+
+Links:
+
+- http://www.slideshare.net/jenniferbryan5811/cm002-deep-thoughts
+- https://pols503.github.io/pols_503_sp15/
+- http://www.princeton.edu/~mjs3/soc504_s2015/
+- https://github.com/lmullen/dh-methods-in-r
+
+Write clean R code / pipes
+
+- http://rpubs.com/tjmahr/pipelines_2015
+- http://files.meetup.com/1225993/Hadley_Wickham_pipe-dsls.pdf
+
+Rio
+
+- https://github.com/leeper/rio

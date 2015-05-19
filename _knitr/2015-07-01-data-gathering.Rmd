@@ -3,3 +3,11 @@ layout: post
 title:  "Topic 9: Data Gathering"
 categories: homework
 ---
+
+Links
+
+- http://cpsievert.github.io/slides/web-scraping/20150515/
+
+Rvest
+
+- https://statsandsnakeoil.wordpress.com/2015/03/06/ceci-nest-pas-opta-data-scraping-bbc-match-reports-with-r-part-1-getting-the-reports/

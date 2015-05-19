@@ -6,3 +6,8 @@ categories: homework
 
 > Much like James Cameron's *Avatar*, Git doesn't make any goddamn
 > sense. - Zach Holman
+
+Git
+
+- http://zmjones.com/git-github-tutorial/
+- https://github.com/carlislerainey/git-for-political-science
