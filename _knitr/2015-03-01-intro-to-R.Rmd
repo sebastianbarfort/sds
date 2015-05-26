@@ -4,12 +4,25 @@ title:  "Topic 5: Introduction to R"
 categories: homework
 ---
 
+Topics: 
+
+- R
+- Rmarkdown
+- https://pols503.github.io/pols_503_sp15/labs/lab1.html
+- https://stat545-ubc.github.io/block002_hello-r-workspace-wd-project.html
+
+# Style guide
+
+- Hadley
+- Google
+
 Links:
 
 - http://www.slideshare.net/jenniferbryan5811/cm002-deep-thoughts
 - https://pols503.github.io/pols_503_sp15/
 - http://www.princeton.edu/~mjs3/soc504_s2015/
 - https://github.com/lmullen/dh-methods-in-r
+- https://github.com/brentonk/rcourse
 
 Write clean R code / pipes
 
@@ -19,3 +32,7 @@ Write clean R code / pipes
 Rio
 
 - https://github.com/leeper/rio
+
+License:
+
+http://creativecommons.org/licenses/by-nc/3.0/

@@ -4,6 +4,11 @@ title:  "Topic 8: Static Visualizations"
 categories: homework
 ---
 
+Readings:
+
+- http://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098
+
+
 Malecki EDAV
 
 - http://stat4701.github.io/edav/
