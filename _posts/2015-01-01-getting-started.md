@@ -86,3 +86,13 @@ Verify that your environment is properly configured by typing the following comm
 See [here](http://cli.learncodethehardway.org/book/) for an overview of using the command line and [this pdf](http://softlayer-dal.dl.sourceforge.net/project/linuxcommand/TLCL/13.07/TLCL-13.07.pdf) for a more extensive reference.
 
 We will discuss these tools in much more detail in class, so don't worry if this is all new and perhaps a bit frightening right now.
+
+## Installing other stuff
+
+... 
+
+
+Her skal vi installere alt muligt andet lort...
+
+
+
