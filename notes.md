@@ -22,3 +22,6 @@ Topics:
 Links:
 
 http://lincolnmullen.com/courses/clio3.2014/
+
+Programming sucks!
+http://www.stilldrinking.org/programming-sucks
