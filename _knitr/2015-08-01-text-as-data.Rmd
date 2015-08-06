@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Topic 8: Text as Data"
+categories: homework
+---
+
+Talk to Robert...

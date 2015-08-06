@@ -40,3 +40,5 @@ A tentative syllabus, subject to change, is below.
 | | Classification|
 | | Cross validation & model selection|
 | | Regularization, Ridge, Lasso|
+
+|**Text as Data**| |
