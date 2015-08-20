@@ -5,6 +5,7 @@ Fall 2015<br/>
 Department of Economics<br/>
 University of Copenhagen<br/>
 Instructors: <a href="http://www.econ.ku.dk/ddl/">David Dreyer Lassen</a>, <a href="http://sebastianbarfort.github.io/">Sebastian Barfort</a><br/>
+TA: <a href="mailto:krierdk@gmail.com"> Kristoffer Glavind </a><br/>
 Time: Mondays, 8am-10am (<i>all weeks</i>)<br/> Thursdays, 8am-10am (<i>odd weeks</i>)<br/>
 Location: CSS 35-3-13
 </center>
