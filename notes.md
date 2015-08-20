@@ -6,6 +6,10 @@ The course consists of 2 hours of classes (lectures) every week and 2x2 hours ev
 - Monday: programming
 - Thursday (odd weeks): lecture
 
+## Typeforms
+
+http://www.typeform.com/
+
 ## Programming
 
 - 14 weeks
@@ -56,3 +60,11 @@ Toward Computational Social Science: Big Data in Digital Environments
 Trey Causey Software Skills
 
 - http://treycausey.com/software_dev_skills.html
+
+Coder in Chief
+
+http://www.theverge.com/2014/12/9/7358111/barack-obama-coding
+
+Data Science through the lens of Social Science
+
+http://videolectures.net/kdd2014_conway_social_science/
