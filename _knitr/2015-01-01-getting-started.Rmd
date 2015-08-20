@@ -6,6 +6,7 @@ categories: homework
 
 - http://www.the-scientist.com/?articles.view/articleNo/43632/title/Get-With-the-Program/
 
+- https://desktop.github.com/
 
 This class will involve a good deal of coding, for which you will need some basic tools. Please make sure to set up the following tools before the first day of class.
 
@@ -74,10 +75,7 @@ We will discuss these tools in much more detail in class, so don't worry if this
 
 ## Installing other stuff
 
-... 
+...
 
 
 Her skal vi installere alt muligt andet lort...
-
-
-

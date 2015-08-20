@@ -7,10 +7,19 @@ categories: homework
 > Much like James Cameron's *Avatar*, Git doesn't make any goddamn
 > sense. - Zach Holman
 
+> Your closest collaborator is you six months ago, but you don't reply
+> to emails.
+
+&ndash; [@gonuke](https://twitter.com/gonuke), after [@kcranstn](https://twitter.com/kcranstn)
+<http://bit.ly/motivate_git> (really from [@mtholder](https://twitter.com/mtholder))
+
+
 Git
 
 - http://zmjones.com/git-github-tutorial/
 - https://github.com/carlislerainey/git-for-political-science
+
+- http://r-pkgs.had.co.nz/git.html
 
 Video:
 

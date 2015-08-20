@@ -25,7 +25,7 @@ Links
 - http://www.collective-behavior.com/liverpool-is-still-the-most-successful-english-club-team-but-for-how-long/
 - http://hafen.github.io/taxi/#initial-exploration
 - http://rpubs.com/bradleyboehmke/median_income_trends
-
+- https://github.com/hrbrmstr/waffle
 
 Gis
 

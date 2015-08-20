@@ -4,6 +4,8 @@ title:  "Topic 5: Introduction to R"
 categories: homework
 ---
 
+(I was first moved to think about R for UGs when I hear Amanda Cox talk about using R at the New York Times on Data Stories.)
+
 Video:
 
 - http://www.rstats.nyc/
@@ -13,6 +15,8 @@ Data:
 - http://blog.yhathq.com/posts/7-funny-datasets.html
 - http://personal.tcu.edu/kylewalker/preview.html (baby names viz)
 - Rlinkedin (http://thinktostart.com/analyze-linkedin-with-r/?utm_content=buffer22dea&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+- http://r4ds.had.co.nz/
+
 
 Topics:
 
