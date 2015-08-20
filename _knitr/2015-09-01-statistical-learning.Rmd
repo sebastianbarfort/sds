@@ -9,3 +9,10 @@ Links:
 - http://people.cs.umass.edu/~brenocon/smacss2015/
 - http://ann.sagepub.com/content/659/1/48.abstract
 - http://conference.nber.org/confer/2015/SI2015/ML/syllabus.pdf
+
+- http://www.niemanlab.org/2015/08/the-new-york-times-built-a-slack-bot-to-help-decide-which-stories-to-post-to-social-media/
+- http://open.blogs.nytimes.com/2015/08/11/building-the-next-new-york-times-recommendation-engine/?smid=tw-share&_r=0
+
+- http://robjhyndman.com/hyndsight/bias-variance/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Hyndsight+%28Hyndsight%29
+
+- http://conference.nber.org/econometrics_minicourse_2015/

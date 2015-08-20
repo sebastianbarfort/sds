@@ -23,3 +23,5 @@ Hadleyverse
 Tidyr
 
 - https://github.com/trinker/tidyr_in_a_nutshell
+- http://stat545-ubc.github.io/cm104_data-cleaning.html
+- https://vimeo.com/33727555

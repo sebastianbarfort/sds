@@ -7,7 +7,7 @@ categories: homework
 Readings:
 
 - http://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098
-
+- http://www.cs171.org/
 
 Malecki EDAV
 
@@ -15,14 +15,24 @@ Malecki EDAV
 
 Links
 
+- http://walkerke.github.io/2015/04/map-or-chart/
+- http://minimaxir.com/2015/02/ggplot-tutorial/
 - https://github.com/pablobarbera/Rdataviz
 - http://rud.is/b/2015/03/30/3364/
 - http://felixhaass.github.io/drowning-in-data/
 - http://asbcllc.com/blog/2015/January/gotham_2014_weather/
 - http://asbcllc.com/blog/2015/february/nba_opp_pts/index.html
-- http://minimaxir.com/2015/02/ggplot-tutorial/
+- http://www.collective-behavior.com/liverpool-is-still-the-most-successful-english-club-team-but-for-how-long/
+- http://hafen.github.io/taxi/#initial-exploration
+- http://rpubs.com/bradleyboehmke/median_income_trends
+
 
 Gis
 
 - http://pakillo.github.io/R-GIS-tutorial/
 - https://github.com/dkahle/ggmap
+- http://rud.is/b/2015/07/26/making-staticinteractive-voronoi-map-layers-in-ggplotleaflet/
+
+Fun: rBlocks
+
+- https://gist.github.com/woobe/9624370

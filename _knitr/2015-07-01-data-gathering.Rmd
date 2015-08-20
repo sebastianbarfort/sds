@@ -7,6 +7,11 @@ categories: homework
 Links
 
 - http://cpsievert.github.io/slides/web-scraping/20150515/
+- http://zevross.com/blog/2015/05/19/scrape-website-data-with-the-new-r-package-rvest/
+- http://www.computerworld.com/article/2909560/business-intelligence/web-scraping-with-r-and-rvest-includes-video-code.html
+- http://rud.is/b/2015/05/18/scraping-jquery-datatable-programmatic-json-with-r/?utm_content=buffer83696&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+- http://www.gregreda.com/2015/02/15/web-scraping-finding-the-api/
+
 
 Rvest
 

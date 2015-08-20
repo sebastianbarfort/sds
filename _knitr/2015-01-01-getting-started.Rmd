@@ -4,6 +4,9 @@ title:  "Getting Started"
 categories: homework
 ---
 
+- http://www.the-scientist.com/?articles.view/articleNo/43632/title/Get-With-the-Program/
+
+
 This class will involve a good deal of coding, for which you will need some basic tools. Please make sure to set up the following tools before the first day of class.
 
 ### [R](http://www.r-project.org/) and [RStudio](http://www.rstudio.com/)

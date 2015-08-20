@@ -4,12 +4,28 @@ title:  "Topic 5: Introduction to R"
 categories: homework
 ---
 
-Topics: 
+Video:
+
+- http://www.rstats.nyc/
+
+Data:
+
+- http://blog.yhathq.com/posts/7-funny-datasets.html
+- http://personal.tcu.edu/kylewalker/preview.html (baby names viz)
+- Rlinkedin (http://thinktostart.com/analyze-linkedin-with-r/?utm_content=buffer22dea&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
+Topics:
 
 - R
 - Rmarkdown
 - https://pols503.github.io/pols_503_sp15/labs/lab1.html
 - https://stat545-ubc.github.io/block002_hello-r-workspace-wd-project.html
+- http://stat545-ubc.github.io/
+- https://dl.dropboxusercontent.com/u/11481940/DataScience_Fall2015.pdf
+- https://stat.duke.edu/courses/Summer15/sta104.01-1/
+- http://www.slideshare.net/jenniferbryan5811/cm002-deep-thoughts
+
+- http://www.princeton.edu/~mjs3/soc504_s2015/
 
 # Style guide
 

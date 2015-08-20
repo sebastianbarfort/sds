@@ -6,10 +6,17 @@ categories: homework
 
 > This is the job. - Lester Freamon
 
+> being a programmer means feeling stupid all the time, but less stupid than a year ago.
+
 Links:
 
 - http://www.slideshare.net/jenniferbryan5811/ubc-stat545-2014-cm001-intro-tocourse?related=1
 
+
+**general**
+
+- http://www.compjour.org/
+- https://gist.github.com/hadley/820f09ded347c62c2864
 
 **Browse before class**
 
@@ -28,3 +35,11 @@ Maya Sen. 2012. [''Large Datasets and You: A Field Guide''](http://scholar.harva
 - [RegexOne](http://regexone.com/).
 - [Eight Terminal Utilities Every OS X Command Line User Should Know](http://www.mitchchn.me/2014/os-x-terminal/).
 - [Strings - Dive into Python 3](http://www.diveintopython3.net/strings.html).
+
+
+** data science**
+
+- http://www.kdnuggets.com/2015/07/data-science-degrees-analyzed.html
+- http://bulletin.imstat.org/2014/09/data-science-how-is-it-different-to-statistics%E2%80%89/
+- http://www.chalmers.se/en/areas-of-advance/ict/events/Documents/Terry%20Speed_Data%20Science,%20Big%20Data%20and%20Statistics%20-%20Can%20We%20All%20Live%20Together.pdf
+- https://dl.dropboxusercontent.com/u/41902/future-da-5-unconf.pdf

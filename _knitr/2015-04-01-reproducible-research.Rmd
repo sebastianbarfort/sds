@@ -11,3 +11,7 @@ Git
 
 - http://zmjones.com/git-github-tutorial/
 - https://github.com/carlislerainey/git-for-political-science
+
+Video:
+
+https://www.youtube.com/watch?v=7B3n-5atLxM
