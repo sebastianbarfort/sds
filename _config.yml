@@ -2,7 +2,7 @@
 title: Social Data Science
 #email: sebastian.barfort@econ.ku.dk
 description: Fall 2015<br/> Department of Economics<br/> University of Copenhagen
-baseurl: "http://sebastianbarfort.github.io/sds"
+baseurl: ""
 url:  "http://sebastianbarfort.github.io/sds" # the base hostname & protocol for your site
 #twitter_username:
 github_username:  sebastianbarfort/sds
