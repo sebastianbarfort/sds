@@ -87,11 +87,3 @@ Once you have an account, clone the [course repository](https://github.com/sebas
 
 When this is complete, verify that you have a local directory called ``sds`` containing a ``README.md`` file.
 
-
-{% highlight r %}
-plot(1:110)
-{% endhighlight %}
-
-![center](/sds../figs/unnamed-chunk-2-1.png) 
-
-
