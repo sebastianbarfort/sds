@@ -5,7 +5,7 @@ description: Fall 2015<br/> Department of Economics<br/> University of Copenhage
 baseurl: "http://sebastianbarfort.github.io/sds"
 url:  "http://sebastianbarfort.github.io/sds" # the base hostname & protocol for your site
 #twitter_username:
-github_username:  sebastianbarfort/dsss
+github_username:  sebastianbarfort/sds
 
 # Build settings
 markdown: kramdown
