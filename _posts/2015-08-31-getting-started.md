@@ -89,9 +89,9 @@ When this is complete, verify that you have a local directory called ``sds`` con
 
 
 {% highlight r %}
-plot(1:100)
+plot(1:110)
 {% endhighlight %}
 
-![center](/sds../figs/2015-08-31-getting-started/unnamed-chunk-2-1.png) 
+![center](/sds../figs/unnamed-chunk-2-1.png) 
 
 
