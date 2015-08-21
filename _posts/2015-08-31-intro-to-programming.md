@@ -11,7 +11,7 @@ Before we get started with R it is worth spending just a couple of minutes think
 
 Writing good code often involve trading off two types of constraints: **cognition time** and **computation time**. [Hadley Wickham](https://dl.dropboxusercontent.com/u/41902/expressive-da-2-strata.pdf), author of many great R packages, describes a data analysis workflow as follows
 
-![](/figs/constraints.png)
+![](/sds/figs/constraints.png)
 
 Before we write any code we need to *think* about the problem (for instance, how should our data look if we were to perform a particular regression?) and we need to *describe* exactly which steps are needed to achieve a given solution. Both steps can be done without opening your computer and they involve cognitive constraints. At last, we need the program to *execute* our code and deliver the output. One simple way to think about the difference between big and small/medium sized data is as follows
 
