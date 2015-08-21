@@ -9,7 +9,7 @@ KnitPost <- function(input, base.url = "/") {
   opts_chunk$set(fig.cap = "center")
   render_jekyll()
   print(paste0("../_posts/", sub(".Rmd$", "", basename(input)), ".md"))
-  knit(input, output = paste0("../_posts/", sub(".Rmd$", "", basename(input)), ".md"), envir = parent.frame())
+  knit(input, encoding = 'UTF-8', output = paste0("../_posts/", sub(".Rmd$", "", basename(input)), ".md"), envir = parent.frame())
 }
 
 KnitPost(input)

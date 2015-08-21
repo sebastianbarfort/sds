@@ -4,6 +4,8 @@ title:  "Topic 7: Data Manipulation"
 categories: homework
 ---
 
+> This is the job. - Lester Freamon
+
 Broom
 
 - http://varianceexplained.org/r/broom-slides/

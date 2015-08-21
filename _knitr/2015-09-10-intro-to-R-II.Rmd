@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Topic 5: Introduction to R"
-categories: homework
+title:  "Topic 1: Introduction to R (Data Structures)"
+categories: posts
 ---
+
+
 
 (I was first moved to think about R for UGs when I hear Amanda Cox talk about using R at the New York Times on Data Stories.)
 
