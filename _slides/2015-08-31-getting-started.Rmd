@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Introduction"
+categories: homework
+---
+
+> Too big for Excel is not 'Big Data'
+
