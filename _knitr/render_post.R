@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 input <- commandArgs(trailingOnly = TRUE)
-KnitPost <- function(input, base.url = "/") {
+KnitPost <- function(input, base.url = "/sds") {
   require(knitr)
   opts_knit$set(base.url = base.url)
   fig.path <- paste0("../figs/", sub(".Rmd$", "", basename(input)), "/")

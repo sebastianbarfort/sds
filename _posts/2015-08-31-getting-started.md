@@ -86,3 +86,12 @@ Once you have an account, clone the [course repository](https://github.com/sebas
 	Checking connectivity... done.
 
 When this is complete, verify that you have a local directory called ``sds`` containing a ``README.md`` file.
+
+
+{% highlight r %}
+plot(1:100)
+{% endhighlight %}
+
+![center](/sds../figs/2015-08-31-getting-started/unnamed-chunk-2-1.png) 
+
+
