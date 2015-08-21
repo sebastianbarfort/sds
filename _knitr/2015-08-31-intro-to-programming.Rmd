@@ -22,7 +22,7 @@ Although we will spend significant time learning how to code in R, we will alway
 
 So while this course will be technical and have a steep learning curve, we will not be dragged into the big data hype without a fight
 
-![](/figs/big-data.jpeg)
+![]({{ site.baseurl }}/figs/big-data.jpeg)
 
 <br>
 
