@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  {% include analytics.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {% if page.img %}
+    <div>
+    <img src="{{ site.url }}/figs/homepage/{{ page.img }}">
+    </div> <!-- /.image-wrap -->
+    {% endif %}
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
