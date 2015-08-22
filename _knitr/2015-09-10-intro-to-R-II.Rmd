@@ -4,3 +4,26 @@ title:  "Topic 1: Reading And Working With Data"
 categories: posts
 ---
 
+In real life you will usually bring data into R from an outside file. This is rarely a pleasant experience, and we will devote several classes in a few weeks focused on how to clean and transform "messy" data. Since this is not our focus today, however, we will imagine all the data we work with today are "clean" (we will discuss what exactly "clean" and "messy" data is in the topic on data transformation). 
+
+Usually, the data that you will work with can come from one of three sources[^datanote]
+
+- statistics packages (data generated from Stata, SAS, SPSS, etc)
+- Excel 
+- flat files such as text files (`.txt`) or comma separated value files (`.csv`)
+
+[^datanote]: data can also come from databases such as SQL, but this is too advanced for our course. 
+
+Luckiluy, R has excellent capabilities for importing data from all sources listed above. I've created the following table to summarise the options currently availible in R 
+
+|Data|File Extension|Packages|Example|
+|:----|:-----:|:-----|:-----|
+|Statistical Packages| `.dta` (Stata) | `haven` | `read_dta("path/to/file")`
+| | `.dta` (Stata) | `foreign` | `read.dta("path/to/file")`
+| | `.sas7bdat` (SAS) | `haven` | `read_sas("path/to/file")`
+| | `.sas7bdat` (SAS) | `sas7bdat` | `read.sas7bdat("path/to/file")`
+
+
+
+
+
