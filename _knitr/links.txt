@@ -1,0 +1,131 @@
+
+
+# get started 
+
+Links:
+
+- http://www.slideshare.net/jenniferbryan5811/ubc-stat545-2014-cm001-intro-tocourse?related=1
+
+**general**
+
+- http://www.compjour.org/
+- https://gist.github.com/hadley/820f09ded347c62c2864
+
+**Browse before class**
+
+- Lazer, David, et al. 2009. ''[Computational Social Science](http://www.sciencemag.org/content/323/5915/721.summary)''. *Science*. 323(5915): 721-723. ([Open access version](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2745217/)).
+- Edelman, Benjamin. 2012. [''Using Internet Data for Economic Research''](http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.26.2.189), *Journal of Economic Perspectives*, 26(2): 189-206.
+
+**Suggested readings**
+
+- Ch. 1: Spraul, V. Anton. 2012. *Think like a
+Programmer*. San Francisco: No Starch Press.
+- Blackwell, Matthew, and
+Maya Sen. 2012. [''Large Datasets and You: A Field Guide''](http://scholar.harvard.edu/files/msen/files/blackwell_sen_tpm.pdf), *The Political Methodologist* 20(1): 2-5.
+- Wickham, Hadley. 2014. [''Tidy Data''](http://www.jstatsoft.org/v59/i10). *Journal of Statistical Software*, 59(10): 1–23.
+- Leek, Jeff. 2014. [''How to share data with a statistician''](https://github.com/jtleek/datasharing).
+- Shotts Jr., William E. 2012. ''The Linux Command Line: A complete introduction''. No Starch Press, San Fransisco.
+- [RegexOne](http://regexone.com/).
+- [Eight Terminal Utilities Every OS X Command Line User Should Know](http://www.mitchchn.me/2014/os-x-terminal/).
+- [Strings - Dive into Python 3](http://www.diveintopython3.net/strings.html).
+
+
+** data science**
+
+- http://www.kdnuggets.com/2015/07/data-science-degrees-analyzed.html
+- http://bulletin.imstat.org/2014/09/data-science-how-is-it-different-to-statistics%E2%80%89/
+- http://www.chalmers.se/en/areas-of-advance/ict/events/Documents/Terry%20Speed_Data%20Science,%20Big%20Data%20and%20Statistics%20-%20Can%20We%20All%20Live%20Together.pdf
+- https://dl.dropboxusercontent.com/u/41902/future-da-5-unconf.pdf
+
+
+# intro to R
+
+Video:
+
+- http://www.rstats.nyc/
+
+Data:
+
+- http://blog.yhathq.com/posts/7-funny-datasets.html
+- http://personal.tcu.edu/kylewalker/preview.html (baby names viz)
+- Rlinkedin (http://thinktostart.com/analyze-linkedin-with-r/?utm_content=buffer22dea&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+- http://r4ds.had.co.nz/
+
+
+Topics:
+
+- R
+- Rmarkdown
+- https://pols503.github.io/pols_503_sp15/labs/lab1.html
+- https://stat545-ubc.github.io/block002_hello-r-workspace-wd-project.html
+- http://stat545-ubc.github.io/
+- https://dl.dropboxusercontent.com/u/11481940/DataScience_Fall2015.pdf
+- https://stat.duke.edu/courses/Summer15/sta104.01-1/
+- http://www.slideshare.net/jenniferbryan5811/cm002-deep-thoughts
+
+- http://www.princeton.edu/~mjs3/soc504_s2015/
+
+# Style guide
+
+- Hadley
+- Google
+
+Links:
+
+- http://www.slideshare.net/jenniferbryan5811/cm002-deep-thoughts
+- https://pols503.github.io/pols_503_sp15/
+- http://www.princeton.edu/~mjs3/soc504_s2015/
+- https://github.com/lmullen/dh-methods-in-r
+- https://github.com/brentonk/rcourse
+
+Write clean R code / pipes
+
+- http://rpubs.com/tjmahr/pipelines_2015
+- http://files.meetup.com/1225993/Hadley_Wickham_pipe-dsls.pdf
+
+Rio
+
+- https://github.com/leeper/rio
+
+License:
+
+http://creativecommons.org/licenses/by-nc/3.0/
+
+
+
+
+# Topic 2:
+
+Readings:
+
+- http://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098
+- http://www.cs171.org/
+
+Malecki EDAV
+
+- http://stat4701.github.io/edav/
+
+Links
+
+- http://walkerke.github.io/2015/04/map-or-chart/
+- http://minimaxir.com/2015/02/ggplot-tutorial/
+- https://github.com/pablobarbera/Rdataviz
+- http://rud.is/b/2015/03/30/3364/
+- http://felixhaass.github.io/drowning-in-data/
+- http://asbcllc.com/blog/2015/January/gotham_2014_weather/
+- http://asbcllc.com/blog/2015/february/nba_opp_pts/index.html
+- http://www.collective-behavior.com/liverpool-is-still-the-most-successful-english-club-team-but-for-how-long/
+- http://hafen.github.io/taxi/#initial-exploration
+- http://rpubs.com/bradleyboehmke/median_income_trends
+- https://github.com/hrbrmstr/waffle
+
+Gis
+
+- http://pakillo.github.io/R-GIS-tutorial/
+- https://github.com/dkahle/ggmap
+- http://rud.is/b/2015/07/26/making-staticinteractive-voronoi-map-layers-in-ggplotleaflet/
+
+Fun: rBlocks
+
+- https://gist.github.com/woobe/9624370
+

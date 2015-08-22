@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Topic 1: Exercises"
+categories: posts
+---
+
+- Complete survey
+
+- questions about basics
+
+- read some data and think 

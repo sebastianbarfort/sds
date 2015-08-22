@@ -33,8 +33,15 @@ Karl Broman, a professor of biostatistics and medical informatics at the Univers
 
 [R](http://www.r-project.org/) is a free software environment for statistical computing and graphics. We will use this throughout the course, so please make sure it is installed on your computer before first day of class. It works on all platforms.
 
+If you want to watch a step-by-step tutorial on how to install R for Mac or Windows, you can watch these videos
+
+- [Install R for Windows](https://www.youtube.com/watch?v=Ohnk9hcxf9M&feature=youtu.be)
+- [Installing R on the Mac](https://www.youtube.com/watch?v=uxuuWXU-7UQ&feature=youtu.be)
+
 Since the vast majority of our coding will be in the R language, we will use an integrated development environment ([IDE](http://en.wikipedia.org/wiki/Integrated_development_environment)). IDEs integrate text editing, syntax highlighting, and version control,
-simplifying the coding process. I urge you to download and use [RStudio](http://www.rstudio.com/). It's free and modern, and if you're new to R this will make it much easier to get started. All R coding in this course will be done in RStudio.
+simplifying the coding process. I urge you to download and use [RStudio](http://www.rstudio.com/). It's free and modern, and if you're new to R this will make it much easier to get started. All R coding in this course will be done in RStudio. There's a nice video of how to install RStudio here
+
+- [Installing RStudio](https://www.youtube.com/watch?v=bM7Sfz-LADM&feature=youtu.be)
 
 Once installed, try to open up RStudio and type the following in the console (lines that start with `##` are the console's output)
 
@@ -62,7 +69,8 @@ print("R is running on my computer")
 {% highlight text %}
 ## [1] "R is running on my computer"
 {% endhighlight %}
-Don't worry if the commands above make no sense to you right now. We will cover installation and introduction to R in much more detail in the [next post](xxx).
+
+Don't worry if the commands above make no sense to you right now. We will give a proper introduction to R in the [next posts](xxx).
 
 ## A Git client
 
@@ -72,7 +80,7 @@ If you are on Windows you can install [Github Desktop](https://desktop.github.co
 
 ## A Github account
 
-[Github](http://github.com)is a platform that facilitates collaboration on projects that use git. You can use it to host projects, publish them to the web, and share them with other people. [Create a free account](https://help.github.com/articles/signing-up-for-a-new-github-account/) if you don't already have one.
+[Github](http://github.com) is a platform that facilitates collaboration on projects that use git. You can use it to host projects, publish them to the web, and share them with other people. [Create a free account](https://help.github.com/articles/signing-up-for-a-new-github-account/) if you don't already have one.
 
 Once you have an account, clone the [course repository](https://github.com/sebastianbarfort/sds) using your local git client. This is most easily done on the command line as follows:
 
