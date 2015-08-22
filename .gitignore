@@ -34,3 +34,5 @@ old-files*
 *.nav
 
 *.snm
+
+/_site
