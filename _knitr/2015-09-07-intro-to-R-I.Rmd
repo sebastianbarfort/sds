@@ -95,7 +95,7 @@ R also has some special values. A couple of examples that are relevant to us are
 - `TRUE`: logical true
 - `FALSE`: logical false
 
-R has built in functions for finding special value. For example, the `is.na` function will return a logical value for whether an object is true or false
+R has built in functions for finding special values. For example, the `is.na` function will return a logical value for whether an object is true or false
 
 ```{r}
 absent = NA

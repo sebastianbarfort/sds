@@ -18,7 +18,7 @@ Before we write any code we need to *think* about the problem (for instance, how
 - cognition time > computation time: you're dealing with **small**/**medium** sized data
 - computation time > cognition time: you could be dealing with **big data**.
 
-Although we will spend significant time learning how to code in R, we will always focus on minimizing the cognitive costs of doing data analysis. When you've learning some sound principles for storing and working with small/medium sized data you're better equipped to minimize computational costs as well.
+Although we will spend significant time learning how to code in R, we will always focus on minimizing the cognitive costs of doing data analysis. When you've learned some sound principles for storing and working with small/medium sized data you're better equipped to worry about computational costs as well.
 
 So while this course will be technical and have a steep learning curve, we will not be dragged into the big data hype without a fight
 
