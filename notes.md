@@ -68,3 +68,7 @@ http://www.theverge.com/2014/12/9/7358111/barack-obama-coding
 Data Science through the lens of Social Science
 
 http://videolectures.net/kdd2014_conway_social_science/
+
+Scraped Data and Sticky Prices
+
+http://www.nber.org/papers/w21490?utm_campaign=ntw&utm_medium=email&utm_source=ntw
