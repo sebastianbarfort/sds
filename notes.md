@@ -72,3 +72,9 @@ http://videolectures.net/kdd2014_conway_social_science/
 Scraped Data and Sticky Prices
 
 http://www.nber.org/papers/w21490?utm_campaign=ntw&utm_medium=email&utm_source=ntw
+
+Benoit: Big Data
+
+https://www.youtube.com/watch?v=0Lpw1Kim3y8&spfreload=10
+
+    - disuinghish between big social data and big data about the physical world
