@@ -9,3 +9,12 @@ categories: posts
 - questions about basics
 
 - read some data and think 
+  - data from priceofweed.com
+    - what are pros and cons of this kind of data?
+    - are there any alternatives?
+  - what kind of interesting questions can we ask of this data?
+  - practical
+    - read the data
+    - dimensions of the data
+    - what are the class of each column
+    - which state has highest mean marijuana price?
