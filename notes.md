@@ -77,4 +77,8 @@ Benoit: Big Data
 
 https://www.youtube.com/watch?v=0Lpw1Kim3y8&spfreload=10
 
-    - disuinghish between big social data and big data about the physical world
+    - distinguish between big social data and big data about the physical world
+
+Super Returns to Super Bowl Ads?
+
+http://people.ischool.berkeley.edu/~hal/Papers/2015/super.pdf
