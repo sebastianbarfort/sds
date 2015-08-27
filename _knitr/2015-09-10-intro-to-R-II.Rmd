@@ -14,7 +14,7 @@ Usually, the data that you will work with can come from one of three sources[^da
 
 [^datanote]: data can also come from databases such as SQL, but this is too advanced for our course. 
 
-Luckiluy, R has excellent capabilities for importing data from all sources listed above. I've created the following table to summarise the options currently availible in R 
+Luckily, R has excellent capabilities for importing data from all sources listed above. I've created the following table to summarise the relevant options currently availible in R 
 
 |Data|File Extension|Packages|Example|
 |:----|:-----:|:-----|:-----|
@@ -22,6 +22,54 @@ Luckiluy, R has excellent capabilities for importing data from all sources liste
 | | `.dta` (Stata) | `foreign` | `read.dta("path/to/file")`
 | | `.sas7bdat` (SAS) | `haven` | `read_sas("path/to/file")`
 | | `.sas7bdat` (SAS) | `sas7bdat` | `read.sas7bdat("path/to/file")`
+|Excel| `.xlsx` | `readxl` | `read_excel("path/to/file")`
+| | `.xlsx| `xlsx` | `read.xlsx("path/to/file")`
+|Flat files| `.csv` | `base` | `read.csv("path/to/file")`
+| |  | `readr` | `read_csv("path/to/file")`
+| | `.txt` (SAS) | `base` | `read.table("path/to/file")`
+
+The most common file format we will work with in this course is `.csv`. 
+
+Let us try to read a `.csv` file into R. For normal sized data you will most likely store this in a folder on your computer. For this example, however, I will read a dataset on battles in the Game of Thrones series available online [here](https://github.com/chrisalbon/war_of_the_five_kings_dataset/blob/master/5kings_battles_v1.csv). 
+
+I use the `readr` library to read the data. To access this library we run the `library("readr")` function. 
+
+
+```{r}
+library("readr")
+```
+
+Afterwards, we can read the data 
+```{r}
+got.df = read_csv("https://raw.githubusercontent.com/chrisalbon/war_of_the_five_kings_dataset/master/5kings_battles_v1.csv")
+```
+
+The `read_csv` function returns a data frame. There are many useful functions for getting a quick overview of the data. Here are just a few
+
+- `names`: lists the column names of the data frame
+- `head`: lists the first five observations 
+- `summary`: calcultes summary statistics for the variables in the data frame
+- `dim`: prints the number of rows and columns in the data frame
+
+Let us start by examining the dimensions of the data
+
+```{r}
+dim(got.df)
+```
+
+By running the command we learned that the data frame contains xxx. 
+
+Next, we print the column names
+
+```{r}
+names(got.df)
+```
+
+You can extract single variables and perform different operations on them. To extract a variable, we use the dollar sign (`$`). We can do more specific operations on this variable alone
+
+
+
+
 
 
 

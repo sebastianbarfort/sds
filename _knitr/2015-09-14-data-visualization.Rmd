@@ -4,5 +4,9 @@ title:  "Topic 2: Data Visualization"
 categories: posts
 ---
 
+what is data (ch 2 ML4H)
+
+http://motioninsocial.com/tufte/
+
 ...
 
