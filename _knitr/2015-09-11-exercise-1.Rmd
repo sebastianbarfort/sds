@@ -4,9 +4,15 @@ title:  "Topic 1: Exercises"
 categories: posts
 ---
 
-- Complete survey
+You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts
 
-- questions about basics
+1. Please complete [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
+
+2. Make sure you have R installed and are able to complete the code I have described in the previous posts
+
+3. This is where we read some data. 
+
+<!-- 
 
 - read some data and think 
   - data from priceofweed.com
@@ -22,3 +28,6 @@ categories: posts
 
 -inspiration
   - ggplot 
+
+-->  
+  

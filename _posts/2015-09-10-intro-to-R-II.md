@@ -33,6 +33,8 @@ Luckily, R has excellent capabilities for importing data from all sources listed
 | |  | `readr` | `read_csv("path/to/file")`
 | | `.txt` | `base` | `read.table("path/to/file")`
 
+<br>
+
 The most common file format we will work with in this course is `.csv`.
 
 Let us try to read a `.csv` file into R. For normal sized data you will most likely store this in a folder on your computer. For this example, however, I will read a dataset of battles in the Game of Thrones series available online [here](https://github.com/chrisalbon/war_of_the_five_kings_dataset/blob/master/5kings_battles_v1.csv).
@@ -183,7 +185,7 @@ p = p + labs(x = "size of attacking army (log scale)",
 plot(p)
 {% endhighlight %}
 
-![center](/sds/figs/2015-09-10-intro-to-R-II/unnamed-chunk-9-1.png) 
+![center](/sds/figs/2015-09-10-intro-to-R-II/unnamed-chunk-9-1.png)
 
 
 {% highlight r %}
