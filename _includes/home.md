@@ -7,7 +7,7 @@ University of Copenhagen<br/>
 Instructors: <a href="http://www.econ.ku.dk/ddl/">David Dreyer Lassen</a>, <a href="http://sebastianbarfort.github.io/">Sebastian Barfort</a><br/>
 TA: <a href="mailto:krierdk@gmail.com"> Kristoffer Glavind </a><br/>
 Time: Mondays, 8am-10am (<i>all weeks</i>)<br/> Thursdays, 8am-10am (<i>odd weeks</i>)<br/>
-Location: CSS 1-1-18
+Location: CSS 1-1-18 <br/>
 Sebastian Office Hours: Wednesdays, 12pm-14pm in CSS 26-1-3</a><br/>
 </center>
 <br/>
