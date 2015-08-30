@@ -7,8 +7,8 @@ permalink: /syllabus/
 A tentative syllabus, subject to change, is below.
 
 
-|Date|Topic|Posts|Exercises|
-|:----|:-----:|:-----|:-----|
+|Date|Topic|Posts|Exercises|Slides|
+|:----|:-----:|:-----|:-----|:-----:|
 |Aug 31, 2015| **Intro** | - |
 |Sep 7, 2015| **Getting started** | [Intro I: Getting Started](http://sebastianbarfort.github.io/sds/posts/2015/08/31/getting-started.html) |
 || | [Intro II: A Few Tips for Coding](http://sebastianbarfort.github.io/sds/posts/2015/08/31/intro-to-programming.html) |
