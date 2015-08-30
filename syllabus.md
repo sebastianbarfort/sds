@@ -6,39 +6,12 @@ permalink: /syllabus/
 
 A tentative syllabus, subject to change, is below.
 
-|Topic|Keywords|Misc|
-|:----|:-----:|:-----|
-|**What is Data?**| qualitative vs quantitative data| Topic 1
-|**Modes of Data Collection**| survey| Topic 2
-| | administrative |
-| | big data |
-| | experiments |
-|**Legal and Ethical Issues in Data Collection**| property rights| Topic 3
-| | privacy |
-|**Introduction to Programming**| R & RStudio| [Topic 4 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
-|| Git & Github| [Slides](xxx)
-| | the command line|
-|**Introduction to R**| object oriented programming| [Topic 2 post](http://127.0.0.1:4000/readings/#introduction-to-programming)
-| | data types and functions| [Slides](http://127.0.0.1:4000/readings/#introduction-to-programming)
-| | iterations, loops, libraries, logical statements|
-| | RMarkdown|
-|**Reproducible Research**| Git & Github|
-|**Data Manipulation**| a grammar of data manipulation|
-| | tidy data|
-| | reshaping, merging|
-| | regular expressions|
-| | working with geographic data|
-|**Static Visualizations**| a grammar of graphics|
-| | ggplot2 & ggmap|
-| | Tufte|
-| | Visualizing raw data vs visualizing models|
-|**Data Gathering**| Web scraping|
-| | Web APIs|
-|**Statistical Learning**| Intuition|
-| | Bias-variance trade off|
-| | Regression|
-| | Classification|
-| | Cross validation & model selection|
-| | Regularization, Ridge, Lasso|
 
-|**Text as Data**| |
+|Date|Topic|Posts|Exercises|
+|:----|:-----:|:-----|:-----|
+|Aug 31, 2015| **Intro** | - |
+|Sep 7, 2015| **Getting started** | [Intro I: Getting Started](http://sebastianbarfort.github.io/sds/posts/2015/08/31/getting-started.html) |
+|| | [Intro II: A Few Tips for Coding](http://sebastianbarfort.github.io/sds/posts/2015/08/31/intro-to-programming.html) |
+|Sep 10, 2015| **R Intro** | [Topic 1: Just Enough To Be DangeRous](http://sebastianbarfort.github.io/sds/posts/2015/09/07/intro-to-R-I.html) | [Exercise 1](http://sebastianbarfort.github.io/sds/posts/2015/09/11/exercise-1.html)
+|| | [Topic 1: Reading And Working With Data](http://sebastianbarfort.github.io/sds/posts/2015/09/10/intro-to-R-II.html) |
+|Sep 14, 2015| **Data Visualization** | [Topic 2: Data Visualization](http://sebastianbarfort.github.io/sds/posts/2015/09/14/data-visualization.html) |
