@@ -6,7 +6,19 @@ categories: homework
 
 We have divided you into groups based on the first letter of your last name. A file containing all group data is available [here](https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/groups.csv). 
 
+```{r, warnings = FALSE, results = "hide", echo = FALSE, warning = FALSE, message = FALSE}
+library("readxl")
 
+df = read_excel("~/git/sds/data/participants.xlsx", col_names = FALSE)
+df$group = rep(1:27, each = 4)[-108]
+
+names(df) = c("name", "role", "group")
+
+library("DT")
+rownames(df) = df$name
+df = df[, -1]
+knitr::kable(df)
+```
 
 The groups are as follows: 
 
