@@ -19,7 +19,7 @@ Usually, the data that you will work with can come from one of three sources[^da
 
 [^datanote]: data can also come from databases such as SQL, but this is too advanced for our course. 
 
-Luckily, R has excellent capabilities for importing data from all sources listed above. I've created the following table to summarise the relevant options currently availible in R 
+Luckily, R has excellent capabilities for importing data from all sources listed above. I've created the following table to summarise the relevant options currently available in R 
 
 |Data|File Extension|Packages|Example|
 |:----|-----:|-----|-----:|
@@ -39,7 +39,7 @@ The most common file format we will work with in this course is `.csv`.
 
 Let us try to read a `.csv` file into R. For normal sized data you will most likely store this in a folder on your computer. For this example, however, I will read a dataset of battles in the Game of Thrones series available online [here](https://github.com/chrisalbon/war_of_the_five_kings_dataset/blob/master/5kings_battles_v1.csv). 
 
-I use the `readr` library to read the data. To access this library we run the `library("readr")` function. 
+I use the `readr` library to read the data. To access this library we run the `library("readr")` function. The library must first be installed, however, which can be done by running the command `install.packages("readr")` or by accessing the Tools menu in RStudio, selecting Install Packages and typing in the name of the library.
 
 
 ```{r, warning = FALSE}
