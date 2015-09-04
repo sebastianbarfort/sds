@@ -6,9 +6,9 @@ categories: posts
 
 You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts, try to work on them in the order they are listed. It's not important that you complete everything. 
 
-1. If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
+- If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
 
-2. Make sure you have R installed and are able to complete the following code
+- Make sure you have R installed and are able to complete the following code
 
 ```{r}
 x = 5
@@ -29,11 +29,12 @@ I want you to think about the following and then run the commands to see whether
   4. What kind of object is `p`?
   5. What is the outut of `my.missing.object == NA`? why do you think this is?
 
-3. Working with data. 
+
+- Working with data. 
 
 Try to read the following dataset
 
-```{r}
+```{r, warning = FALSE}
 library("readr")
 my.df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
 ```
@@ -50,6 +51,8 @@ This is a dataset of daily marijuana prices across the U.S. The data is scraped 
   - what are the dimensions of the data?
   - what are the class of each column?
   - which state has the highest mean marijuana price? 
+
+<br>  
   
 - fifth, if you have time, look at the documentation for `ggplot2` (run `?ggplot`) and try to create some interesting plots. An example is given below. 
 ![](/sds/figs/marijuana.png)
