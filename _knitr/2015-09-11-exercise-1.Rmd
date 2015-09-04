@@ -6,9 +6,9 @@ categories: posts
 
 You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts, try to work on them in the order they are listed. It's not important that you complete everything. 
 
-- If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
+### If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
 
-- Make sure you have R installed and are able to complete the following code
+### Make sure you have R installed and are able to complete the following code
 
 ```{r}
 x = 5
@@ -30,7 +30,7 @@ I want you to think about the following and then run the commands to see whether
   5. What is the outut of `my.missing.object == NA`? why do you think this is?
 
 
-- Working with data. 
+### Working with data. 
 
 Try to read the following dataset
 
@@ -39,7 +39,11 @@ library("readr")
 my.df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
 ```
 
-This is a dataset of daily marijuana prices across the U.S. The data is scraped from [this website](www.priceofweed.com). We will talk later about how to do this. You should know that variables ending with `QN` counts quantity and `Q` lists the price. There are three classes of marijuana quality listed in the dataset: `High`, `Med` and `Low`. 
+This is a dataset of daily marijuana prices across the U.S. The data is scraped from [priceofweed](www.priceofweed.com). We will talk later about how to do this. The idea behind the website is to crowdsource the price of marijuana 
+
+> We crowdsource the street value of marijuana from the most accurate source possible: you, the consumer. Help by anonymously submitting data on the latest transaction you've made. 
+
+You should know that variables ending with `QN` counts quantity and `Q` lists the price. There are three classes of marijuana quality listed in the dataset: `High`, `Med` and `Low`. 
 
 - first, try to describe the dataset. What simple commands would you run?
 
