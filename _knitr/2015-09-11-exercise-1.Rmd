@@ -4,13 +4,55 @@ title:  "Topic 1: Exercises"
 categories: posts
 ---
 
-You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts
+You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts, try to work on them in the order they are listed. It's not important that you complete everything. 
 
-1. Please complete [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
+1. If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
 
-2. Make sure you have R installed and are able to complete the code I have described in the previous posts
+2. Make sure you have R installed and are able to complete the following code
 
-3. This is where we read some data. 
+```{r}
+x = 5
+y = 10
+x * y
+
+my.missing.object = NA
+my.number = 220
+z = "we're working on exercise 1"
+p = TRUE
+```
+
+I want you to think about the following and then run the commands to see whether you were correct
+
+  1. What kind of object is `z`
+  2. What happens if we run `my.number * z`?
+  3. What happens if we run `my.missing.object * my.number`?
+  4. What kind of object is `p`?
+  5. What is the outut of `my.missing.object == NA`? why do you think this is?
+
+3. Working with data. 
+
+Try to read the following dataset
+
+```{r}
+library("readr")
+my.df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
+```
+
+This is a dataset of daily marijuana prices across the U.S. The data is scraped from [this website](www.priceofweed.com). We will talk later about how to do this. You should know that variables ending with `QN` counts quantity and `Q` lists the price. There are three classes of marijuana quality listed in the dataset: `High`, `Med` and `Low`. 
+
+- first, try to describe the dataset. What simple commands would you run?
+
+- second, I want you to think about pros and cons of using this kind of data? What should we be worried about when working with this kind of data?
+
+- third, think about interesting questions to ask from the data?
+
+- fourth, to test your R skills, try to answer the following questions
+  - what are the dimensions of the data?
+  - what are the class of each column?
+  - which state has the highest mean marijuana price? 
+  
+- fifth, if you have time, look at the documentation for `ggplot2` (run `?ggplot`) and try to create some interesting plots. An example is given below. 
+![](/sds/figs/marijuana.png)
 
 <!-- 
 
