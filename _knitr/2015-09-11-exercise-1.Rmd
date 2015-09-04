@@ -6,9 +6,9 @@ categories: posts
 
 You will work on Exercise 1 with Kristoffer in class. The exercise consists of the following parts, try to work on them in the order they are listed. It's not important that you complete everything. 
 
-### If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
+1. If you haven't done so yet, please make sure you've completed [this survey](https://sebastianbarfort.typeform.com/to/xsjlLr) to give us an idea about your background
 
-### Make sure you have R installed and are able to complete the following code
+2. Make sure you have R installed and are able to complete the following code
 
 ```{r}
 x = 5
@@ -23,14 +23,14 @@ p = TRUE
 
 I want you to think about the following and then run the commands to see whether you were correct
 
-  1. What kind of object is `z`
-  2. What happens if we run `my.number * z`?
-  3. What happens if we run `my.missing.object * my.number`?
-  4. What kind of object is `p`?
-  5. What is the outut of `my.missing.object == NA`? why do you think this is?
+  - What kind of object is `z`
+  - What happens if we run `my.number * z`?
+  - What happens if we run `my.missing.object * my.number`?
+  - What kind of object is `p`?
+  - What is the outut of `my.missing.object == NA`? why do you think this is?
 
 
-### Working with data. 
+3. Working with data. 
 
 Try to read the following dataset
 
