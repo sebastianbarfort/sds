@@ -1,100 +1,100 @@
-#,"What is your field of study?",Other,"Are you taking this course for credit?","How many hours do you (honestly) expect to spend on preparation for this course per week?","Do you consider your computing skills to be","What kind of system do you use?","Are you a BA or MA student?",Other,"What is your age?","What is your gender?","Start Date (UTC)","Submit Date (UTC)","Network ID"
-40e2f0210b257832a7922cef1d7f4079,Economics,,1,,,,,,41,Male,"2015-08-28 14:36:24","2015-08-28 14:36:54",49d0dbc2f3
-97e041b43cb0d3092b21a0b1022f83e6,"Political Science",,0,3,,,,phd,43,Male,"2015-08-28 21:22:01","2015-08-28 21:22:52",102af4d3de
-35bfaa406ec3e37b241496594cc70845,Economics,,1,8,"Above average",,MA,,26,Male,"2015-08-29 15:58:32","2015-08-29 15:59:24",b02750a49b
-f69d3c421f5f33f41d15ef10f46b635a,Economics,,0,3-4,"Above average","Mac OS X",MA,,25,Male,"2015-08-30 15:43:30","2015-08-30 16:36:08",0fc629c1a1
-446a056b5a4b286ca4e7aee1fd7f2dd8,Economics,,0,5,Average,Windows,,PhD,30,Male,"2015-08-31 06:07:30","2015-08-31 06:08:16",49d0dbc2f3
-301d6b11bf2075a152aa45f9b82cd87d,Economics,,1,6,"Above average","Mac OS X",MA,,24,Male,"2015-08-31 06:34:39","2015-08-31 06:35:18",49d0dbc2f3
-1605dc6c495dae121191eb1b53d5abcb,Economics,,1,3,"Above average",Windows,BA,,23,Male,"2015-08-31 06:43:50","2015-08-31 06:44:52",49d0dbc2f3
-3c5b65d3ded8d4653667362da0bc2522,Economics,,1,2,"Above average",Windows,MA,,24,Male,"2015-08-31 06:44:06","2015-08-31 06:44:52",49d0dbc2f3
-c17eb6c26fedfc9bdd3a2e23f005e2d4,Economics,,1,4,"Above average",Windows,MA,,23,Male,"2015-08-31 06:44:11","2015-08-31 06:44:55",49d0dbc2f3
-2f4c731066008fd8facce727f409189b,Economics,,1,4,Average,Windows,BA,,23,Female,"2015-08-31 06:44:07","2015-08-31 06:45:01",49d0dbc2f3
-b9ea3e8e800543935eb17825c741e960,Economics,,1,8,"Above average",Windows,MA,,25,Male,"2015-08-31 06:31:54","2015-08-31 06:45:05",49d0dbc2f3
-8315a12358523c6dfbd084efc42075ae,Economics,,1,4,Average,"Mac OS X",BA,,21,Female,"2015-08-31 06:42:51","2015-08-31 06:45:12",49d0dbc2f3
-9d7ea2789a60a90b20a84c2647682b90,Economics,,1,1,Average,"Mac OS X",BA,,21,Male,"2015-08-31 06:44:26","2015-08-31 06:45:13",49d0dbc2f3
-98c099df980a40562ca3a122612719cc,Economics,,1,5,"Above average","Mac OS X",MA,,21,Male,"2015-08-31 06:44:00","2015-08-31 06:45:13",49d0dbc2f3
-0965cc3f8b80fae43687a298cfd6d79a,Economics,,1,4,"Above average",Windows,BA,,22,Female,"2015-08-31 06:44:33","2015-08-31 06:45:13",49d0dbc2f3
-dc0dde59ebac1ca3a8c3c3da44f5a646,Economics,,1,5,"Above average",Windows,MA,,23,Female,"2015-08-31 06:44:32","2015-08-31 06:45:16",49d0dbc2f3
-6ffe940cf16efa6c5c09334a982244a9,Economics,,1,10,Average,Windows,MA,,26,Male,"2015-08-31 06:44:31","2015-08-31 06:45:16",49d0dbc2f3
-bf1c3e30b99c5437c6887243789352d8,"Political Science",,1,6,Average,"Mac OS X",MA,,23,Female,"2015-08-31 06:44:12","2015-08-31 06:45:18",49d0dbc2f3
-7d67a580c5904aae91bf2a0174e68310,Economics,,1,2,Average,Windows,BA,,24,Female,"2015-08-31 06:43:12","2015-08-31 06:45:18",49d0dbc2f3
-89c3fb2c959cd0f0f268b4f89cad2ac2,Economics,,1,4,"Above average","Mac OS X",MA,,24,Male,"2015-08-31 06:43:16","2015-08-31 06:45:20",49d0dbc2f3
-6bed25568abaa1ba8cb8962f54034544,Economics,,1,10,Average,"Mac OS X",MA,,24,Male,"2015-08-31 06:44:46","2015-08-31 06:45:27",49d0dbc2f3
-7882c84075a93c7f426f091d31735af8,"Political Science",,0,3,"Below average",Windows,,Ph.d.,27,Male,"2015-08-31 06:44:34","2015-08-31 06:45:29",49d0dbc2f3
-e6065f4c2a89f4cfdfabf35f130f522d,Economics,,1,3,"Above average",Windows,MA,,26,Female,"2015-08-31 06:44:25","2015-08-31 06:45:31",49d0dbc2f3
-a02672c7069d97b64aec5c889ec8753d,Economics,,1,4,"Above average",Windows,MA,,24,Male,"2015-08-31 06:44:30","2015-08-31 06:45:32",49d0dbc2f3
-5143bb57d997c9278dbaaba2fac238c2,Economics,,1,5,Average,"Mac OS X",MA,,25,Male,"2015-08-31 06:44:27","2015-08-31 06:45:32",49d0dbc2f3
-2869e4e8b1a3c845e453f9608d4103a6,Economics,,1,8,Average,Windows,MA,,24,Male,"2015-08-31 06:44:15","2015-08-31 06:45:38",49d0dbc2f3
-134b05ee8e859e05d538547a776648d4,Economics,,1,8,Average,Windows,MA,,27,Male,"2015-08-31 06:44:28","2015-08-31 06:45:39",49d0dbc2f3
-737fee504737bb0a71f919683e35090d,Economics,,1,"2 hour ",Average,"Mac OS X",MA,,25,Female,"2015-08-31 06:44:20","2015-08-31 06:45:41",49d0dbc2f3
-b04c70139ca88d0768aaeedcddaa2609,Economics,,1,4,"Above average","Mac OS X",MA,,27,Female,"2015-08-31 06:44:25","2015-08-31 06:45:44",49d0dbc2f3
-129f7b65c56e7bef743fb2e7e4b7e93a,Economics,,1,4,"Above average",Windows,MA,,23,Male,"2015-08-31 06:44:27","2015-08-31 06:45:45",49d0dbc2f3
-ff2c315cfe251f98f71629cd2f3aec08,"Political Science",,1,8,Average,Windows,MA,,24,Male,"2015-08-31 06:44:37","2015-08-31 06:45:46",49d0dbc2f3
-04783dc2eff52fab629987b5df071ff4,Economics,,1,3,"Above average","Mac OS X",MA,,23,Female,"2015-08-31 06:44:42","2015-08-31 06:45:47",49d0dbc2f3
-69182883d89d1fe991168a9e1b655208,Economics,,1,6,"Above average","Mac OS X",BA,,22,Male,"2015-08-31 06:44:25","2015-08-31 06:45:50",49d0dbc2f3
-c7889cc613bfddbb89064dd55cd10ede,Economics,,1,2,Average,"Mac OS X",MA,,24,Female,"2015-08-31 06:44:08","2015-08-31 06:45:50",2f1cf0cfe4
-38c2446c19c076abec68a9df21fa2b35,Economics,,1,4,"Above average",Windows,MA,,26,Male,"2015-08-31 06:44:59","2015-08-31 06:45:50",49d0dbc2f3
-63bd09b50a4fd4d656b36027f93c0541,Economics,,1,7,Average,Windows,MA,,24,Male,"2015-08-31 06:44:57","2015-08-31 06:45:51",49d0dbc2f3
-26c55f6b997fc2a5da154ba1104c91c9,Economics,,1,4,Average,Windows,BA,,24,Female,"2015-08-31 06:45:08","2015-08-31 06:45:54",49d0dbc2f3
-a0c6c55c8a62b32071dd5ce7f1fed04f,Economics,,0,5,Average,"Mac OS X",MA,,26,Male,"2015-08-31 06:44:38","2015-08-31 06:45:55",49d0dbc2f3
-8e048bb9219c383280cfd0602f599f43,Economics,,1,6,Average,Windows,MA,,23,Female,"2015-08-31 06:44:16","2015-08-31 06:45:59",49d0dbc2f3
-e78af1c7169e32f330b0f9d6db3a9749,Economics,,0,4,Average,Windows,MA,,25,Male,"2015-08-31 06:43:52","2015-08-31 06:46:00",49d0dbc2f3
-239d2295e8440784bf11a5a9140b55b3,Economics,,0,15,"Above average","Mac OS X",,"Phd ",30,Male,"2015-08-31 06:44:59","2015-08-31 06:46:04",49d0dbc2f3
-090893d3277c2a2cc1829d8f87f2f909,"Political Science",,1,10,Average,Windows,MA,,24,Male,"2015-08-31 06:44:59","2015-08-31 06:46:05",71e4d2f3b7
-5423a3202c350d4c8282dc75517e0177,Economics,,1,6,"Above average",Windows,MA,,27,Male,"2015-08-31 06:44:58","2015-08-31 06:46:07",49d0dbc2f3
-b18ed392973a5f3dc08e3761542d67cb,Economics,,1,10,Average,Windows,MA,,22,Female,"2015-08-31 06:44:27","2015-08-31 06:46:08",49d0dbc2f3
-47dc34b7503ef498052392d13ba1bf83,Sociology,,0,10,Average,Windows,MA,,24,Male,"2015-08-31 06:45:19","2015-08-31 06:46:09",870b70b4c7
-c171f98b3c0d725e03b7c72e0273781c,Economics,,1,6,"Above average",Windows,MA,,24,Male,"2015-08-31 06:44:09","2015-08-31 06:46:10",49d0dbc2f3
-6c2c97ce05b9048acc029ad363377c6d,Economics,,0,3,Average,Windows,MA,,26,Female,"2015-08-31 06:44:31","2015-08-31 06:46:11",49d0dbc2f3
-0fbe7ba4f63b2d4df61e2cb39280b56a,"Political Science",,1,12,Average,Windows,,ph.d,27,Male,"2015-08-31 06:44:50","2015-08-31 06:46:12",e45317e7c1
-195c1745f126721ad4db96ed4c673aff,Economics,,1,8,"Above average",Windows,MA,,25,Male,"2015-08-31 06:45:05","2015-08-31 06:46:12",49d0dbc2f3
-c444750e6a3207c85d765904adcc4ee9,Economics,,1,6,Average,Windows,MA,,26,Male,"2015-08-31 06:45:19","2015-08-31 06:46:12",49d0dbc2f3
-c73262315073b255631d2e143d89c972,Economics,,1,4,Average,"Mac OS X",MA,,26,Female,"2015-08-31 06:44:16","2015-08-31 06:46:15",49d0dbc2f3
-de44383cfa70b9b9cabaa6df2ba1e0d5,Economics,,1,"7,5",Average,Windows,MA,,23,Female,"2015-08-31 06:44:34","2015-08-31 06:46:15",49d0dbc2f3
-71443939bfbc0467d8e5099fb74ec84b,Economics,,1,4,"Above average",Windows,MA,,24,Male,"2015-08-31 06:45:33","2015-08-31 06:46:15",1e2a7b4d43
-a1ac1286e18b22419e4409188ba75780,Economics,,0,10,"Below average",Windows,BA,,20,Female,"2015-08-31 06:44:25","2015-08-31 06:46:17",49d0dbc2f3
-29369eaf78c9a107387a3483491cbba6,Economics,,1,4,"Above average","Mac OS X",MA,,21,Male,"2015-08-31 06:45:31","2015-08-31 06:46:19",49d0dbc2f3
-b8da52f24f43e133f14a7566d75d3ed3,Economics,,1,7,Average,"Mac OS X",BA,,24,Female,"2015-08-31 06:45:06","2015-08-31 06:46:21",49d0dbc2f3
-5ec673ba65b55ac3ae560e45fda8eba0,Economics,,1,10,Average,Windows,BA,,23,Male,"2015-08-31 06:45:45","2015-08-31 06:46:22",49d0dbc2f3
-1e553be1fbacf5f1f8c202ce8b5e329d,Economics,,0,2,"Above average",Windows,MA,,26,Male,"2015-08-31 06:45:41","2015-08-31 06:46:23",49d0dbc2f3
-0a8db1aba47892071860f4279f8e78dd,Economics,,1,3,Average,Windows,MA,,24,Female,"2015-08-31 06:44:48","2015-08-31 06:46:23",49d0dbc2f3
-854a5d830761e0782cde867e4ee12fcc,Economics,,1,7,Average,Windows,MA,,24,Female,"2015-08-31 06:44:41","2015-08-31 06:46:24",49d0dbc2f3
-a95120a5e6e59c93c620673b13c4c300,Economics,,1,5,"Above average",Windows,MA,,25,Male,"2015-08-31 06:45:05","2015-08-31 06:46:25",49d0dbc2f3
-ad14bd91ffd54fe3bc0dbb8acf612a4f,Economics,,1,3,"Below average",Windows,MA,,26,Male,"2015-08-31 06:45:12","2015-08-31 06:46:26",49d0dbc2f3
-78d04e80844af6d051da401bd2323437,Economics,,1,5,Average,"Mac OS X",MA,,29,Male,"2015-08-31 06:45:40","2015-08-31 06:46:27",49d0dbc2f3
-4964a7e47d82d1084af3ba0983241664,Economics,,1,10,Average,Windows,MA,,25,Female,"2015-08-31 06:44:21","2015-08-31 06:46:28",49d0dbc2f3
-75a244a25a895fea17c61e2b3340a94c,Economics,,1,2,Average,Windows,MA,,25,Female,"2015-08-31 06:45:51","2015-08-31 06:46:28",49d0dbc2f3
-8ac4f3622e41a24550e03862a9c7fed8,Economics,,1,10,"Above average","Mac OS X",MA,,24,Female,"2015-08-31 06:45:27","2015-08-31 06:46:32",49d0dbc2f3
-13388eb54858dea3eea3cc9170f2c696,Economics,,1,3,Average,Windows,MA,,25,Female,"2015-08-31 06:43:14","2015-08-31 06:46:33",49d0dbc2f3
-f3081399412cee8b58397fd20d62eb92,Economics,,1,4,Average,Windows,MA,,29,Female,"2015-08-31 06:44:26","2015-08-31 06:46:37",49d0dbc2f3
-6626556c56d6d1eab87652f51717eba7,Economics,,1,4,Average,Windows,MA,,29,Female,"2015-08-31 06:44:21","2015-08-31 06:46:39",49d0dbc2f3
-19a03f54c5857ba2513b3c82eb4c3b09,Economics,,1,7,"Above average",Windows,MA,,24,Male,"2015-08-31 06:44:21","2015-08-31 06:46:43",49d0dbc2f3
-f49dd93fc007a862330b038cbce7b5c8,Economics,,1,8,Average,Windows,BA,,24,Female,"2015-08-31 06:45:53","2015-08-31 06:46:44",49d0dbc2f3
-87ac82cc2d141a799ab351aae88e9fc9,Economics,,1,6,Average,Windows,MA,,26,Male,"2015-08-31 06:45:42","2015-08-31 06:46:53",49d0dbc2f3
-c3a64226ba92c6c96f2f84ccc205aaac,Economics,,1,"4,5",Average,Windows,MA,,25,Male,"2015-08-31 06:46:02","2015-08-31 06:46:58",49d0dbc2f3
-c42b67120cf4666404658b019ef7611d,"Political Science",,1,"5 ",Average,Windows,MA,,26,Male,"2015-08-31 06:46:00","2015-08-31 06:47:05",49d0dbc2f3
-4251ece0c8ca80abaf23192241a00636,Economics,,1,8,Average,Windows,MA,,23,Female,"2015-08-31 06:45:38","2015-08-31 06:47:08",49d0dbc2f3
-9d7064a6285e59a1909dba882eed834b,Economics,,1,8,"Above average",Linux,MA,,25,Male,"2015-08-31 06:45:58","2015-08-31 06:47:12",a8a65fe1d4
-43b3c86a37beb929f389c6d31f724848,Economics,,,10,Average,Windows,BA,,29,Male,"2015-08-31 06:46:21","2015-08-31 06:47:19",49d0dbc2f3
-a6c043c20927c3ca89da4fa87971344a,Economics,,1,5,Average,Windows,MA,,24,Male,"2015-08-31 06:46:45","2015-08-31 06:47:19",49d0dbc2f3
-5c6b502956a9998fe4dd465409231f3d,Economics,,1,5,Average,Windows,BA,,20,Male,"2015-08-31 06:46:48","2015-08-31 06:47:24",49d0dbc2f3
-8063192f7cdc755399464900ca5d695c,Economics,,1,5,"Above average",Windows,MA,,39,Male,"2015-08-31 06:46:06","2015-08-31 06:47:34",49d0dbc2f3
-77d5842e15f75dc979cc3035e3758484,Economics,,1,3,Average,Windows,MA,,24,Female,"2015-08-31 06:46:36","2015-08-31 06:47:42",3d80e9b780
-7d0e08e9411a31e0e34038f7fdfbb3f9,Economics,,1,5,"Above average",Windows,MA,,26,Male,"2015-08-31 06:46:49","2015-08-31 06:47:48",49d0dbc2f3
-7ec2f0325880f1fa2b821d9a07e2dafc,Economics,,1,4,Average,Windows,MA,,24,Female,"2015-08-31 06:47:33","2015-08-31 06:48:11",49d0dbc2f3
-88da510679fbd120bafcf6be680a9124,Economics,,1,8,"Above average","Mac OS X",MA,,25,Male,"2015-08-31 06:48:04","2015-08-31 06:49:32",49d0dbc2f3
-8ab06db7392b13ff610ae658069560b6,Economics,,1,6,"Above average",Windows,MA,,25,Female,"2015-08-31 06:48:08","2015-08-31 06:49:38",e52274acdd
-8bb69ed6b32c381d92631fc31f60d5b0,Economics,,1,6,Average,Windows,,Exchange,25,Male,"2015-08-31 06:57:27","2015-08-31 06:58:46",49d0dbc2f3
-752ee2212d123961f0cb1696b5062f6d,Economics,,1,4,Average,Windows,BA,,21,Male,"2015-08-31 07:07:55","2015-08-31 07:08:32",a26debb478
-f41561f3313881de7774dad41ec3f969,Economics,,1,8,"Above average","Mac OS X",MA,,25,Male,"2015-08-31 16:58:47","2015-08-31 17:00:07",b0f1c04173
-890189b75ccf93ecc70a2366f2788418,Economics,,1,4,"Above average",Windows,MA,,25,Male,"2015-08-31 20:47:37","2015-08-31 20:48:25",4fd9dbe578
-78f8c2ec41ff44b13824bfaf17f3c06b,Economics,,1,2,"Above average","Mac OS X",MA,,26,Female,"2015-09-02 19:33:02","2015-09-02 19:36:08",b9e0e03cc1
-41c0d0874fd70ca07161162af94218e2,Economics,,1,4,Average,"Mac OS X",BA,,22,Female,"2015-09-03 06:27:28","2015-09-03 06:28:04",49d0dbc2f3
-c7bb265b46a5dd8a1d5f1461a11e9e33,"Political Science",,0,3,"Above average",Windows,MA,,25,Male,"2015-09-04 10:21:47","2015-09-04 10:22:30",4ade656181
-966d37e2437edcf20bf5c2ea2ddf1f10,Economics,,1,6,"Above average",Windows,MA,,28,Male,"2015-09-04 18:13:08","2015-09-04 18:13:49",5469b221ef
-b20ddb7a5d44dffc4303110d1fe89251,,"Security Risk Management",1,4,Average,"Mac OS X",MA,,24,Male,"2015-09-06 17:28:39","2015-09-06 17:29:23",dd1928de96
-2170d23e93859dd1b1afce606af0542a,Economics,,0,5,"Below average",Windows,BA,,20,Female,"2015-09-07 06:59:51","2015-09-07 07:00:35",49d0dbc2f3
-79598e3e1433fb8375ff9bc84f9d9947,Economics,,1,5,Average,"Mac OS X",MA,,25,Male,"2015-09-07 07:31:27","2015-09-07 07:32:22",49d0dbc2f3
-ee8eb784cb4d8a0fec889ffb24cac407,Economics,,1,4,Average,"Mac OS X",BA,,20,Female,"2015-09-07 07:32:34","2015-09-07 07:33:04",49d0dbc2f3
-0a46b779980ec2ae9effcf6883c03ad8,Economics,,1,5,Average,Windows,MA,,26,Female,"2015-09-07 11:47:20","2015-09-07 11:48:43",cfc9feb6c2
-dd482cd31caaf2660fe15ba42c959486,Economics,,1,4,"Above average",Windows,BA,,23,Male,"2015-09-09 14:19:52","2015-09-09 14:20:31",d6045dde0b
+"","X.","What.is.your.field.of.study.","Other","Are.you.taking.this.course.for.credit.","How.many.hours.do.you..honestly..expect.to.spend.on.preparation.for.this.course.per.week.","Do.you.consider.your.computing.skills.to.be","What.kind.of.system.do.you.use.","Are.you.a.BA.or.MA.student.","Other.1","What.is.your.age.","What.is.your.gender.","Start.Date..UTC.","Submit.Date..UTC.","Network.ID"
+"1","40e2f0210b257832a7922cef1d7f4079","Economics","",1,"","","","","",41,"Male","2015-08-28 14:36:24","2015-08-28 14:36:54","49d0dbc2f3"
+"2","97e041b43cb0d3092b21a0b1022f83e6","Political Science","",0,"3","","","","phd",43,"Male","2015-08-28 21:22:01","2015-08-28 21:22:52","102af4d3de"
+"3","35bfaa406ec3e37b241496594cc70845","Economics","",1,"8","Above average","","MA","",26,"Male","2015-08-29 15:58:32","2015-08-29 15:59:24","b02750a49b"
+"4","f69d3c421f5f33f41d15ef10f46b635a","Economics","",0,"3-4","Above average","Mac OS X","MA","",25,"Male","2015-08-30 15:43:30","2015-08-30 16:36:08","0fc629c1a1"
+"5","446a056b5a4b286ca4e7aee1fd7f2dd8","Economics","",0,"5","Average","Windows","","PhD",30,"Male","2015-08-31 06:07:30","2015-08-31 06:08:16","49d0dbc2f3"
+"6","301d6b11bf2075a152aa45f9b82cd87d","Economics","",1,"6","Above average","Mac OS X","MA","",24,"Male","2015-08-31 06:34:39","2015-08-31 06:35:18","49d0dbc2f3"
+"7","1605dc6c495dae121191eb1b53d5abcb","Economics","",1,"3","Above average","Windows","BA","",23,"Male","2015-08-31 06:43:50","2015-08-31 06:44:52","49d0dbc2f3"
+"8","3c5b65d3ded8d4653667362da0bc2522","Economics","",1,"2","Above average","Windows","MA","",24,"Male","2015-08-31 06:44:06","2015-08-31 06:44:52","49d0dbc2f3"
+"9","c17eb6c26fedfc9bdd3a2e23f005e2d4","Economics","",1,"4","Above average","Windows","MA","",23,"Male","2015-08-31 06:44:11","2015-08-31 06:44:55","49d0dbc2f3"
+"10","2f4c731066008fd8facce727f409189b","Economics","",1,"4","Average","Windows","BA","",23,"Female","2015-08-31 06:44:07","2015-08-31 06:45:01","49d0dbc2f3"
+"11","b9ea3e8e800543935eb17825c741e960","Economics","",1,"8","Above average","Windows","MA","",25,"Male","2015-08-31 06:31:54","2015-08-31 06:45:05","49d0dbc2f3"
+"12","8315a12358523c6dfbd084efc42075ae","Economics","",1,"4","Average","Mac OS X","BA","",21,"Female","2015-08-31 06:42:51","2015-08-31 06:45:12","49d0dbc2f3"
+"13","9d7ea2789a60a90b20a84c2647682b90","Economics","",1,"1","Average","Mac OS X","BA","",21,"Male","2015-08-31 06:44:26","2015-08-31 06:45:13","49d0dbc2f3"
+"14","98c099df980a40562ca3a122612719cc","Economics","",1,"5","Above average","Mac OS X","MA","",21,"Male","2015-08-31 06:44:00","2015-08-31 06:45:13","49d0dbc2f3"
+"15","0965cc3f8b80fae43687a298cfd6d79a","Economics","",1,"4","Above average","Windows","BA","",22,"Female","2015-08-31 06:44:33","2015-08-31 06:45:13","49d0dbc2f3"
+"16","dc0dde59ebac1ca3a8c3c3da44f5a646","Economics","",1,"5","Above average","Windows","MA","",23,"Female","2015-08-31 06:44:32","2015-08-31 06:45:16","49d0dbc2f3"
+"17","6ffe940cf16efa6c5c09334a982244a9","Economics","",1,"10","Average","Windows","MA","",26,"Male","2015-08-31 06:44:31","2015-08-31 06:45:16","49d0dbc2f3"
+"18","bf1c3e30b99c5437c6887243789352d8","Political Science","",1,"6","Average","Mac OS X","MA","",23,"Female","2015-08-31 06:44:12","2015-08-31 06:45:18","49d0dbc2f3"
+"19","7d67a580c5904aae91bf2a0174e68310","Economics","",1,"2","Average","Windows","BA","",24,"Female","2015-08-31 06:43:12","2015-08-31 06:45:18","49d0dbc2f3"
+"20","89c3fb2c959cd0f0f268b4f89cad2ac2","Economics","",1,"4","Above average","Mac OS X","MA","",24,"Male","2015-08-31 06:43:16","2015-08-31 06:45:20","49d0dbc2f3"
+"21","6bed25568abaa1ba8cb8962f54034544","Economics","",1,"10","Average","Mac OS X","MA","",24,"Male","2015-08-31 06:44:46","2015-08-31 06:45:27","49d0dbc2f3"
+"22","7882c84075a93c7f426f091d31735af8","Political Science","",0,"3","Below average","Windows","","Ph.d.",27,"Male","2015-08-31 06:44:34","2015-08-31 06:45:29","49d0dbc2f3"
+"23","e6065f4c2a89f4cfdfabf35f130f522d","Economics","",1,"3","Above average","Windows","MA","",26,"Female","2015-08-31 06:44:25","2015-08-31 06:45:31","49d0dbc2f3"
+"24","a02672c7069d97b64aec5c889ec8753d","Economics","",1,"4","Above average","Windows","MA","",24,"Male","2015-08-31 06:44:30","2015-08-31 06:45:32","49d0dbc2f3"
+"25","5143bb57d997c9278dbaaba2fac238c2","Economics","",1,"5","Average","Mac OS X","MA","",25,"Male","2015-08-31 06:44:27","2015-08-31 06:45:32","49d0dbc2f3"
+"26","2869e4e8b1a3c845e453f9608d4103a6","Economics","",1,"8","Average","Windows","MA","",24,"Male","2015-08-31 06:44:15","2015-08-31 06:45:38","49d0dbc2f3"
+"27","134b05ee8e859e05d538547a776648d4","Economics","",1,"8","Average","Windows","MA","",27,"Male","2015-08-31 06:44:28","2015-08-31 06:45:39","49d0dbc2f3"
+"28","737fee504737bb0a71f919683e35090d","Economics","",1,"2 hour ","Average","Mac OS X","MA","",25,"Female","2015-08-31 06:44:20","2015-08-31 06:45:41","49d0dbc2f3"
+"29","b04c70139ca88d0768aaeedcddaa2609","Economics","",1,"4","Above average","Mac OS X","MA","",27,"Female","2015-08-31 06:44:25","2015-08-31 06:45:44","49d0dbc2f3"
+"30","129f7b65c56e7bef743fb2e7e4b7e93a","Economics","",1,"4","Above average","Windows","MA","",23,"Male","2015-08-31 06:44:27","2015-08-31 06:45:45","49d0dbc2f3"
+"31","ff2c315cfe251f98f71629cd2f3aec08","Political Science","",1,"8","Average","Windows","MA","",24,"Male","2015-08-31 06:44:37","2015-08-31 06:45:46","49d0dbc2f3"
+"32","04783dc2eff52fab629987b5df071ff4","Economics","",1,"3","Above average","Mac OS X","MA","",23,"Female","2015-08-31 06:44:42","2015-08-31 06:45:47","49d0dbc2f3"
+"33","69182883d89d1fe991168a9e1b655208","Economics","",1,"6","Above average","Mac OS X","BA","",22,"Male","2015-08-31 06:44:25","2015-08-31 06:45:50","49d0dbc2f3"
+"34","c7889cc613bfddbb89064dd55cd10ede","Economics","",1,"2","Average","Mac OS X","MA","",24,"Female","2015-08-31 06:44:08","2015-08-31 06:45:50","2f1cf0cfe4"
+"35","38c2446c19c076abec68a9df21fa2b35","Economics","",1,"4","Above average","Windows","MA","",26,"Male","2015-08-31 06:44:59","2015-08-31 06:45:50","49d0dbc2f3"
+"36","63bd09b50a4fd4d656b36027f93c0541","Economics","",1,"7","Average","Windows","MA","",24,"Male","2015-08-31 06:44:57","2015-08-31 06:45:51","49d0dbc2f3"
+"37","26c55f6b997fc2a5da154ba1104c91c9","Economics","",1,"4","Average","Windows","BA","",24,"Female","2015-08-31 06:45:08","2015-08-31 06:45:54","49d0dbc2f3"
+"38","a0c6c55c8a62b32071dd5ce7f1fed04f","Economics","",0,"5","Average","Mac OS X","MA","",26,"Male","2015-08-31 06:44:38","2015-08-31 06:45:55","49d0dbc2f3"
+"39","8e048bb9219c383280cfd0602f599f43","Economics","",1,"6","Average","Windows","MA","",23,"Female","2015-08-31 06:44:16","2015-08-31 06:45:59","49d0dbc2f3"
+"40","e78af1c7169e32f330b0f9d6db3a9749","Economics","",0,"4","Average","Windows","MA","",25,"Male","2015-08-31 06:43:52","2015-08-31 06:46:00","49d0dbc2f3"
+"41","239d2295e8440784bf11a5a9140b55b3","Economics","",0,"15","Above average","Mac OS X","","Phd ",30,"Male","2015-08-31 06:44:59","2015-08-31 06:46:04","49d0dbc2f3"
+"42","090893d3277c2a2cc1829d8f87f2f909","Political Science","",1,"10","Average","Windows","MA","",24,"Male","2015-08-31 06:44:59","2015-08-31 06:46:05","71e4d2f3b7"
+"43","5423a3202c350d4c8282dc75517e0177","Economics","",1,"6","Above average","Windows","MA","",27,"Male","2015-08-31 06:44:58","2015-08-31 06:46:07","49d0dbc2f3"
+"44","b18ed392973a5f3dc08e3761542d67cb","Economics","",1,"10","Average","Windows","MA","",22,"Female","2015-08-31 06:44:27","2015-08-31 06:46:08","49d0dbc2f3"
+"45","47dc34b7503ef498052392d13ba1bf83","Sociology","",0,"10","Average","Windows","MA","",24,"Male","2015-08-31 06:45:19","2015-08-31 06:46:09","870b70b4c7"
+"46","c171f98b3c0d725e03b7c72e0273781c","Economics","",1,"6","Above average","Windows","MA","",24,"Male","2015-08-31 06:44:09","2015-08-31 06:46:10","49d0dbc2f3"
+"47","6c2c97ce05b9048acc029ad363377c6d","Economics","",0,"3","Average","Windows","MA","",26,"Female","2015-08-31 06:44:31","2015-08-31 06:46:11","49d0dbc2f3"
+"48","0fbe7ba4f63b2d4df61e2cb39280b56a","Political Science","",1,"12","Average","Windows","","ph.d",27,"Male","2015-08-31 06:44:50","2015-08-31 06:46:12","e45317e7c1"
+"49","195c1745f126721ad4db96ed4c673aff","Economics","",1,"8","Above average","Windows","MA","",25,"Male","2015-08-31 06:45:05","2015-08-31 06:46:12","49d0dbc2f3"
+"50","c444750e6a3207c85d765904adcc4ee9","Economics","",1,"6","Average","Windows","MA","",26,"Male","2015-08-31 06:45:19","2015-08-31 06:46:12","49d0dbc2f3"
+"51","c73262315073b255631d2e143d89c972","Economics","",1,"4","Average","Mac OS X","MA","",26,"Female","2015-08-31 06:44:16","2015-08-31 06:46:15","49d0dbc2f3"
+"52","de44383cfa70b9b9cabaa6df2ba1e0d5","Economics","",1,"7,5","Average","Windows","MA","",23,"Female","2015-08-31 06:44:34","2015-08-31 06:46:15","49d0dbc2f3"
+"53","71443939bfbc0467d8e5099fb74ec84b","Economics","",1,"4","Above average","Windows","MA","",24,"Male","2015-08-31 06:45:33","2015-08-31 06:46:15","1e2a7b4d43"
+"54","a1ac1286e18b22419e4409188ba75780","Economics","",0,"10","Below average","Windows","BA","",20,"Female","2015-08-31 06:44:25","2015-08-31 06:46:17","49d0dbc2f3"
+"55","29369eaf78c9a107387a3483491cbba6","Economics","",1,"4","Above average","Mac OS X","MA","",21,"Male","2015-08-31 06:45:31","2015-08-31 06:46:19","49d0dbc2f3"
+"56","b8da52f24f43e133f14a7566d75d3ed3","Economics","",1,"7","Average","Mac OS X","BA","",24,"Female","2015-08-31 06:45:06","2015-08-31 06:46:21","49d0dbc2f3"
+"57","5ec673ba65b55ac3ae560e45fda8eba0","Economics","",1,"10","Average","Windows","BA","",23,"Male","2015-08-31 06:45:45","2015-08-31 06:46:22","49d0dbc2f3"
+"58","1e553be1fbacf5f1f8c202ce8b5e329d","Economics","",0,"2","Above average","Windows","MA","",26,"Male","2015-08-31 06:45:41","2015-08-31 06:46:23","49d0dbc2f3"
+"59","0a8db1aba47892071860f4279f8e78dd","Economics","",1,"3","Average","Windows","MA","",24,"Female","2015-08-31 06:44:48","2015-08-31 06:46:23","49d0dbc2f3"
+"60","854a5d830761e0782cde867e4ee12fcc","Economics","",1,"7","Average","Windows","MA","",24,"Female","2015-08-31 06:44:41","2015-08-31 06:46:24","49d0dbc2f3"
+"61","a95120a5e6e59c93c620673b13c4c300","Economics","",1,"5","Above average","Windows","MA","",25,"Male","2015-08-31 06:45:05","2015-08-31 06:46:25","49d0dbc2f3"
+"62","ad14bd91ffd54fe3bc0dbb8acf612a4f","Economics","",1,"3","Below average","Windows","MA","",26,"Male","2015-08-31 06:45:12","2015-08-31 06:46:26","49d0dbc2f3"
+"63","78d04e80844af6d051da401bd2323437","Economics","",1,"5","Average","Mac OS X","MA","",29,"Male","2015-08-31 06:45:40","2015-08-31 06:46:27","49d0dbc2f3"
+"64","4964a7e47d82d1084af3ba0983241664","Economics","",1,"10","Average","Windows","MA","",25,"Female","2015-08-31 06:44:21","2015-08-31 06:46:28","49d0dbc2f3"
+"65","75a244a25a895fea17c61e2b3340a94c","Economics","",1,"2","Average","Windows","MA","",25,"Female","2015-08-31 06:45:51","2015-08-31 06:46:28","49d0dbc2f3"
+"66","8ac4f3622e41a24550e03862a9c7fed8","Economics","",1,"10","Above average","Mac OS X","MA","",24,"Female","2015-08-31 06:45:27","2015-08-31 06:46:32","49d0dbc2f3"
+"67","13388eb54858dea3eea3cc9170f2c696","Economics","",1,"3","Average","Windows","MA","",25,"Female","2015-08-31 06:43:14","2015-08-31 06:46:33","49d0dbc2f3"
+"68","f3081399412cee8b58397fd20d62eb92","Economics","",1,"4","Average","Windows","MA","",29,"Female","2015-08-31 06:44:26","2015-08-31 06:46:37","49d0dbc2f3"
+"69","6626556c56d6d1eab87652f51717eba7","Economics","",1,"4","Average","Windows","MA","",29,"Female","2015-08-31 06:44:21","2015-08-31 06:46:39","49d0dbc2f3"
+"70","19a03f54c5857ba2513b3c82eb4c3b09","Economics","",1,"7","Above average","Windows","MA","",24,"Male","2015-08-31 06:44:21","2015-08-31 06:46:43","49d0dbc2f3"
+"71","f49dd93fc007a862330b038cbce7b5c8","Economics","",1,"8","Average","Windows","BA","",24,"Female","2015-08-31 06:45:53","2015-08-31 06:46:44","49d0dbc2f3"
+"72","87ac82cc2d141a799ab351aae88e9fc9","Economics","",1,"6","Average","Windows","MA","",26,"Male","2015-08-31 06:45:42","2015-08-31 06:46:53","49d0dbc2f3"
+"73","c3a64226ba92c6c96f2f84ccc205aaac","Economics","",1,"4,5","Average","Windows","MA","",25,"Male","2015-08-31 06:46:02","2015-08-31 06:46:58","49d0dbc2f3"
+"74","c42b67120cf4666404658b019ef7611d","Political Science","",1,"5 ","Average","Windows","MA","",26,"Male","2015-08-31 06:46:00","2015-08-31 06:47:05","49d0dbc2f3"
+"75","4251ece0c8ca80abaf23192241a00636","Economics","",1,"8","Average","Windows","MA","",23,"Female","2015-08-31 06:45:38","2015-08-31 06:47:08","49d0dbc2f3"
+"76","9d7064a6285e59a1909dba882eed834b","Economics","",1,"8","Above average","Linux","MA","",25,"Male","2015-08-31 06:45:58","2015-08-31 06:47:12","a8a65fe1d4"
+"77","43b3c86a37beb929f389c6d31f724848","Economics","",NA,"10","Average","Windows","BA","",29,"Male","2015-08-31 06:46:21","2015-08-31 06:47:19","49d0dbc2f3"
+"78","a6c043c20927c3ca89da4fa87971344a","Economics","",1,"5","Average","Windows","MA","",24,"Male","2015-08-31 06:46:45","2015-08-31 06:47:19","49d0dbc2f3"
+"79","5c6b502956a9998fe4dd465409231f3d","Economics","",1,"5","Average","Windows","BA","",20,"Male","2015-08-31 06:46:48","2015-08-31 06:47:24","49d0dbc2f3"
+"80","8063192f7cdc755399464900ca5d695c","Economics","",1,"5","Above average","Windows","MA","",39,"Male","2015-08-31 06:46:06","2015-08-31 06:47:34","49d0dbc2f3"
+"81","77d5842e15f75dc979cc3035e3758484","Economics","",1,"3","Average","Windows","MA","",24,"Female","2015-08-31 06:46:36","2015-08-31 06:47:42","3d80e9b780"
+"82","7d0e08e9411a31e0e34038f7fdfbb3f9","Economics","",1,"5","Above average","Windows","MA","",26,"Male","2015-08-31 06:46:49","2015-08-31 06:47:48","49d0dbc2f3"
+"83","7ec2f0325880f1fa2b821d9a07e2dafc","Economics","",1,"4","Average","Windows","MA","",24,"Female","2015-08-31 06:47:33","2015-08-31 06:48:11","49d0dbc2f3"
+"84","88da510679fbd120bafcf6be680a9124","Economics","",1,"8","Above average","Mac OS X","MA","",25,"Male","2015-08-31 06:48:04","2015-08-31 06:49:32","49d0dbc2f3"
+"85","8ab06db7392b13ff610ae658069560b6","Economics","",1,"6","Above average","Windows","MA","",25,"Female","2015-08-31 06:48:08","2015-08-31 06:49:38","e52274acdd"
+"86","8bb69ed6b32c381d92631fc31f60d5b0","Economics","",1,"6","Average","Windows","","Exchange",25,"Male","2015-08-31 06:57:27","2015-08-31 06:58:46","49d0dbc2f3"
+"87","752ee2212d123961f0cb1696b5062f6d","Economics","",1,"4","Average","Windows","BA","",21,"Male","2015-08-31 07:07:55","2015-08-31 07:08:32","a26debb478"
+"88","f41561f3313881de7774dad41ec3f969","Economics","",1,"8","Above average","Mac OS X","MA","",25,"Male","2015-08-31 16:58:47","2015-08-31 17:00:07","b0f1c04173"
+"89","890189b75ccf93ecc70a2366f2788418","Economics","",1,"4","Above average","Windows","MA","",25,"Male","2015-08-31 20:47:37","2015-08-31 20:48:25","4fd9dbe578"
+"90","78f8c2ec41ff44b13824bfaf17f3c06b","Economics","",1,"2","Above average","Mac OS X","MA","",26,"Female","2015-09-02 19:33:02","2015-09-02 19:36:08","b9e0e03cc1"
+"91","41c0d0874fd70ca07161162af94218e2","Economics","",1,"4","Average","Mac OS X","BA","",22,"Female","2015-09-03 06:27:28","2015-09-03 06:28:04","49d0dbc2f3"
+"92","c7bb265b46a5dd8a1d5f1461a11e9e33","Political Science","",0,"3","Above average","Windows","MA","",25,"Male","2015-09-04 10:21:47","2015-09-04 10:22:30","4ade656181"
+"93","966d37e2437edcf20bf5c2ea2ddf1f10","Economics","",1,"6","Above average","Windows","MA","",28,"Male","2015-09-04 18:13:08","2015-09-04 18:13:49","5469b221ef"
+"94","b20ddb7a5d44dffc4303110d1fe89251","","Security Risk Management",1,"4","Average","Mac OS X","MA","",24,"Male","2015-09-06 17:28:39","2015-09-06 17:29:23","dd1928de96"
+"95","2170d23e93859dd1b1afce606af0542a","Economics","",0,"5","Below average","Windows","BA","",20,"Female","2015-09-07 06:59:51","2015-09-07 07:00:35","49d0dbc2f3"
+"96","79598e3e1433fb8375ff9bc84f9d9947","Economics","",1,"5","Average","Mac OS X","MA","",25,"Male","2015-09-07 07:31:27","2015-09-07 07:32:22","49d0dbc2f3"
+"97","ee8eb784cb4d8a0fec889ffb24cac407","Economics","",1,"4","Average","Mac OS X","BA","",20,"Female","2015-09-07 07:32:34","2015-09-07 07:33:04","49d0dbc2f3"
+"98","0a46b779980ec2ae9effcf6883c03ad8","Economics","",1,"5","Average","Windows","MA","",26,"Female","2015-09-07 11:47:20","2015-09-07 11:48:43","cfc9feb6c2"
+"99","dd482cd31caaf2660fe15ba42c959486","Economics","",1,"4","Above average","Windows","BA","",23,"Male","2015-09-09 14:19:52","2015-09-09 14:20:31","d6045dde0b"
