@@ -21,11 +21,19 @@ css: styles.css
 
 ## survey results
 
-- millions of people across the world have experienced unemployment and shrinking incomes as a consequence of the financial crisis of 2007-08
+```{r, message = FALSE, warning = FALSE}
+library("readr")
 
-- the question how much government should redistribute from the rich to the poor is back at the forefront of public debate
+df = read_delim("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-survey-1.csv", quote="\"", delim = ",")
+
+df = read.csv("/Users/sebastianbarfort/git/sds/data/sds-survey-1.csv",
+  stringsAsFactors = FALSE)
+
+write.csv(df, "/Users/sebastianbarfort/git/sds/data/sds-survey-1.csv")
+
+```
 
 
-# Data & Setup {.segue .cente}
+# Data & Setup {.segue}
 
 
