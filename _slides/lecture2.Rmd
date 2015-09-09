@@ -63,7 +63,7 @@ df$computing.skills= ifelse(df$computing.skills == "", NA, df$computing.skills)
 df$degree= ifelse(df$degree == "", NA, df$degree)
 df$system= ifelse(df$system == "", NA, df$system)
 
-write.csv(df, "/Users/sebastianbarfort/git/sds/data/sds-survey-1")
+write.csv(df, "/Users/sebastianbarfort/git/sds/data/sds-survey-1.csv", row.names = FALSE)
 
 
 ```
