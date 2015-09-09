@@ -1,0 +1,31 @@
+---
+title: "Great Expectations"
+subtitle: ""
+author: "Sebastian Barfort (sebastianbarfort@gmail.com)"
+date: "September, 2014"
+output:
+  ioslides_presentation:
+    widescreen: true
+    fig_caption: false
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+- survey results
+- groups
+- R basics
+- exercise 1
+ 
+
+## survey results
+
+- millions of people across the world have experienced unemployment and shrinking incomes as a consequence of the financial crisis of 2007-08
+
+- the question how much government should redistribute from the rich to the poor is back at the forefront of public debate
+
+
+# Data & Setup {.segue .cente}
+
+

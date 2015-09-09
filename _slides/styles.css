@@ -1,0 +1,195 @@
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text);
+
+/* this stuff controls color of sliding bar with logo */
+aside.gdbar{
+  background: white;
+}
+
+/* Styles for Title Slide */
+.title-slide hgroup > h1{
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 50px;
+  }
+
+.title-slide hgroup > h2{
+  font-family: 'Open Sans', Arial, sans-serif;
+  }
+
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-align: justify;
+  font-size:22px;
+  line-height: 1.5em;
+  color: #444;
+}
+
+slide:not(.segue) h2{
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -2px;
+  line-height: 1.2em;
+/*  color: #193441;*/
+/*  color: #02574D;*/
+  color: #CC2904;
+}
+
+.title-slide {
+  background-color: white; /* #EDE0CF; ; #CA9F9D*/
+  /* background-image:url(http://goo.gl/EpXln); */
+}
+
+.title-slide hgroup > h1{
+ font-family: 'Open Sans', Arial, sans-serif; 
+ color: #CC2904;
+}
+
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: #CC2904;  /* ; #EF5150*/
+}
+
+/* Reduce Space between Title and Body */
+slides > slide > hgroup + article {
+  margin-top: 10px;
+}
+
+
+/* Remove Border, Margins and Padding from iframe 
+iframe {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+slide.quote strong {
+  color: red;
+  font-family: "Crimson Text";
+  font-size: 1.5em;
+}
+
+slide.quote q {
+  font-size: 48px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+slide.bigger pre {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+slide.smaller pre{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+slides > slide.dark  {
+  background: white !important;
+}
+
+
+slide.dark q {
+  color: whitesmoke;
+}
+
+li.tab::before{
+  content: ""
+}
+
+slide.centrepre pre{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+slide.centrepre code {
+  font-size: 22px;
+}
+
+#demo1-create pre{
+  width: 90%;
+}
+
+#demo1-create code{
+  font-size: 18px;
+  line-height: 28px;
+}
+
+slides.layout-widescreen > slide.backdrop{
+  background: white;
+}
+
+#interactive-quiz pre{
+  line-height: 1.2em;
+}
+
+slides > slide.backdrop {
+  z-index: -10;
+  display: block !important;
+  background: black;
+  background-color: black;
+}
+
+slides {
+  background-color: white;
+}
+
+.segue h2 {
+  color: black;
+  font-size: 60px;
+}
+
+blockquote {
+  font: 16px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+} 
+
+/*
+.lang-cpp:before {
+  margin-right: 8px;
+  font-style: oblique;
+  float: right;
+  content: "C++";
+  color: dodgerblue;
+}
+
+.lang-r:before {
+  margin-right: 8px;
+  font-style: oblique;
+  float: right;
+  content: "R";
+  color: brown;
+}
+
+pre.prettyprint {
+  width: inherit;
+  left: 0px !important;
+  padding: 10px !important;
+  box-shadow: 1px 1px 5px #9c9c9c !important;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #ADADAD;
+}
+
+pre.prettyprint + pre {
+  width: inherit;
+  left: 0px !important;
+  padding: 10px !important;
+  box-shadow: 1px 1px 5px #9c9c9c !important;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #ADADAD;
+  background-color: #F3F3F3;
+}
+*/

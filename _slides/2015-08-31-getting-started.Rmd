@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Introduction"
-categories: homework
----
-
-> Too big for Excel is not 'Big Data'
-
-> I keep saying the sexy job in the next ten years will be statisticians. People think I'm joking, but who would've guessed that computer engineers would've been the sexy job of the 1990s?
