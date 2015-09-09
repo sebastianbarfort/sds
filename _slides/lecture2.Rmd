@@ -1,8 +1,8 @@
 ---
-title: "Great Expectations"
+title: "Lecture 2: R basics"
 subtitle: ""
-author: "Sebastian Barfort (sebastianbarfort@gmail.com)"
-date: "September, 2014"
+author: "Sebastian Barfort"
+date: "September, 2015"
 output:
   ioslides_presentation:
     widescreen: true
@@ -17,55 +17,155 @@ css: styles.css
 - groups
 - exercise 1
  
-# R basics
+## R basics
 
 - do you all have R installed on your computer? 
 - can you all read datasets into R?
 - have you finished exercise 1?
 
-# 
+## Installing packages
+
+- on its own, R can't do all that much 
+- to really make use of R's capabilities, we need packages
+- a package bundles together code, data, documentation, and tests
+- we install packages from two sources
+    - the Comprehensive R Archive Network (CRAN)
+    - github
+
+## Installing packages from CRAN
+
+We can install the `readr` package, for example, by running
+    
+```{r, eval = FALSE}    
+install.packages("readr")
+```
+
+Afterwards, we can access all the functions available in the package by running
+
+```{r, eval = FALSE}    
+library("readr")
+```
+
+## Installing packages from Github
+
+It's slightly more difficult to install from github since we need to load a package from CRAN first: `devtools`
+
+Installing from Github now looks like
+
+```{r, eval = FALSE}
+library("devtools")
+install_github("hadley/purrr")
+```
+
+the `purrr` package can now be loaded using the `library` command
+
+```{r, eval = FALSE}
+library("purrr")
+```
+
+## Getting help
+
+- if you know the command, type `?` followed by the function in the console
+
+```{r}    
+?summary
+```
+
+- search your version of R using `??` followed by the function name
+- otherwise, try Google/Stackoverflow or our discussion forum
+
+## Fundamentals
+
+R is *object oriented*
+
+Examples: 
+
+- character string (e.g. words)
+- number
+- vector
+- matrix
+- data frame
+- list
+
+We can verify the class of an object using the `class` function
+
+We assign objects to object names using "`<-`" or "`=`"
+
+## Example
+
+```{r}
+z = "text"
+p = c(1, 3, 5)
+q = 2
+y = NA
+k = FALSE
+```
+
+>- **Question**: what is the class of the objects given above?
+
+## Special values
+
+- `NA`: not avaliable, missing (`is.na`)
+- `NULL`: undefined (`is.null`)
+- `TRUE`: logical true (`isTRUE`)
+- `FALSE`: logical false (`!isTRUE`)
+
+## Symbols
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `<`      | less than                |
+| `>`      | greater than             |
+| `==`     | equal to                 |
+| `<=`     | less than or equal to    |
+| `>=`     | greater than or equal to |
+| `!=`     | not equal to             |
+| `a | b`  | a or b                   |
+| `a & b`  | a and b                  |
+
+
+## Functions
+
+Functions operate on objects
+
+R has many cool built in functions such as `summary`, `mean`, `table`, etc
+
+```{r}
+x = 1:10
+mean(x)
+sd(x)
+table(x)
+```
+
+## Vectors
+
+The most basic type of R object is a vector. There is really only one rule about vectors in R, which is that a vector can only contain objects of the same class.
+
+Everything in R is a vector 
+
+We can create vectors using the `c` (concatenate/combine) function 
+
+```{r}
+my_vector = c(1, 3, 5, 10)
+another_vector = 1:100
+a_third_vector = c("yes", "no", "hello")
+my_logical_vector = c(TRUE, FALSE, FALSE, TRUE)
+```
+
+## Data frames
+
+- R stores spreadsheet like data in a **data frame**
+- these are really collections of vectors of the same length
+- 
+
 
 
 ## survey results
 
 ```{r, message = FALSE, warning = FALSE}
-library("readr")
-library("dplyr")
-
-df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-survey-1.csv", col_types = list(
-  Start.Date..UTC. = col_character(),
-  Submit.Date..UTC. = col_character()
-))
-
-df = df %>%
-  mutate(
-    time = parse_datetime(Submit.Date..UTC.) - parse_datetime(Start.Date..UTC.)
-  )
-
-names(df) = gsub("What.is.your.", "", names(df))
-
-df = df %>%
-  mutate(
-    field.of.study. = ifelse(field.of.study. == "", Other, field.of.study.),
-    Are.you.a.BA.or.MA.student. = ifelse(Are.you.a.BA.or.MA.student. == "", Other.1, Are.you.a.BA.or.MA.student.)
-  )
-  
-df = df %>%
-  select(field.of.study., Are.you.taking.this.course.for.credit., 
-    How.many.hours.do.you..honestly..expect.to.spend.on.preparation.for.this.course.per.week., Do.you.consider.your.computing.skills.to.be, What.kind.of.system.do.you.use.,
-    Are.you.a.BA.or.MA.student., age., gender., time)
-
-names(df) = c("field.of.study", "credit", "hours", "computing.skills", 
-  "system", "degree", "age", "gender", "time.spent")
-
-df$hours = ifelse(df$hours == "", NA, df$hours)
-df$computing.skills= ifelse(df$computing.skills == "", NA, df$computing.skills)
-df$degree= ifelse(df$degree == "", NA, df$degree)
-df$system= ifelse(df$system == "", NA, df$system)
-
-write.csv(df, "/Users/sebastianbarfort/git/sds/data/sds-survey-1.csv", row.names = FALSE)
-
-
+#library("readr")
+#
+#df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-su#rvey-1.csv")
 ```
 
 
