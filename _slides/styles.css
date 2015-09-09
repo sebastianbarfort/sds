@@ -131,8 +131,8 @@ slides.layout-widescreen > slide.backdrop{
 slides > slide.backdrop {
   z-index: -10;
   display: block !important;
-  background: black;
-  background-color: black;
+  background: white;
+  background-color: white;
 }
 
 slides {

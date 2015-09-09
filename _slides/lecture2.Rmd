@@ -1,6 +1,6 @@
 ---
 title: "Lecture 2: R basics"
-subtitle: ""
+subtitle: "Social Data Science"
 author: "Sebastian Barfort"
 date: "September, 2015"
 output:
@@ -156,20 +156,253 @@ my_logical_vector = c(TRUE, FALSE, FALSE, TRUE)
 
 - R stores spreadsheet like data in a **data frame**
 - these are really collections of vectors of the same length
-- 
+- we read data with commands such as `read.csv`, `read_xlsx`, etc
+- see the post [Reading And Working With Data](http://sebastianbarfort.github.io/sds/posts/2015/09/10/intro-to-R-II.html)
 
+## Data frames basics
 
+you can select variables using `$`, known as the component selector
 
-## survey results
+you can also call variables/observations using indexing
 
-```{r, message = FALSE, warning = FALSE}
-#library("readr")
-#
-#df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-su#rvey-1.csv")
+If you have a data frame, `df` then 
+
+```{r, eval = FALSE}
+df[1, 1]
 ```
 
+selects the first row and the first column of the dataset
+
+```{r, eval = FALSE}
+df[, 1]
+```
+
+selects the entire first column, 
+```{r, eval = FALSE}
+df[2, ]
+```
+selects the second row, etc. 
+
+## Working with data frames
+
+Some useful functions for working with data frames:
+
+- `names`: returns the column names of the data frame
+- `rownames`: returns the row names (if any) of the data frame
+- `summary`: returns summary statistics
+- `head`: returns the first 5 or 10 observations of the data frame
+
+# Your turn {.segue}
+
+## Work with a data frame in groups
+
+I want you to work with a cleaned version of your survey responses in groups.
+
+The data can be read as
+
+```{r, message = FALSE, warning = FALSE, tidy = FALSE}
+# install.packages("readr")
+library("readr")
+
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-survey-1.csv")
+```
+
+Link [here](https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-survey-1.csv)
+
+## Questions for discussion
+
+1. what are the variable names in the dataset?
+2. how many observations do we have? 
+3. make a table of observations grouped by study
+4. try to figure out how to rename one of the variables 
+5. are there any `NA`s in the data?
+6. what is the mean age of the respondents?
+7. try to crosstabulate observations by gender and field of study
+8. Are there any variables that are coded wrong? Think about how to change this if you think this is the case
 
 
-# Data & Setup {.segue}
+## Answers I
 
+```{r}
+names(df) # Q 1
+nrow(df) # Q2
+table(df$field.of.study) # Q3
+```
 
+## Answers II
+
+```{r}
+names(df) = c("study", names(df)[-1]) #Q4
+summary(df) # Q5
+mean(df$age) # Q6
+```
+
+## Answers III
+
+```{r, echo = FALSE}
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/sds-survey-1.csv")
+```
+
+```{r}
+table(df$field.of.study, df$gender) # Q7
+```
+
+## Some interesting points 
+
+Clear majority of econ students (90%)
+
+Only 4% rate their computing skills below average ;)
+
+We have 1 Linux user (54% on Windows)
+
+86% are taking the course for credit
+
+## A classic error 
+
+An interesting variable we might be interested in is `hours`: how many hours does the student plan on studying for the course
+
+However, when we want to analyze this variable we run into problems
+
+```{r}
+mean(df$hours)
+```
+
+What is the problem?
+
+## Error analysis
+
+We can see that R has read the variable as a character vector
+
+```{r}
+class(df$hours)
+```
+
+The reason is that some have answered, for example, `3-4` instead of 3,5
+
+```{r}
+head(df$hours)
+```
+
+We can investigate how many times this happens by using the `grep` function. Take a minute and discuss with your classmate how you would use this function to analyze the problem
+
+## The `grep` function
+
+The `grep` function does so-called string matching. That is, it looks for a certain string in our vector. It returns the indices where the string appears in the vector. 
+
+```{r}
+grep("-", df$hours)
+```
+
+```{r, echo = FALSE}
+df$hours = gsub(" hour", "", df$hours)
+df$hours = gsub(",", ".", df$hours)
+df$hours = gsub("^\\s+|\\s+$", "", df$hours) 
+```
+
+We can fix the error using the `gsub` function
+
+```{r}
+df$hours = gsub("3-4", "3.5", df$hours)
+```
+
+At last, we can convert the column to class `integer`
+
+```{r}
+df$hours = as.integer(df$hours)
+```
+
+## Work ambition (do you work enough?)
+
+We can plot the distribution of the `hours` variable 
+
+```{r, warning = FALSE, message = FALSE}
+library("ggplot2")
+p = ggplot(df, aes(x = hours))
+p + geom_histogram() 
+```
+
+## Work ambition by gender
+```{r, warning = FALSE, message = FALSE}
+library("ggplot2")
+p = ggplot(df, aes(x = hours))
+p + geom_histogram() + facet_wrap(~ gender)
+```
+
+# Exercise 1 {.segue}
+
+## Exercise 1 
+
+- first, try to describe the dataset. What simple commands would you run?
+
+- second, I want you to think about pros and cons of using this kind of data? What should we be worried about when working with this kind of data?
+
+- third, think about interesting questions to ask from the data?
+
+- fourth, to test your R skills, try to answer the following questions
+    - what are the dimensions of the data?
+    - what are the class of each column?
+    - which state has the highest mean marijuana price?
+
+## R skills I 
+
+Read the data
+```{r, error= FALSE, warning=FALSE, message=FALSE}
+library("readr")
+my.df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
+```
+
+```{r}
+dim(my.df)
+names(my.df)
+summary(my.df)
+```
+
+## R skills II
+For figuring out which state has the highest mean marijuana price we need to look at the `dplyr` package. 
+
+Take a look at this package and try if you can figure out how to do this (tip: you need the `group_by` function)
+
+## Highest mean price
+
+```{r, error= FALSE, warning=FALSE, message=FALSE}
+library("dplyr")
+my.df %>%
+  group_by(State) %>%
+  summarise(
+    m.price = mean(HighQ, na.rm = TRUE)
+  ) %>%
+  arrange(desc(m.price))
+```
+
+## The plot code
+```{r, error= FALSE, warning=FALSE, message=FALSE}
+library("readr")
+my.df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
+```
+
+```{r, results = "hide", message = FALSE, warning = FALSE}
+library("ggplot2")
+library("scales")
+p = ggplot(my.df, aes(x = date, y = HighQ))
+p = p + geom_point(alpha = .05) # add points
+p = p + geom_line() # add points
+p = p + geom_smooth(colour = "red")
+p = p + facet_wrap(~ State, scales = "free_y")
+p = p + scale_x_date(breaks = pretty_breaks(4))
+p = p + labs(x = NULL, y = "Price ($)", title = "Price of Marijuana")
+```
+ 
+## The plot
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, fig.height = 6, fig.width = 9}
+library("ggplot2")
+library("scales")
+p = ggplot(my.df, aes(x = date, y = HighQ))
+p = p + geom_point(alpha = .05) # add points
+p = p + geom_line() # add points
+p = p + geom_smooth(colour = "red")
+p = p + facet_wrap(~ State, scales = "free_y")
+p = p + scale_x_date(breaks = pretty_breaks(4))
+p = p + labs(x = NULL, y = "Price ($)", title = "Price of Marijuana")
+p
+```
