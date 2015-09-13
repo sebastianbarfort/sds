@@ -1,0 +1,50 @@
+---
+title: "Lecture 3: Data Visualization in R"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "September, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Graphs in R 
+
+- 
+
+## 
+![source: [Bob Rudis](https://github.com/hrbrmstr?tab=repositories)](images/statemap.png)
+
+
+## 
+
+![source: [Alex Bresler](https://gist.github.com/abresler/46c36c1a88c849b94b07)](images/weather.png)
+
+
+## 
+
+![source: [Kyle Walker](http://walkerke.github.io/2015/04/map-or-chart/)](images/gini_coef.png)
+
+## 
+
+![source: [Hillary Parker](https://github.com/hilaryparker/cats)](images/cats.png)
+
+
+## 
+
+**Grammar of Graphics**
+
+> A statistical graph is a mapping from *data* to *aesthetic* attributes (colour, shape, size) of *geometric* objects (points, lines, bars). The plot may also contain *statistical transformations* of the data and is drawn on a specific *coordinate* system. *Faceting* can be used to generate the same plot for different subsets of the dataset. It is the combination of these independent components that make up a graphic.   
+- Wickham, *ggplot2*, p. 3.
+
+## Components of a graph 
+
+- **data**: What you want to visualize, including variables (columns) to be mapped to aesthetic attributes.
+- **geom**: Geometric objects that are drawn to represent the data: bars, lines, points, etc.
+- **stats**: Statistical transformations of the data, such as binning or averaging.
+- **scales**: Map values in the data space to values in an aesthetic space (color, shape, size...)
+- **coord**: Coordinate system; provides axes and gridlines to make it possible to read the graph.
+- **facets**: Breaking up the data into subsets, to be displayed independently on a grid.
