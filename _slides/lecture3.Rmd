@@ -11,9 +11,23 @@ output:
 css: styles.css
 ---
 
-## Graphs in R 
+## Quick announcements
 
-- 
+Groups are coming
+
+Rune is coming
+
+Mikkel created some cool [plots](https://twitter.com/mikkelkrogsholm/status/641916325376475136/photo/1) using our marijuana data
+
+## Data visualizations in R 
+
+`R` has excellent plotting libraries
+
+There is the base plotting function (`plot`) which can be useful once in a while. Furthermore, there is the `lattice` library which is very powerful but has a complicated syntax.
+
+Today we will focus on `ggplot2`, written by Hadley Wickham 
+
+I'll show you a lot of examples using some data I downloaded from Facebook. Afterwards, you will work with `ggplot2` in groups
 
 ## 
 ![source: [Bob Rudis](https://github.com/hrbrmstr?tab=repositories)](images/statemap.png)
@@ -32,13 +46,17 @@ css: styles.css
 
 ![source: [Hillary Parker](https://github.com/hilaryparker/cats)](images/cats.png)
 
+## `ggplot2` - a grammar of graphics in R 
 
-## 
-
-**Grammar of Graphics**
+`ggplot2` is based on the grammar of graphics, the  idea that you can build every graph from the same few components: a dataset, a set of 
+geoms—visual marks that represent data points, and a coordinate system
 
 > A statistical graph is a mapping from *data* to *aesthetic* attributes (colour, shape, size) of *geometric* objects (points, lines, bars). The plot may also contain *statistical transformations* of the data and is drawn on a specific *coordinate* system. *Faceting* can be used to generate the same plot for different subsets of the dataset. It is the combination of these independent components that make up a graphic.   
 - Wickham, *ggplot2*, p. 3.
+
+## 
+
+![[source](http://stcorp.nl/R_course/tutorial_ggplot2.html)](images/ggplot2.png)
 
 ## Components of a graph 
 
@@ -48,3 +66,345 @@ css: styles.css
 - **scales**: Map values in the data space to values in an aesthetic space (color, shape, size...)
 - **coord**: Coordinate system; provides axes and gridlines to make it possible to read the graph.
 - **facets**: Breaking up the data into subsets, to be displayed independently on a grid.
+
+
+## Data
+
+We will work with the latest 5,000 Facebook posts from the Danish newspaper Politiken. 
+
+The script that downloads the data is on [github](https://github.com/sebastianbarfort/sds/blob/master/scripts/facebook.R).
+
+Read the data
+
+```{r, message = FALSE, warning = FALSE}
+library("readr")
+
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv", col_types = list(created_time = col_character()))
+
+df$created_time = parse_datetime(df$created_time)
+```
+
+[Link to data](https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv)
+
+## Plotting one (continuous) variable
+
+Distribution of number of likes for each post.
+
+```{r, message = FALSE, warning = FALSE}
+library("ggplot2")
+p = ggplot(data = df, aes(x = likes_count)) # data & aesthetics
+p + geom_histogram() # add geom
+```
+
+## Plotting one (continuous) variable: histogram 
+
+Distribution of (logged) number of likes for each post.
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(data = df, aes(x = likes_count)) # data & aesthetics
+p = p + geom_histogram() # add geom
+p + scale_x_log10() # add log scale 
+```
+
+## Plotting one (continuous) variable: density plot
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(data = df, aes(x = likes_count)) # data & aesthetics
+p = p + geom_density() # add geom
+p + scale_x_log10() # add log scale 
+```
+
+## Plotting one (continuous) variable: area plot
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(data = df, aes(x = likes_count)) # data & aesthetics
+p = p + geom_area(stat = "bin") # add geom
+p + scale_x_log10() # add log scale 
+```
+
+## Plotting one (continuous) variable: combining geoms
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(data = df, aes(x = likes_count)) # data & aesthetics
+p + geom_histogram(aes(y=..density..), colour="black", fill="white") + 
+    geom_density(alpha=.2, fill="#FF6666") + scale_x_log10() 
+```
+
+## Plotting two (continuous) variables
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(data = df, aes(x = likes_count, y = comments_count))
+p + geom_point() + scale_x_log10() + scale_y_log10() # add log scales 
+```
+
+## Plotting two (continuous) variables: smoothers 
+
+```{r, message = FALSE, warning = FALSE}
+p + geom_point() + geom_smooth(na.rm = TRUE, 
+  data = df[df$likes_count>0 & df$comments_count>0,]) + 
+  geom_smooth(na.rm = TRUE, 
+    data = df[df$likes_count>0 & df$comments_count>0,], 
+    method = "lm", colour = "red") + 
+  scale_x_log10() + scale_y_log10() # add log scales 
+```
+
+
+## Plotting two (continuous) variables
+
+Number of likes over time
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(df, aes(x = as.Date(created_time), y = likes_count))
+p + geom_line()
+```
+
+## Categorical variables
+
+We can see the section by following the `link` variable in the dataset
+
+```{r}
+head(df$link, 3)
+```
+
+We can grab the section using a regular expression
+
+```{r, message = FALSE, warning = FALSE}
+library("stringr")
+df$section = str_extract(df$link, ".dk/[a-z]*")
+df$section = gsub(".dk/", "", df$section)
+head(df$section, 5)
+```
+
+## Discrete X, continuous Y 
+
+Count average number of likes by section
+
+```{r, message = FALSE, warning = FALSE}
+library("dplyr")
+df.section = df %>%
+  filter(!is.na(section)) %>%
+  filter(section != "") %>%
+group_by(section) %>%
+  summarise(
+    likes.pr.post = mean(likes_count, na.rm = TRUE)
+) %>%
+  arrange(-likes.pr.post)
+```
+
+## Plot mean likes by section
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(df.section, aes(x = reorder(section, likes.pr.post), 
+  y = likes.pr.post))
+p + geom_bar(stat = "identity") + coord_flip()
+```
+
+## Distribution of likes by weekday
+
+Let's create a variable for the weekday of the post
+
+```{r, message = FALSE, warning = FALSE}
+library("lubridate")
+df$weekday = wday(df$created_time, label = TRUE)
+```
+
+Let's plot the distribution of likes by weekday 
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(df, aes(x = likes_count, colour = weekday))
+p = p + geom_density() + scale_x_log10()
+```
+
+## Result
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = likes_count, colour = weekday))
+p + geom_density() + scale_x_log10()
+```
+
+## Two continuous and a categorical variable
+
+Relationship between likes and comments by weekday
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(df, aes(x = likes_count, y = comments_count))
+p = p + geom_point() + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+    data = df[df$likes_count>0 & df$comments_count>0,]) +
+  facet_wrap(~ weekday, scales = "free")
+```
+
+## Result
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = likes_count, y = comments_count))
+p + geom_point() + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+    data = df[df$likes_count>0 & df$comments_count>0,]) +
+  facet_wrap(~ weekday, scales = "free")
+```
+
+## Two continuous and two categorical variables
+
+Let's compare the `indland` and `udland` parts of Politiken
+
+```{r, message = FALSE, warning = FALSE}
+df.subset = df %>%
+  filter(section %in% c("indland", "udland"))
+```
+
+Now we can plot the relationship between likes and comments by weekday and section
+
+```{r, message = FALSE, warning = FALSE, results="hide"}
+p = ggplot(df.subset, aes(x = likes_count, y = comments_count))
+p = p + geom_point() + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+  data = df.subset[df.subset$likes_count>0 & 
+      df.subset$comments_count>0,]) +
+  facet_grid(section~ weekday, scales = "free")
+```
+
+## Result
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df.subset, aes(x = likes_count, y = comments_count))
+p + geom_point() + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+  data = df.subset[df.subset$likes_count>0 & df.subset$comments_count>0,]) +
+  facet_grid(section~ weekday, scales = "free")
+```
+
+## Multiple scales
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df.subset, aes(x = likes_count, y = comments_count, 
+  size = shares_count, colour = weekday, shape = section))
+p + geom_point() + scale_x_log10() + scale_y_log10() 
+```
+
+## Two categorical variables: tile plot
+
+```{r, message = FALSE, warning = FALSE}
+tab = data.frame(table(df$section, df$weekday))
+names(tab) = c("section", "weekday", "count")
+```
+
+Tile plot
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(tab, aes(x = section, y = weekday))
+p = p + geom_tile(aes(fill = count))
+```
+
+## Result
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(tab, aes(x = section, y = weekday))
+p = p + geom_tile(aes(fill = count)) +
+  theme(axis.text.x = element_text(angle=90)) 
+p
+```
+
+# Your turn {.segue}
+
+## Exercises
+
+In the rest of the class, I want you to work together to try to reproduce the following plots
+
+For getting help, I want you to learn how to use the ggplot2 webpage:
+http://ggplot2.org/
+
+## Plot 1
+
+Number of posts by section
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = section))
+p + geom_histogram()
+```
+
+## Plot 2
+
+`ggplot2` has several options to deal with overplotting. Take a look at the `alpha` argument to `geom_point` and try to reproduce the following plot
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = likes_count, y = comments_count))
+p + geom_point(alpha = .35) + scale_x_log10() + scale_y_log10() 
+```
+
+## Plot 3
+
+Another option is to use hexagonal binning. Take a look at `geom_hex` and try to reproduce the following plot (you need to install the package `hexbin` from CRAN) 
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE, echo = FALSE}
+p = ggplot(df[df$likes_count>0 & df$comments_count>0,], 
+  aes(x = likes_count, y = comments_count))
+p + geom_hex() + scale_x_log10() + scale_y_log10() + 
+  scale_fill_continuous(trans="log10")
+```
+
+
+## Plot 4
+
+You can customize titles using the `labs` argument. Use this function and try to reproduce the following
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = as.Date(created_time), y = likes_count))
+p + geom_line() + labs(title = "Number of likes over time", 
+  y = "number of likes", x = "time")
+```
+
+## Plot 5
+
+You can control the baseline look of the plot using the `theme` function. Try to figure out what themes are available and reproduce the plot below
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = as.Date(created_time), y = likes_count))
+p + geom_line() + labs(title = "Number of likes over time", 
+  y = "number of likes", x = "time") + theme_minimal()
+```
+
+## Plot 6
+
+`geom_rug` shows the marginal distribution of each of the plotting variable. Use this function to create the following plot
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df, aes(x = likes_count, y = comments_count))
+p + geom_point(alpha = .25) + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+  data = df[df$likes_count>0 & 
+      df$comments_count>0,],
+    colour = "green") +
+      geom_rug() + theme_minimal() +
+  labs(x = "likes (log scale)", y = "comments (log scale)",
+    title = "Relationship between likes and comments on Politiken's Facebook page")
+```
+
+## Plot 7
+
+Use what you know about categorical variables to produce the following graph
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+p = ggplot(df.subset, aes(x = likes_count, 
+  y = comments_count, colour = section))
+p + geom_point(alpha = .25) + scale_x_log10() + scale_y_log10() + 
+  geom_smooth(na.rm = TRUE, 
+  data = df.subset[df.subset$likes_count>0 & 
+      df.subset$comments_count>0,],
+    method = "lm") +
+      geom_rug() + theme_minimal() +
+  labs(x = "likes (log scale)", y = "comments (log scale)",
+    title = "Relationship between likes and comments on Politiken's Facebook page")
+```
+
+## Plot 8
+
+At last, I want you to think of an graph that we haven't done yet and try to figure out how to produce it in `ggplot2`. This can, for example, be 
+
+- plot the number of likes by hour of the day Politiken posted the link
+- plot the distribution of likes depending on the type of link posted
+- is the relationship between likes and shares stronger for some sections than others? 
+- if time permits, read up on plotting geographical data using `ggplot2`
+
+
+
