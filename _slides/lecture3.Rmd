@@ -79,7 +79,8 @@ Read the data
 ```{r, message = FALSE, warning = FALSE}
 library("readr")
 
-df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv", col_types = list(created_time = col_character()))
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv", 
+  col_types = list(created_time = col_character()))
 
 df$created_time = parse_datetime(df$created_time)
 ```

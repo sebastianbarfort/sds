@@ -161,7 +161,8 @@
 
 <pre class = 'prettyprint lang-r'>library(&quot;readr&quot;)
 
-df = read_csv(&quot;https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv&quot;, col_types = list(created_time = col_character()))
+df = read_csv(&quot;https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/politiken.csv&quot;, 
+  col_types = list(created_time = col_character()))
 
 df$created_time = parse_datetime(df$created_time)</pre>
 
