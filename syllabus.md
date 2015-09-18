@@ -16,7 +16,7 @@ A tentative syllabus, subject to change, is below.
 || | [Topic 1: Reading And Working With Data](http://sebastianbarfort.github.io/sds/posts/2015/09/10/intro-to-R-II.html) |
 |Sep 14, 2015| **Data Visualization** | [Topic 2: Data Visualization (readings)](http://sebastianbarfort.github.io/sds/posts/2015/09/14/data-visualization.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture3.html)
 |Sep 21, 2015| **Data Visualization** | [Topic 2: Data Visualization (readings)](http://sebastianbarfort.github.io/sds/posts/2015/09/14/data-visualization.html) |
-|Sep 21, 2015| **Data Manipulation**  | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) |
+| | **Data Manipulation**  | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) |
 |Sep 28, 2015| **Guest lecture** | [Rune Madsen](http://www.runemadsen.com/): Data visualization at the New York Times & Programming and the Visual Arts|
 |Nov 15, 2015| *Deadline: Project Description* | |
 |Dec 11, 2015| *Deadline: Exam Project* | |
