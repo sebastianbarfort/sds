@@ -1,0 +1,374 @@
+---
+title: "Lecture 4: Data Visualization in R (maps)"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "September, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+Saving scripts in R 
+
+Generate lecture code examples 
+
+Maps in ``ggplot2``
+
+Data manipulation (intro)
+
+## Code from lectures
+
+Use the `knitr` package
+
+```{r, message = FALSE, warning = FALSE, eval = FALSE}
+# install.packages("knitr")
+library("knitr")
+purl("https://raw.githubusercontent.com/sebastianbarfort/sds/gh-pages/_slides/lecture3.Rmd")
+```
+
+## Making maps 
+
+There are many ways to make maps in R
+
+1. **easy**: use an existing package
+2. **hard**: learn how to work with shapefiles (we don't have time for this today, but I strongly recommend reading [these notes](https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf) on the topic)
+
+Today focus is on 1. 
+
+
+## Map packages
+
+There are many useful packages for making maps in R 
+
+- ``maps``: all kinds of maps
+- ``ggcounty``: generate United States county maps
+- ``ggmap``: extends ``ggplot2`` for maps
+- ``mapDK``: maps of Denmark
+
+## Marijuana prices
+
+Let's return to our marijuana price data 
+
+```{r, message = FALSE, warning = FALSE}
+library("readr")
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/marijuana-street-price-clean.csv")
+```
+
+Generate yearly state level means
+
+```{r, message = FALSE, warning = FALSE}
+library("lubridate")
+library("dplyr")
+df$year = year(df$date)
+
+df = df %>% 
+  group_by(State, year) %>%
+  summarise(
+    m.price = mean(HighQ, na.rm = TRUE)
+  ) %>%
+  mutate(
+    region = tolower(State)
+  )
+```
+
+## `maps`
+
+The `maps` package has geographic information on all U.S states
+
+```{r, message = FALSE, warning = FALSE}
+library("maps")
+library("ggplot2")
+us.states = map_data("state")
+head(us.states)
+```
+
+Merge the data
+
+```{r, message = FALSE, warning = FALSE}
+df.merge = left_join(df, us.states)
+```
+
+## Plotting with `ggplot2`
+
+Plotting the dataframe is easy in `ggplot2`
+
+```{r, message = FALSE, warning = FALSE}
+p = ggplot(df.merge, aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = m.price)) + 
+  facet_wrap( ~ year, ncol = 1) + 
+  expand_limits() + 
+  theme_minimal()
+```
+
+## Output
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE, fig.width = 5, fig.height = 8}
+ggplot(df.merge, aes(x = long, y = lat, group = group)) + 
+  geom_polygon(aes(fill = m.price)) + 
+  facet_wrap( ~ year, ncol = 1) + 
+  expand_limits(x = df.merge$long, y = df.merge$lat) + 
+  theme_minimal()
+```
+
+## ``ggcounty``
+The ``ggcounty`` package provides data at the U.S county level
+
+```{r, message = FALSE, warning = FALSE}
+# library(devtools)
+# install_github("hrbrmstr/ggcounty")
+library("ggcounty")
+data(population) # built-in US population by FIPS code data set
+population$brk <- cut(population$count, 
+                      breaks=c(0, 100, 1000, 10000, 100000, 1000000, 10000000), 
+                      labels=c("0-99", "100-1K", "1K-10K", "10K-100K", 
+                               "100K-1M", "1M-10M"),
+                      include.lowest=TRUE) # define appropriate (& nicely labeled) population breaks
+us <- ggcounty.us()
+gg <- us$g # start the plot with our base map
+gg <- gg + geom_map(data=population, map=us$map,
+                    aes(map_id=FIPS, fill=brk), 
+                    color="white", size=0.125) # add a new geom with our population (choropleth)
+gg <- gg + scale_fill_manual(values=c("#ffffcc", "#c7e9b4", "#7fcdbb", 
+                                      "#41b6c4", "#2c7fb8", "#253494"), 
+                             name="Population")
+```
+
+## Output
+
+```{r, echo = FALSE}
+# library(devtools)
+# install_github("hrbrmstr/ggcounty")
+library("ggcounty")
+
+# built-in US population by FIPS code data set
+data(population)
+
+# define appropriate (& nicely labeled) population breaks
+population$brk <- cut(population$count, 
+                      breaks=c(0, 100, 1000, 10000, 100000, 1000000, 10000000), 
+                      labels=c("0-99", "100-1K", "1K-10K", "10K-100K", 
+                               "100K-1M", "1M-10M"),
+                      include.lowest=TRUE)
+
+# get the US counties map (lower 48)
+us <- ggcounty.us()
+
+# start the plot with our base map
+gg <- us$g
+
+# add a new geom with our population (choropleth)
+gg <- gg + geom_map(data=population, map=us$map,
+                    aes(map_id=FIPS, fill=brk), 
+                    color="white", size=0.125)
+
+# define nice colors
+gg <- gg + scale_fill_manual(values=c("#ffffcc", "#c7e9b4", "#7fcdbb", 
+                                      "#41b6c4", "#2c7fb8", "#253494"), 
+                             name="Population")
+gg
+```
+
+## `ggmap`
+
+`ggmap` is a package that uses the `ggplot2` syntax as a template to create maps with image tiles taken from map servers such as Google and OpenStreetMap
+
+Let's use some data on benches in Copenhagen
+
+```{r, message = FALSE, warning = FALSE}
+df = read_csv("http://wfs-kbhkort.kk.dk/k101/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=k101:baenk&outputFormat=csv&SRSNAME=EPSG:4326")
+names(df)
+```
+
+## Data cleaning 
+
+We need to do quite some data cleaning
+
+```{r, message = FALSE, warning = FALSE}
+library("dplyr")
+library("stringr")
+df = df %>%
+  select(wkb_geometry, baenk_tilstand) 
+
+# cleaning  
+df$wkb_geometry = gsub("\\(|\\)", "", df$wkb_geometry) 
+df$wkb_geometry = str_extract(df$wkb_geometry, "[0-9].+")
+x = str_split(df$wkb_geometry, pattern  = " ")
+x = do.call(rbind.data.frame, x)
+df = bind_cols(df, x)
+names(df) = c("wbk_geometry", "baenk_tilstand", "lat", "lon")
+df$lon = as.numeric(as.character(df$lon))
+df$lat = as.numeric(as.character(df$lat))
+```
+
+## Plotting the data
+
+```{r, cache = TRUE, message = FALSE, warning = FALSE}
+library("ggmap")
+qmplot(lat, lon, zoom = 7, data = df, 
+       maptype = "toner-lite", color = I("red"))
+```
+
+## Plotting the data
+
+```{r, cache = TRUE, message = FALSE, warning = FALSE}
+qmplot(lat, lon, zoom = 7, data = df, 
+       maptype = "toner-lite", geom = "density2d", color = I("red"))
+```
+
+## `mapDK`
+
+A package for making maps of Denmark at different levels of aggregation
+
+### Functions
+
+The package currently only has two functions: 
+
+- `mapDK` - makes the map 
+
+- `getID` - prints keys in case you run into merge problems 
+
+## getID
+
+only accepts one argument: `detail`
+
+```{r, message = FALSE, warning = FALSE}
+library(mapDK)
+args(getID)
+```
+
+```{r, message = FALSE, warning = FALSE}
+getID(detail = "municipal")[1:10]
+```
+
+```{r, message = FALSE, warning = FALSE}
+getID(detail = "region")
+```
+
+## mapDK
+`mapDK` takes the following arguments
+
+```{r, message = FALSE, warning = FALSE}
+args(mapDK)
+```
+
+- For basic maps you really only need `detail`, `sub` and `map.title`
+
+- If you want to do choropleth maps you need to specify 
+
+    - `data`: A data frame of values and ids  
+    - `values`, `id`: String variables specifying names of value and id columns in the dataset
+
+- returns a `ggplot2` object you can modify if you like 
+ 
+## Level of aggregation
+- You control the level of aggregation using the `detail` argument 
+    - `municipality` - plots Denmark's 98 municipalities
+    - `region` - plots Denmark's 5 regions
+    - `rural` - plots Denmark's 11 rural areas
+    - `zip` - plots Denmark's 598 zip code areas
+    - `polling` - plots Denmark's 1385 polling places (as of 2015)
+    - `parish` - plots Denmark's 1931 parishes
+
+- the `sub` argument takes a vector of strings specifying subregions to be plotted
+
+## Example I
+
+```{r, message = FALSE, warning = FALSE}
+mapDK()
+```
+
+## Example II 
+
+```{r, message = FALSE, warning = FALSE}
+mapDK(detail = "parish")
+```
+
+## Example III
+
+```{r, message = FALSE, warning = FALSE}
+mapDK(values = "stemmer", id = "id", 
+  data = subset(votes, navn == "socialdemokratiet"),
+  detail = "polling", show_missing = FALSE,
+  guide.label = "Stemmer \nSocialdemokratiet (pct)")
+```
+
+## Example IV
+
+Putting it all togother...
+
+```{r,message = FALSE, warning = FALSE}
+library("mapproj")
+df = mapDK::polling
+df.votes = mapDK::votes
+df = df %>% filter(KommuneNav == "koebenhavn")
+df.t = left_join(df, df.votes)
+cph.map = ggmap(get_map(location = c(12.57, 55.68), 
+                       source = "stamen", maptype = "toner", crop = TRUE,
+                       zoom = 12))
+p = cph.map + geom_polygon(data = subset(df.t, navn == "socialdemokratiet"), 
+                       aes(x = long, y = lat,
+                           group = group, fill = stemmer),
+                       alpha = .75) 
+```
+
+## Output 
+
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+library("mapproj")
+df = mapDK::polling
+df.votes = mapDK::votes
+df = df %>% filter(KommuneNav == "koebenhavn")
+df.t = left_join(df, df.votes)
+cph.map = ggmap(get_map(location = c(12.57, 55.68), 
+                       source = "stamen", maptype = "toner", crop = TRUE,
+                       zoom = 12))
+p = cph.map + geom_polygon(data = subset(df.t, navn == "socialdemokratiet"), 
+                       aes(x = long, y = lat,
+                           group = group, fill = stemmer),
+                       alpha = .75) 
+p
+```
+
+
+# Exercises
+
+## Exercise 1 
+
+For this exercise we will work with data on GDP per capita at the country level. You can download the data using the `WDI` package as shown below
+
+```{r, eval = FALSE}
+# install.packages("WDI")
+library("WDI")
+library("dplyr")
+
+df = WDI(indicator = "NY.GDP.PCAP.KN" ,
+         start = 2010, end = 2010, extra = F)
+df = df %>%
+  filter(!is.na(NY.GDP.PCAP.KN))
+head(df)
+```
+
+**Question 1**: use the `map` package and the GDP data to make a world map of GDP per capita. 
+
+**Question 2**: install the package `countrycode` and use the `countrycode` function to add a region indicator to the dataset. Create a world map faceted by your region indicator.
+
+## Exercise 2
+
+In this exercise you will work with data on votes for the Danish general election from 2011. You can read the data using the following piece of code
+
+```{r}
+df = mapDK::votes
+```
+
+**Question 1**: use the `mapDK` package to make a map of votes (in pct) for the Conservative Party ("detkonservativefolkeparti") at the polling place level.
+
+**Question 2**: read up on the documentation for the `dplyr` package to aggregate the data into votes (in pct) for the Conservatives at the municipal level. Plot the data using `mapDK`
+
+## Exercise 3
+
+

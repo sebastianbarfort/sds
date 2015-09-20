@@ -1,0 +1,13 @@
+base
+knitr
+readr
+lubridate
+dplyr
+maps
+ggplot2
+ggcounty
+sp
+maptools
+mapproj
+stringr
+ggmap
