@@ -19,7 +19,7 @@ Generate lecture code examples
 
 Maps in ``ggplot2``
 
-Data manipulation (intro)
+Exercises (maps & data manipulation) 
 
 ## Code from lectures
 
@@ -107,7 +107,7 @@ p = ggplot(df.merge, aes(x = long, y = lat, group = group)) +
 
 ## Output
 
-```{r, message = FALSE, warning = FALSE, echo = FALSE, fig.width = 5, fig.height = 8}
+```{r, message = FALSE, warning = FALSE, echo = FALSE, fig.width = 5, fig.height = 6}
 ggplot(df.merge, aes(x = long, y = lat, group = group)) + 
   geom_polygon(aes(fill = m.price)) + 
   facet_wrap( ~ year, ncol = 1) + 
@@ -119,8 +119,7 @@ ggplot(df.merge, aes(x = long, y = lat, group = group)) +
 The ``ggcounty`` package provides data at the U.S county level
 
 ```{r, message = FALSE, warning = FALSE}
-# library(devtools)
-# install_github("hrbrmstr/ggcounty")
+# devtools::install_github("hrbrmstr/ggcounty")
 library("ggcounty")
 data(population) # built-in US population by FIPS code data set
 population$brk <- cut(population$count, 
@@ -209,14 +208,14 @@ df$lat = as.numeric(as.character(df$lat))
 
 ```{r, cache = TRUE, message = FALSE, warning = FALSE}
 library("ggmap")
-qmplot(lat, lon, zoom = 7, data = df, 
-       maptype = "toner-lite", color = I("red"))
+qmplot(lat, lon, zoom = 15, data = df, 
+       maptype = "toner-background", color = I("red"))
 ```
 
 ## Plotting the data
 
 ```{r, cache = TRUE, message = FALSE, warning = FALSE}
-qmplot(lat, lon, zoom = 7, data = df, 
+qmplot(lat, lon, zoom = 15, data = df, 
        maptype = "toner-lite", geom = "density2d", color = I("red"))
 ```
 
@@ -303,14 +302,17 @@ Putting it all togother...
 
 ```{r,message = FALSE, warning = FALSE}
 library("mapproj")
+library("ggmap")
 df = mapDK::polling
 df.votes = mapDK::votes
 df = df %>% filter(KommuneNav == "koebenhavn")
 df.t = left_join(df, df.votes)
 cph.map = ggmap(get_map(location = c(12.57, 55.68), 
-                       source = "stamen", maptype = "toner", crop = TRUE,
-                       zoom = 12))
-p = cph.map + geom_polygon(data = subset(df.t, navn == "socialdemokratiet"), 
+                       source = "stamen", 
+                       maptype = "toner", crop = TRUE,
+                       zoom = 13))
+p = cph.map + 
+  geom_polygon(data = subset(df.t, navn == "socialdemokratiet"), 
                        aes(x = long, y = lat,
                            group = group, fill = stemmer),
                        alpha = .75) 
@@ -348,9 +350,7 @@ library("dplyr")
 
 df = WDI(indicator = "NY.GDP.PCAP.KN" ,
          start = 2010, end = 2010, extra = F)
-df = df %>%
-  filter(!is.na(NY.GDP.PCAP.KN))
-head(df)
+df = df %>% filter(!is.na(NY.GDP.PCAP.KN))
 ```
 
 **Question 1**: use the `map` package and the GDP data to make a world map of GDP per capita. 
@@ -369,6 +369,22 @@ df = mapDK::votes
 
 **Question 2**: read up on the documentation for the `dplyr` package to aggregate the data into votes (in pct) for the Conservatives at the municipal level. Plot the data using `mapDK`
 
+**Question 3**: Repeat question 2 but only for the municipalities "Aarhus" and "Koebenhavn". 
+
+
 ## Exercise 3
 
+For this exercise we will work with Facebook data from the Danish parliamentary election 2015 kindly provided by [56 north](http://www.56n.dk/). 
 
+Load the data by running
+
+```{r}
+library(readr)
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/FV15_data.csv")
+```
+
+**Question 1**: Use the `dplyr` package to aggregate the number of likes by party and "storkreds"
+
+**Question 2**: Plot the data (do you need to facet?) on a map using the `mapDK` package.
+
+**Question 3**: Use the `dplyr` package to sort the dataset according to the number of likes. Which candidate in the data is most popular? Create a dataset with only the most popular candidate by "storkreds". 
