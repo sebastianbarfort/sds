@@ -18,6 +18,10 @@ library("DT")
 rownames(df) = df$name
 df = df[, -1]
 knitr::kable(df)
+
+# group 26: 
+# - Villumsen, Signe Gro Møller 
+# - Werkstetter, Tobias
 ```
 
 The groups are as follows: 
