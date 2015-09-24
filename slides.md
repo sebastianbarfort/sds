@@ -8,3 +8,4 @@ permalink: /slides/
 - [**Lecture 2**](http://sebastianbarfort.github.io/sds/slides/lecture2.html)
 - [**Lecture 3**](http://sebastianbarfort.github.io/sds/slides/lecture3.html)
 - [**Lecture 4**](http://sebastianbarfort.github.io/sds/slides/lecture4.html)
+- [**Lecture 5**](http://sebastianbarfort.github.io/sds/slides/lecture5.pdf)
