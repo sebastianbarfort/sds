@@ -6,7 +6,7 @@ categories: homework
 
 We have divided you into groups based on the first letter of your last name. A file containing all group data is available [here](https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/groups.csv). 
 
-```{r, warnings = FALSE, results = "hide", echo = FALSE, warning = FALSE, message = FALSE}
+```{r, eval = FALSE}
 library("readxl")
 
 df = read_excel("~/git/sds/data/participants.xlsx", col_names = FALSE)
@@ -19,15 +19,38 @@ df2 = read_excel("~/git/sds/data/participants1.xlsx",
                  col_names = FALSE)
 df2$indicator = "new"
 
-dt.t = full_join(df, df2, by = c("name" = "X1"))
+df = full_join(df, df2, by = c("name" = "X1"))
+
+# manually remove students who won't take the exam
+# søren korsgaard
+df = df[-grep("korsgaard", tolower(df$name)), ]
+# peter pallesen
+df = df[-grep("pallesen", tolower(df$name)), ]
+# marina canta
+df = df[-grep("canta", tolower(df$name)), ]
 
 
-
+df = df %>% 
+  select(name, X2, group) %>%
+  rename(role = X2)
 
 library("DT")
-rownames(df) = df$name
+name  = df$name
 df = df[, -1]
+rownames(df) = name
 knitr::kable(df)
+
+# group 7:
+# |Golovchenko, Yevgeniy Yevgeniyovych |Student |     7|
+# |Hansen, Anders Daugaard             |Student |     7|
+
+# group 6?
+# |Foltinger, Astrid Willum            |Student |     6|
+
+# group 24: 
+#|Sepúlveda Witt, Guillermo Edgardo   |Student |    24|
+#|Svensson, Emily Mae                 |Student |    24|
+#|Sørensen, Asger Johannes Bay        |NA      |    24|
 
 # group 26: 
 # - Villumsen, Signe Gro Møller 
@@ -48,7 +71,7 @@ The groups are as follows:
 |Bjørn, Rasmus                       |Student |     2|
 |Brodersen, Emil Regin               |Student |     3|
 |Busch, Frederik Oliver              |Student |     3|
-|Canta, Mariana                      |Student |     3|
+|Canta, Mariana                      |NA      |     3|
 |Carlsen, Rolf Kranold               |Student |     3|
 |Caspersen, Sune Christian           |Student |     4|
 |Christensen, Nina Holst             |Student |     4|
@@ -85,7 +108,6 @@ The groups are as follows:
 |Klingler, Timo Oliver               |Student |    12|
 |Koch, Tanja                         |Student |    12|
 |Koehn, Margaret                     |Student |    12|
-|Korsgaard, Søren                    |Student |    12|
 |Kristiansen, Ida Lykke              |Student |    13|
 |Kruithof, Bob                       |Student |    13|
 |Lam, Chuk Yat                       |Student |    13|
@@ -99,7 +121,7 @@ The groups are as follows:
 |Mammen, Mathilde Else Ripka         |Student |    15|
 |Marschall, Laurits                  |Student |    15|
 |Mathiasen, Benjamin Wedel           |Student |    16|
-|Meisel, Jan                         |Student |    16|
+|Meisel, Jan                         |NA      |    16|
 |Mertz, Mikkel Baggesgaard           |Student |    16|
 |Mogensen, Bjarke Dahl               |Student |    16|
 |Mortensen, Caroline Mark            |Student |    17|
@@ -115,9 +137,8 @@ The groups are as follows:
 |Olesen, Daniel Sloth                |Student |    19|
 |Olesen, Simon Alexander             |Student |    19|
 |Olsen, Sascha                       |Student |    20|
-|Pallesen, Peter Mølgaard            |Student |    20|
 |Pedersen, Jesper Hybel              |Student |    20|
-|Pedersen, Pernille Helander         |Student |    20|
+|Pedersen, Pernille Helander         |NA      |    20|
 |Peterson, Søren Bo                  |Student |    21|
 |Peus, Christian                     |Student |    21|
 |Ponikowski, Charlotte               |Student |    21|
@@ -133,7 +154,7 @@ The groups are as follows:
 |Sepúlveda Witt, Guillermo Edgardo   |Student |    24|
 |Stentoft-Hansen, Valdemar           |Student |    24|
 |Svensson, Emily Mae                 |Student |    24|
-|Sørensen, Asger Johannes Bay        |Student |    24|
+|Sørensen, Asger Johannes Bay        |NA      |    24|
 |Thaysen, Natasha Reimer             |Student |    25|
 |Thomsen, Aksel                      |Student |    25|
 |Thomsen, Niels Petter               |Student |    25|
@@ -145,3 +166,10 @@ The groups are as follows:
 |Wesselhoff, Stine Lund              |Student |    27|
 |Ziegler, Robert Mark                |Student |    27|
 |Østergaard, Esben                   |Student |    27|
+|Burgard, Sophie                     |Student |    NA|
+|Chen, Linxin                        |Student |    NA|
+|Haurum, Peter                       |Student |    NA|
+|Jensen, Tor                         |Student |    NA|
+|Pedersen, Jens-Peter Serup          |Student |    NA|
+|Wiget, Janette                      |Student |    NA|
+|Ye, Chuou                           |Student |    NA|
