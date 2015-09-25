@@ -1,0 +1,190 @@
+---
+layout: post
+title:  "Solutions for Lecture 4"
+categories: homework
+---
+
+## Exercise 1 
+
+Load data
+
+```{r, warning = FALSE, message = FALSE}
+# install.packages("WDI")
+library("WDI")
+library("dplyr")
+
+df = WDI(indicator = "NY.GDP.PCAP.KN" ,
+         start = 2010, end = 2010, extra = F)
+df = df %>% filter(!is.na(NY.GDP.PCAP.KN))
+```
+
+**Question 1**: use the `map` package and the GDP data to make a world map of GDP per capita. 
+
+Solution
+
+```{r, warning = FALSE, message = FALSE}
+library("ggplot2")
+library("maps")
+map = map_data("world") # load world map
+
+df.map = left_join(df, map, by = c("country" = "region")) # join data 
+
+p = ggplot(df.map, aes(x = long, y = lat, group = group, fill = NY.GDP.PCAP.KN))
+p + geom_polygon() +
+  expand_limits(x = df.map$long, y = df.map$lat) 
+```
+
+This is ok, but a lot of countries are missing. 
+
+We can see which countries from the World Bank data can't be matched in the `map` data
+
+```{r, warning = FALSE, message = FALSE}
+df$country[!unique(df$country) %in% unique(map$region)]
+```
+
+A better solution involves using the `countrycode` package. 
+
+```{r, warning = FALSE, message = FALSE}
+library("countrycode")
+map$iso2c = countrycode(map$region, origin = "country.name", destination = "iso2c")
+```
+
+Merge the data 
+
+```{r, warning = FALSE, message = FALSE}
+df.map.2 = left_join(df, map) # merge data by iso2 
+```
+
+Make the plot
+
+```{r, warning = FALSE, message = FALSE}
+p = ggplot(df.map.2, aes(x = long, y = lat, group = group, fill = log(NY.GDP.PCAP.KN)))
+p + geom_polygon() +
+  expand_limits(x = df.map.2$long, y = df.map.2$lat) 
+```
+
+This is not perfect, but much better. 
+
+**Question 2**: install the package `countrycode` and use the `countrycode` function to add a region indicator to the dataset. Create a world map faceted by your region indicator.
+
+This is easy to do once you know how the `countrycode` function works. 
+
+```{r, warning = FALSE, message = FALSE}
+df.map.2$continent = countrycode(df.map.2$iso2c, 
+                                 origin = "iso2c", destination = "continent")
+```
+
+Filter the data to make a better plot
+
+```{r, warning = FALSE, message = FALSE}
+library("dplyr")
+df.map.2 = df.map.2 %>%
+  filter(!is.na(long)) %>%
+  filter(!is.na(lat)) 
+```
+
+Remove outliers
+
+```{r, warning = FALSE, message = FALSE}
+df.map.2 = df.map.2 %>%
+  group_by(continent) %>%
+  filter(lat >= quantile(lat, probs = .02, names = FALSE)) %>%
+  filter(lat < quantile(lat, probs = .98, names = FALSE)) %>%
+  filter(long >= quantile(long, probs = .02, names = FALSE)) %>%
+  filter(long < quantile(long, probs = .98, names = FALSE))
+```
+
+
+Generate plot 
+
+```{r, warning = FALSE, message = FALSE}
+p = ggplot(df.map.2, aes(x = long, y = lat, group = group, fill = log(NY.GDP.PCAP.KN)))
+p + geom_polygon() + facet_wrap(~ continent, scales = "free")
+  
+```
+
+## Exercise 2
+
+Load data
+
+```{r}
+library("mapDK")
+df = mapDK::votes
+```
+
+**Question 1**: use the `mapDK` package to make a map of votes (in pct) for the Conservative Party ("detkonservativefolkeparti") at the polling place level.
+
+```{r, message = FALSE, warning = FALSE}
+mapDK(values = "stemmer", id = "id", 
+  data = subset(votes, navn == "detkonservativefolkeparti"),
+  detail = "polling", show_missing = FALSE,
+  guide.label = "Stemmer \nKonservative (pct)")
+```
+
+**Question 2**: read up on the documentation for the `dplyr` package to aggregate the data into votes (in pct) for the Conservatives at the municipal level. Plot the data using `mapDK`
+
+Prepare the data
+
+```{r, message = FALSE, warning = FALSE}
+library("mapDK")
+df.map = mapDK::polling
+df.plot = left_join(df, df.map)
+
+df.plot.agg = df.plot %>%
+  filter(navn == "detkonservativefolkeparti") %>%
+  group_by(KommuneNav) %>%
+  summarise(votes = sum(stemmer)) %>%
+  data.frame
+```
+
+Plot
+```{r, message = FALSE, warning = FALSE}
+mapDK(values = "votes", id = "KommuneNav", 
+  data = df.plot.agg,, show_missing = FALSE,
+  guide.label = "Stemmer \nKonservative (pct)")
+```
+
+**Question 3**: Repeat question 2 but only for the municipalities "Aarhus" and "Koebenhavn". 
+
+```{r, message = FALSE, warning = FALSE}
+mapDK(values = "votes", id = "KommuneNav", 
+  data = df.plot.agg,, show_missing = FALSE,
+  guide.label = "Stemmer \nKonservative (pct)",
+  sub = c("aarhus", "koebenhavn"))
+```
+
+## Exercise 3
+
+Load data
+
+```{r, message = FALSE, warning = FALSE}
+library("readr")
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/FV15_data.csv")
+```
+
+**Question 1**: Use the `dplyr` package to aggregate the number of likes by party and "storkreds"
+
+```{r, message = FALSE, warning = FALSE}
+df.agg = df %>%
+  group_by(PARTI, STORKREDS) %>%
+  summarise(
+    likes = sum(likes)
+  )
+head(df.agg)
+```
+
+
+**Question 3**: Use the `dplyr` package to sort the dataset according to the number of likes. Which candidate in the data is most popular? Create a dataset with only the most popular candidate by "storkreds". 
+
+```{r, message = FALSE, warning = FALSE}
+df.agg.2 = df %>%
+  group_by(NAVN, STORKREDS) %>%
+  summarise(
+    mean.likes = mean(likes)
+  ) %>%
+  ungroup() %>%
+  group_by(STORKREDS) %>%
+  top_n(1)
+
+head(df.agg.2, 10)
+```
