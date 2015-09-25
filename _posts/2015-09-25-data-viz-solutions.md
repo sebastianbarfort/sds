@@ -209,7 +209,7 @@ mapDK(values = "votes", id = "KommuneNav",
   sub = c("aarhus", "koebenhavn"))
 {% endhighlight %}
 
-![center](/sds/figs/2015-09-25-data-viz-solutions/unnamed-chunk-15-1.png) 
+![center](/sds/figs/2015-09-25-data-viz-solutions/unnamed-chunk-15-1.png)
 
 ## Exercise 3
 
