@@ -14,16 +14,18 @@ You hand in the assignment by opening an issue [here](https://github.com/sebasti
 
 You can load the data used in the assignment by running the following piece of code
 
-```{r, eval = FALSE}
+
+{% highlight r %}
 library("readr")
 df = read_csv("https://raw.githubusercontent.com/MuseumofModernArt/collection/master/Artworks.csv")
-```
+{% endhighlight %}
 
 Create an `R` script that answers the eight questions below. Please use comments to mark what questions are answered by each code block. Use comments to explain what each code block does. 
 
 An example is provided below
 
-```{r, eval = FALSE}
+
+{% highlight r %}
 # Question 1 ---------------
 # read the data
 df = read_csv("https://raw.githubusercontent.com/MuseumofModernArt/collection/master/Artworks.csv")
@@ -34,7 +36,7 @@ df = read_csv("https://raw.githubusercontent.com/MuseumofModernArt/collection/ma
 # Question 2 ---------------
 
 ...
-```
+{% endhighlight %}
 
 1. Create a new dataframe of the stock of paintings at MOMA for each month in the year. 
 2. Use `ggplot2` and your new data frame to plot the the stock of paintings on the y-axis and the date on the x-axis. 
