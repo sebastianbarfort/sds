@@ -6,8 +6,9 @@ categories: homework
 
 We have divided you into groups based on the first letter of your last name. A file containing all group data is available [here](https://raw.githubusercontent.com/sebastianbarfort/sds/master/data/groups.csv). 
 
-```{r, eval = FALSE}
+```{r, eval = FALSE, echo = FALSE}
 library("readxl")
+library("dplyr")
 
 df = read_excel("~/git/sds/data/participants.xlsx", col_names = FALSE)
 df$group = rep(1:27, each = 4)[-108]
@@ -29,12 +30,51 @@ df = df[-grep("pallesen", tolower(df$name)), ]
 # marina canta
 df = df[-grep("canta", tolower(df$name)), ]
 
+# meisel
+df = df[-grep("meisel", tolower(df$name)), ]
+
+# helander 
+df = df[-grep("pernille helander", tolower(df$name)), ]
+
+# Golovchenko
+df = df[-grep("golovchenko", tolower(df$name)), ]
+# Anders Daugaard 
+df = df[-grep("anders daugaard", tolower(df$name)), ]
+
+# Foltinger
+df = df[-grep("foltinger", tolower(df$name)), ]
+
+# Sørensen, Asger Johannes Bay 
+df = df[-grep("johannes bay", tolower(df$name)), ]
+
+# change Stentoft-Hansen, Valdemar
+df$group[grep("stentoft-hansen", tolower(df$name))] = 27
+
+# sophie burgard: group 24
+# linxin chen: group 24
+df$group[grep("burgard", tolower(df$name))] = 24
+df$group[grep("chen", tolower(df$name))] = 24
+
+# peter harum: group 3
+df$group[grep("haurum", tolower(df$name))] = 3
+
+# the rest: group 28
+df$group[is.na(df$group)] = 28
+
+# merge groups 7 & 20
+df$group[df$group == 20] = 7
 
 df = df %>% 
   select(name, X2, group) %>%
-  rename(role = X2)
+  rename(role = X2) %>%
+  arrange(group) %>%
+  group_by(group) %>%
+  mutate(
+    group.count = n()
+  )
 
 library("DT")
+df$group.count = NULL
 name  = df$name
 df = df[, -1]
 rownames(df) = name
@@ -59,6 +99,7 @@ knitr::kable(df)
 
 The groups are as follows: 
 
+
 |                                    |role    | group|
 |:-----------------------------------|:-------|-----:|
 |Albrechtsen, Kasper Hjalager        |Student |     1|
@@ -71,8 +112,8 @@ The groups are as follows:
 |Bjørn, Rasmus                       |Student |     2|
 |Brodersen, Emil Regin               |Student |     3|
 |Busch, Frederik Oliver              |Student |     3|
-|Canta, Mariana                      |NA      |     3|
 |Carlsen, Rolf Kranold               |Student |     3|
+|Haurum, Peter                       |Student |     3|
 |Caspersen, Sune Christian           |Student |     4|
 |Christensen, Nina Holst             |Student |     4|
 |Christiansen, Chris Cornelia Friis  |Student |     4|
@@ -84,11 +125,10 @@ The groups are as follows:
 |Egerod, Benjamin Carl               |Student |     6|
 |Elberg, Ulrik Torp                  |Student |     6|
 |Eriksson, Simon                     |Student |     6|
-|Foltinger, Astrid Willum            |Student |     6|
 |Gallagher, Neil Justin              |Student |     7|
 |Goldschmidt, Peter Riemer           |Student |     7|
-|Golovchenko, Yevgeniy Yevgeniyovych |Student |     7|
-|Hansen, Anders Daugaard             |Student |     7|
+|Olsen, Sascha                       |Student |     7|
+|Pedersen, Jesper Hybel              |Student |     7|
 |Hansen, Ann-Sofie                   |Student |     8|
 |Hansen, Dennis                      |Student |     8|
 |Hansen, Susanne Sundgaard           |Student |     8|
@@ -121,7 +161,6 @@ The groups are as follows:
 |Mammen, Mathilde Else Ripka         |Student |    15|
 |Marschall, Laurits                  |Student |    15|
 |Mathiasen, Benjamin Wedel           |Student |    16|
-|Meisel, Jan                         |NA      |    16|
 |Mertz, Mikkel Baggesgaard           |Student |    16|
 |Mogensen, Bjarke Dahl               |Student |    16|
 |Mortensen, Caroline Mark            |Student |    17|
@@ -136,9 +175,6 @@ The groups are as follows:
 |Nygaard, Christoffer Braüner        |Student |    19|
 |Olesen, Daniel Sloth                |Student |    19|
 |Olesen, Simon Alexander             |Student |    19|
-|Olsen, Sascha                       |Student |    20|
-|Pedersen, Jesper Hybel              |Student |    20|
-|Pedersen, Pernille Helander         |NA      |    20|
 |Peterson, Søren Bo                  |Student |    21|
 |Peus, Christian                     |Student |    21|
 |Ponikowski, Charlotte               |Student |    21|
@@ -152,9 +188,9 @@ The groups are as follows:
 |Sandoy, Trondur Møller              |Student |    23|
 |Schondelmaier, Martin               |Student |    23|
 |Sepúlveda Witt, Guillermo Edgardo   |Student |    24|
-|Stentoft-Hansen, Valdemar           |Student |    24|
 |Svensson, Emily Mae                 |Student |    24|
-|Sørensen, Asger Johannes Bay        |NA      |    24|
+|Burgard, Sophie                     |Student |    24|
+|Chen, Linxin                        |Student |    24|
 |Thaysen, Natasha Reimer             |Student |    25|
 |Thomsen, Aksel                      |Student |    25|
 |Thomsen, Niels Petter               |Student |    25|
@@ -163,13 +199,12 @@ The groups are as follows:
 |Villumsen, Signe Gro Møller         |Student |    26|
 |Werkstetter, Tobias                 |Student |    26|
 |Werlauff, Kasper Skærlund           |Student |    26|
+|Stentoft-Hansen, Valdemar           |Student |    27|
 |Wesselhoff, Stine Lund              |Student |    27|
 |Ziegler, Robert Mark                |Student |    27|
 |Østergaard, Esben                   |Student |    27|
-|Burgard, Sophie                     |Student |    NA|
-|Chen, Linxin                        |Student |    NA|
-|Haurum, Peter                       |Student |    NA|
-|Jensen, Tor                         |Student |    NA|
-|Pedersen, Jens-Peter Serup          |Student |    NA|
-|Wiget, Janette                      |Student |    NA|
-|Ye, Chuou                           |Student |    NA|
+|Jensen, Tor                         |Student |    28|
+|Pedersen, Jens-Peter Serup          |Student |    28|
+|Wiget, Janette                      |Student |    28|
+|Ye, Chuou                           |Student |    28|
+
