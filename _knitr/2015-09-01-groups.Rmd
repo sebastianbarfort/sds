@@ -95,6 +95,10 @@ knitr::kable(df)
 # group 26: 
 # - Villumsen, Signe Gro Møller 
 # - Werkstetter, Tobias
+
+
+# 28.09
+# Kim, Jane 	Student 	11 - kommer/svarer ikke 
 ```
 
 The groups are as follows: 
