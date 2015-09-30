@@ -8,10 +8,11 @@ categories: homework
 
 - Watch [this](https://www.youtube.com/watch?v=8SGif63VW6E) introduction to the `dplyr` package by Hadley Wickham
 - Read the `dplyr` documentation [here](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+- Wickham, Hadley. 2011. “[The Split-Apply-Combine Strategy for Data Analysis](http://www.jstatsoft.org/article/view/v040i01)”. Journal of Statistical Software 40(1)
 
 ### Tidy Data
 
-- Wickham, Hadley. 2014. “[Tidy Data](http://www.jstatsoft.org/v59/i10)”. Journal of Statistical Software 59(10): 1–23.
+- Wickham, Hadley. 2014. “[Tidy Data](http://www.jstatsoft.org/v59/i10)”. Journal of Statistical Software 59(10).
 
 ### Strings
 
