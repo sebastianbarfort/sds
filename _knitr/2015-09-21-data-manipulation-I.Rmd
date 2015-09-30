@@ -18,4 +18,9 @@ categories: homework
 - Wickham, Hadley. 2010. ''[stringr: modern, consistent string processing](http://journal.r-project.org/archive/2010-2/RJournal_2010-2_Wickham.pdf)''.
 *The R Journal*. 2(2): 38-40.
 
+### Regular Expressions
+
+- [rex: Friendly regular expressions for R](https://github.com/kevinushey/rex)
+- [RegexOne](http://regexone.com/)
+
 
