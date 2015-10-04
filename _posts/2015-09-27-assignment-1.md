@@ -67,7 +67,7 @@ It's up to you to decide what you feel is interesting about the Danish federal b
 
 The best data visualization will be rewarded with a Danish "guldøl", and I will send your proposal to Berlingske as an alternative to what they decided to do. 
 
-![](https://d1kga0hijum0zx.cloudfront.net/380x380/1005001.jpg)
+![](http://www.olfabrikken.dk/~/media/Images/Corporate/Product%20Images/Product%20Image%20181x400/Guldoel%20flaske.ashx)
 
 
 
