@@ -18,9 +18,8 @@ A tentative syllabus, subject to change, is below.
 |Sep 21, 2015| **Data Visualization** | [Topic 2: Data Visualization (readings)](http://sebastianbarfort.github.io/sds/posts/2015/09/14/data-visualization.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture4.html)
 |Sep 24, 2015| **Lecture** | *Different Types of Data* | [slides](http://sebastianbarfort.github.io/sds/slides/lecture5.pdf) |
 |Sep 28, 2015| **Guest lecture** | [Rune Madsen](http://www.runemadsen.com/): Data visualization at the New York Times & Programming and the Visual Arts| [slides](http://sebastianbarfort.github.io/sds/slides/runeslides.pdf) |
-|Oct 5, 2015| **Data Manipulation** | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) |
 |Oct 8, 2015| **Data Manipulation** | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) |
-|Oct 8, 2015| <font color="red">Deadline </font>| Assignment 1 | [Assignment 1](http://sebastianbarfort.github.io/sds/posts/2015/09/27/assignment-1.html)
+|Oct 14, 2015| <font color="red">Deadline </font>| Assignment 1 | [Assignment 1](http://sebastianbarfort.github.io/sds/posts/2015/09/27/assignment-1.html)
 |Oct 19, 2015| **Data Gathering** | Topic 4: Data Gathering |
 |Oct 22, 2015| **Data Gathering** | Topic 4: Data Gathering |
 |Oct 26, 2015| **Lecture** |  |
