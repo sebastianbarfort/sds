@@ -178,7 +178,8 @@ Many data analysis problems involve the application of a *split-apply-combine st
 
 `dplyr`: (efficiently) split-apply-combine for data frames
 
-**Verbs**
+**Verbs** 
+a verb is a function that takes a data frame as it's first argument
 
 - `filter`: select rows
 - `arrange`: order rows
@@ -189,7 +190,196 @@ Many data analysis problems involve the application of a *split-apply-combine st
 - `summarise`: summarize across a data set
 - `sample_n`: sample from a data set 
 
-## 
+## The `filter` function I
+
+```{r}
+filter(df, udgift == min(udgift))
+```
+
+```{r}
+filter(df, paragraf == "Skatter og afgifter ")
+```
+
+## Combining conditions: `and`
+
+You can easily combine conditions
+
+```{r}
+filter(df, paragraf == "Skatter og afgifter " & aktivitet == "Personskatter ")
+```
+
+## Combining conditions: `or`
+
+```{r}
+filter(df, paragraf == "Skatter og afgifter " | aktivitet == "Personskatter ")
+```
+
+## The `select` function
+
+```{r}
+select(df, aar, udgift)
+```
+
+## The `arrange` function
+
+```{r}
+arrange(df, hovedomrode, udgift)
+```
+
+## Arrange by numeric variable
+
+```{r}
+arrange(df, -aar)
+```
+
+## The `mutate` function
+
+`mutate` let's you add new variables to your data frame
+
+```{r}
+df.mutated = mutate(df, newVar = udgift/2)
+select(df.mutated, newVar, udgift)
+```
+
+## The `sample_n` function
+
+```{r}
+sample_n(df, 3)
+```
+
+## Digression: Meet the pipe
+
+<div class="centered">
+![](pipe.png)
+</div>
+
+## The pipe operator
+
+The pipe operator `%>%` (RStudio has keyboard shortcuts, learn to use them!) let's you write sequences instead of nested functions
+
+`x %>% f(y)` -> `f(x,y)`
+    
+`x %>% f(z, .)` -> `f(z, x)`
+
+Read `%>%` as "then". First do this, *then* do this, etc...
+
+It's invented by a [Danish econometrician](https://twitter.com/stefanbache)
+
+## Intuition 
+
+<div class="centered">
+![](romain.jpg)
+</div>
+
+[source](http://www.slideshare.net/romainfrancois)
+
+## Combining `dplyr` and the pipe
+
+`dplyr` is designed to work with the pipe.
+
+So 
+
+```{r, eval = FALSE}
+df %>% 
+  select(aar, udgift) %>% 
+  filter(aar == 2014)
+```
+
+returns the same as
+
+```{r, eval = FALSE}
+filter(select(df, aar, udgift), aar == 2014)
+```
+
+## Example
+
+Show me a random sample of the data from 2014, where `paragraf == Folketinget` and `udgift` is above the mean.
+
+```{r}
+df.1 = filter(df, aar == 2014 & paragraf == "Folketinget ")
+df.2 = filter(df.1, udgift > mean(udgift, na.rm = TRUE))
+df.3 = sample_n(df.2, 3)
+df.3
+```
+
+## With the pipe
+
+```{r}
+df %>% 
+  filter(aar == 2014 & paragraf == "Folketinget ") %>% 
+  filter(udgift > mean(udgift, na.rm = TRUE)) %>% 
+  sample_n(3)
+```
+
+Note how readable the code is. Almost like a grammer of data manipulation?
+
+## Grouped operations
+
+So far, we have primarily learned how to manipulate data frames. 
+
+The `dplyr` package becomes really powerful when we introduce the `group_by` function
+
+`group_by` breaks down a dataset into specified groups of rows. When you then apply the verbs above on the resulting object they’ll be automatically applied "by group".
+
+Use in conjunction with `mutate` (to add existing rows to your data frame) or `summarise` (to create a new data frame)
+
+## Common `mutate`/`summarise` options
+
+- `mean`: mean within groups
+- `sum`: sum within groups
+- `sd`: standard deviation within groups
+- `max`: max within groups
+- `n()`: number in each group
+- `first`: first in group
+- `last`: last in group
+- `nth(n = 3)`: nth in group (3rd here)
+
+## `group_by` in action I
+
+Which ministry has the largest expenses?
+
+```{r}
+df %>% filter(udgift >= 0) %>% group_by(paragraf) %>% 
+  summarise(totale.udgifter = sum(udgift, na.rm = TRUE)) %>% 
+  arrange(-totale.udgifter)
+```
+
+## `group_by` in action II
+
+Add `totale.udgifter` to the existing data frame
+
+```{r}
+df %>% filter(udgift >= 0) %>% group_by(paragraf) %>% 
+  mutate(totale.udgifter = sum(udgift, na.rm = TRUE)) %>% 
+  select(aar, udgift, totale.udgifter)
+```
+
+## `group_by` in action III
+
+You can group by several variables
+
+```{r}
+df %>% filter(udgift >= 0) %>% group_by(aar, paragraf) %>% 
+  summarise(totale.udgifter = sum(udgift, na.rm = TRUE)) %>% 
+  arrange(-totale.udgifter)
+```
+
+## `group_by` in action IV
+
+You can group by several variables
+
+```{r}
+df %>% filter(udgift >= 0) %>% group_by(paragraf, hovedomrode) %>% 
+  summarise(totale.udgifter = sum(udgift, na.rm = TRUE)) %>% 
+  arrange(-totale.udgifter)
+```
+
+## Merging data sets
+
+
+
+
+
 
 ## Links
 
