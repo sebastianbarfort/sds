@@ -263,7 +263,7 @@ The pipe operator `%>%` (RStudio has keyboard shortcuts, learn to use them!) let
 
 Read `%>%` as "then". First do this, *then* do this, etc...
 
-It's invented by a [Danish econometrician](https://twitter.com/stefanbache)
+It's implemented in `R` by a [Danish econometrician](https://twitter.com/stefanbache)
 
 ## Intuition 
 
@@ -376,16 +376,146 @@ df %>% filter(udgift >= 0) %>% group_by(paragraf, hovedomrode) %>%
 
 ## Merging data sets
 
+Merging two data sets can be tricky and depends on your needs. It's important to think about what you want before joining. 
 
+<div class="centered">
+![](joins.png)
+</div>
 
+## Superhero example
 
+https://stat545-ubc.github.io/bit001_dplyr-cheatsheet.html
 
+```{r}
+superheroes = c("    name, alignment, gender,         publisher",
+    " Magneto,       bad,   male,            Marvel",
+    "   Storm,      good, female,            Marvel",
+    "Mystique,       bad, female,            Marvel",
+    "  Batman,      good,   male,                DC",
+    "   Joker,       bad,   male,                DC",
+    "Catwoman,       bad, female,                DC",
+    " Hellboy,      good,   male, Dark Horse Comics")
 
-## Links
+superheroes = read.csv(text = superheroes, strip.white = TRUE)
+head(superheroes)
+```
 
-http://jtleek.com/advdatasci/lecture_notes/tidyingdata/#16
+## Publishers
 
-https://stat545-ubc.github.io/block009_dplyr-intro.html
+```{r}
+publishers = c("publisher, yr_founded",
+    "       DC,       1934",
+    "   Marvel,       1939",
+    "    Image,       1992")
+publishers = read.csv(text = publishers, strip.white = TRUE)
+head(publishers)
+```
+
+## Inner join
+
+```{r}
+ijsp = inner_join(superheroes, publishers)
+ijsp
+```
+
+## Left join
+
+```{r}
+ljsp = left_join(superheroes, publishers)
+ljsp
+```
+
+## Merging different names
+
+```{r}
+superheroes = mutate(superheroes,
+                seblikes = (publisher=="Marvel"))
+publishers = mutate(publishers,
+                    seb = (publisher == "Marvel"))
+ij2 = inner_join(superheroes,publishers)
+ij2
+```
+
+## Merging different names
+
+```{r}
+ij2 = inner_join(superheroes,publishers,
+                    by=c("publisher"="publisher",
+                            "seblikes"="seb"))
+ij2
+```
+
+# Strings
+
+## the `strsplit` function
+
+> Split the elements of a character vector `x` into substrings according to the matches to substring split within them.
+
+```{r}
+strsplit(names(df), "t")
+```
+
+## the `gsub` function
+
+```{r}
+gsub("t", " ", names(df))
+```
+
+## the `substr` function
+
+> Extract or replace substrings in a character vector.
+
+```{r}
+substr(names(df), 1, 3)
+```
+
+## the `grep` function
+
+Regular expression matching
+
+```{r}
+grep("t", names(df))
+```
+
+```{r}
+grepl("t", names(df))
+```
+
+## `tolower` and `toupper`
+
+```{r}
+tolower(names(df))
+```
+
+```{r}
+toupper(names(df))
+```
+
+## The `stringr` package
+
+```{r}
+library("stringr")
+str_detect(names(df), "t")
+```
+
+```{r}
+str_subset(names(df), "t")
+```
+
+## Useful functions
+
+```{r}
+str_trim("Sebastian           ")
+paste0("Sebastian", "Barfort")
+nchar("SebastianBarfort")
+```
+
+## Next
+
+Tidy data 
+
+Regular expressions
+
 
 
 
