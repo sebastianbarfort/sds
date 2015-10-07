@@ -10,3 +10,4 @@ permalink: /slides/
 - [**Lecture 4**: Data Visualization (maps)](http://sebastianbarfort.github.io/sds/slides/lecture4.html)
 - [**Lecture 5**: Different Types of Data](http://sebastianbarfort.github.io/sds/slides/lecture5.pdf)
 - [**Lecture 6**: Data Visualization (by Rune Madsen)](http://sebastianbarfort.github.io/sds/slides/runeslides.pdf)
+- [**Lecture 7**: Data Visualization (maps)](http://sebastianbarfort.github.io/sds/slides/lecture6.html)
