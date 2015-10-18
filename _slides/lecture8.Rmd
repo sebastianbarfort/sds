@@ -1,0 +1,384 @@
+---
+title: "Lecture 8: Data Manipulation Tools"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "October, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+Turning lists into data frames
+
+Tidy data
+
+Regular expressions
+
+Exam brainstorming
+  
+## Turning lists into data frames
+
+This is actually not always easy
+
+When the list is of equal length, try the `ldply` function in the `plyr` package
+
+```{r, message = FALSE}
+library("plyr")
+my.list = list(x="a", value=123, y = "hej", z = 4)
+ldply(my.list)
+```
+
+## Lists of lists
+
+Slightly more complicated example 
+
+```{r}
+obs1 = list(x="a", value=123)
+obs2 = list(x="b", value=27)
+obs3 = list(x="c", value=99)
+dlist = list(obs1, obs2, obs3)
+dlist
+```
+
+## Lists of lists
+
+```{r}
+ldply(dlist, data.frame)
+```
+
+## Lists of unequal length
+
+```{r, message = FALSE}
+library("readr")
+df = read_csv("https://raw.githubusercontent.com/sebastianbarfort/sds/gh-pages/data/finanslov_tidy.csv")
+my.list = strsplit(names(df), "t")
+my.list
+```  
+
+## What we can't do 
+
+`ldply` won't work here
+
+```{r, error = TRUE}
+ldply(my.list)
+``` 
+
+The problem is that the elements of the list have unequal length
+
+## Analyzing the problem
+
+Let's count the length of each element in the list
+
+```{r}
+ldply(my.list, length)
+```
+
+This is equivalent to 
+
+```{r}
+sapply(my.list, length)
+```
+
+## Pick only first element?
+
+```{r}
+ldply(my.list, function(x) data.frame(x[1]))
+```
+
+## Pick all elements?
+
+```{r}
+ldply(llply(my.list, rbind), cbind)
+```
+
+# tidy data
+
+## `tidyr`  
+
+> Happy families are all alike; every unhappy family is unhappy in its own way 
+
+*Leo Tolstoy*
+
+Goal of `tidyr`: take your messy data and turn it into a tidy format
+
+**tidy data**: observations are in the rows, variables are in the columns
+
+## Tidy data 
+
+```{r, message = FALSE}
+library("readr")
+library("dplyr")
+library("tidyr")
+
+df = read_csv("https://raw.githubusercontent.com/hadley/tidyr/master/vignettes/pew.csv")
+head(df, 3)
+```
+
+**Question 1**: What variables are in this dataset?
+
+**Question 2**: How does a tidy version of this data look like?
+
+## The `gather` function
+
+**Objective**: Reshaping wide format to long format
+
+To tidy this data, we need to **gather** the non-variable columns into a two-column key-value pair
+
+```{r}
+args(gather)
+```
+
+Arguments:
+
+- `data`: data frame
+- `key`: column name representing new variable
+- `value`: column name representing variable values
+- `...`: names of columns to gather (or not gather)
+
+## `gather` at work
+
+```{r}
+df %>% gather(income, frequency, -religion)
+```
+
+## Alternatives
+
+This
+
+```{r, eval = FALSE}
+df %>% gather(income, frequency, 2:11)
+```
+
+returns the same as 
+
+```{r, eval = FALSE}
+df %>% gather(income, frequency, -religion)
+```
+
+## More complicated example
+
+Billboard data
+
+```{r, message = FALSE}
+
+df = read_csv("https://raw.githubusercontent.com/hadley/tidyr/master/vignettes/billboard.csv")
+head(df, 3)
+```
+
+**Question**: what are the variables here? 
+
+## Tidying the Billboard data
+
+To tidy this dataset, we first gather together all the `wk` columns. The column names give the week and the values are the ranks:
+
+```{r}
+billboard2 = df %>% 
+  gather(week, rank, wk1:wk76,na.rm = TRUE)
+head(billboard2, 3)
+```
+
+What more would we want to do to the data?
+
+## Data cleaning
+
+Let's turn the week into a numeric variable and create a proper date column
+
+```{r}
+billboard3 = billboard2 %>%
+  mutate(
+    week = extract_numeric(week),
+    date = as.Date(date.entered) + 7 * (week - 1)) %>%
+  select(-date.entered) %>% 
+  arrange(artist, track, week)
+head(billboard3, 3)
+```
+
+## Even more complicated example
+
+After gathering columns, the key column is sometimes a combination of multiple underlying variable names. 
+
+```{r, message = FALSE}
+
+df = read_csv("https://raw.githubusercontent.com/hadley/tidyr/master/vignettes/tb.csv")
+head(df, 3)
+```
+
+**Question**: what are the variables here?
+
+## Answer
+
+The dataset comes from the World Health Organisation, and records the counts of confirmed tuberculosis cases by country, year, and demographic group. The demographic groups are broken down by sex (m, f) and age (0-14, 15-25, 25-34, 35-44, 45-54, 55-64, unknown).
+
+## Gathering the non-variable columns
+
+```{r}
+tb2 = df %>% 
+  gather(demo, n, -iso2, -year, na.rm = TRUE)
+head(tb2, 3)
+```
+
+Is this dataset tidy?
+
+## Separating the `demo` variable
+
+`separate` makes it easy to split a compound variables into individual variables. You can either pass it a regular expression to split on or a vector of character positions. In this case we want to split after the first character.
+
+```{r}
+tb3 = tb2 %>% 
+  separate(demo, c("sex", "age"), 1)
+head(tb3, 3)
+```
+
+**Question**: Compare `tb3` to the original data frame (`df`). What are the advantages of having our data stored in a tidy format?
+
+## Reshaping from long to wide format
+
+There are times when we are required to turn long formatted data into wide formatted data. The `spread` function spreads a key-value pair across multiple columns.
+
+```{r}
+args(spread)
+```
+
+
+- `data`: data frame
+- `key`: column values to convert to multiple columns
+- `value`: single column values to convert to multiple columns' values 
+- `fill`: If there isn't a value for every combination of the other variables and the key column, this value will be substituted
+
+## `spread` in action
+
+```{r}
+tb3.wide = tb3 %>% spread(age, n)
+tb3.wide
+```
+
+# Regular Expressions
+
+## Introduction to regular expressions
+
+Regular expression is a pattern that describes a specific set of strings with a common structure. It is heavily used for string matching / replacing in all programming languages, although specific syntax may differ a bit. 
+
+Regular expressions typically specify characters (or character classes) to seek out, possibly with information about repeats and location within the string. This is accomplished with the help of metacharacters that have specific meaning: `$ * + . ? [ ] ^ { } | ( ) \`
+
+I won't lie: they can be difficult 
+
+## Quantifiers
+
+Quantifiers specify how many repetitions of the pattern
+
+- `*`: matches at least 0 times
+- `+`: matches at least 1 times
+- `?`: matches at most 1 times
+- `{n}`: matches exactly *n* times
+- `{n,}`: matches at least *n* times
+- `{n,m}`: matches between *n* and *m* times
+
+## Example
+
+```{r}
+strings = c("a", "ab", "acb", "accb", "acccb", "accccb")
+strings
+grep("ac*b", strings, value = TRUE)
+grep("ac+b", strings, value = TRUE)
+grep("ac?b", strings, value = TRUE)
+```
+
+## 
+
+```{r}
+grep("ac{2}b", strings, value = TRUE)
+grep("ac{2,}b", strings, value = TRUE)
+grep("ac{2,3}b", strings, value = TRUE)
+```
+
+## Operators 
+
+- `.`: matches any single character, as shown in the first example.
+- `[...]`: a character list, matches any one of the characters inside the square brackets. We can also use - inside the brackets to specify a range of characters.
+- `[^...]`: an inverted character list, similar to [...], but matches any characters except those inside the square brackets.
+- `|`: an “or” operator, matches patterns on either side of the |.
+- `\`: suppress the special meaning of metacharacters in regular expression
+- `^`: matches the start of the string.
+
+## Example 
+
+```{r}
+strings = c("^ab", "ab", "abc", "abd", "abe", "ab 12")
+grep("ab.", strings, value = TRUE)
+grep("ab[c-e]", strings, value = TRUE)
+grep("ab[^c]", strings, value = TRUE)
+```
+
+## 
+```{r}
+grep("^ab", strings, value = TRUE)
+grep("\\^ab", strings, value = TRUE)
+grep("abc|abd", strings, value = TRUE)
+```
+
+## Character classes
+
+Character classes allows to specify entire classes of characters, such as numbers, letters, etc. 
+
+- `[:digit:]` or `\d`: digits, 0 1 2 3 4 5 6 7 8 9, equivalent to `[0-9]`.
+- `\D`: non-digits, equivalent to `[^0-9]`.
+- `[:lower:]`: lower-case letters, equivalent to `[a-z]`.
+- `[:upper:]`: upper-case letters, equivalent to `[A-Z]`.
+- `[:alpha:]`: alphabetic characters, equivalent to `[[:lower:][:upper:]]` or `[A-z]`.
+- `[:alnum:]`: alphanumeric characters, equivalent to `[[:alpha:][:digit:]]` or `[A-z0-9]`.
+- `\w`: word characters, equivalent to `[[:alnum:]_]` or `[A-z0-9_]`.
+- `\W`: not word, equivalent to `[^A-z0-9_]`.
+
+##
+
+- `[:blank:]`: blank characters, i.e. space and tab.
+- `[:space:]`: space characters: tab, newline, vertical tab, form feed, carriage return, space.
+- `\s`: space, ` `.
+- `\S`: not space.
+- `[:punct:]`: punctuation characters, ! " # $ % & ’ ( ) * + , - . / : ; < = > ? @ [  ] ^ _ ` { | } ~.
+
+# Exam brainstorming
+
+## Where are we at?
+
+You know the basics of plotting and data manipulation in R
+
+By next week, you will know how to gather data from the web as well
+
+That means it's time to start thinking about the exam project
+
+## The boring stuff
+
+The exam project has to be handed in not later than 11 December 2015 
+
+You will also need to have a project description aproved. Deadline here is November 16
+
+## What do we expect?
+
+> For the exam students are expected to pose an interesting social science question and attempt to answer it using standard academic practices including original data collection and statistical analysis.
+
+Points for
+
+- collecting new data
+- good ideas
+- clear presentation 
+- using statistical techniques correctly
+
+## Where to gather data?
+
+That's really up to you (so you need to think)
+
+I've had fun collecting data from the Danish Superliga, Goodreads, Voting patterns in the European Parliament, the U.S Congress, the New York Times, Twitter, Instagram, Facebook, MOMA, etc. 
+
+... but it depends on your interests! 
+
+So spend the last part of today's class brainstorming with your group
+
+
+
+
