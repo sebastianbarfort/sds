@@ -1,0 +1,427 @@
+---
+title: "Lecture 9: Data Gathering"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "October, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+Gathering data from the web
+
+Webscraping 
+  
+  - **easy**: using css selectors
+  - **old approach**: using xpath
+
+Gathering data from APIs 
+
+## Rules
+
+<div class="centered">
+![](walter.jpg)
+</div>
+
+## Rules of web scraping
+
+1. You should check a site's terms and conditions before you scrape them. It's their data and they likely have some rules to govern it.
+2. Be nice - A computer will send web requests much quicker than a user can. Make sure you space out your requests a bit so that you don't hammer the site's server.
+3. Scrapers break - Sites change their layout all the time. If that happens, be prepared to rewrite your code.
+4. Web pages are inconsistent - There's sometimes some manual clean up that has to happen even after you've gotten your data.
+
+## How does a web page look like? 
+
+<iframe src = 'http://sebastianbarfort.github.io/' height='500px'></iframe>
+
+## Motivating example 
+
+<iframe src = 'https://en.wikipedia.org/wiki/Table_%28information%29' height='500px'></iframe>
+
+
+## `rvest` example
+
+`rvest` is a nice R package for web-scraping 
+
+```{r, warning = FALSE, message = FALSE}
+library("rvest")
+read_html("http://en.wikipedia.org/wiki/Table_(information)") %>%
+  html_node(".wikitable") %>% # extract first node with class wikitable
+  html_table() # then convert the HTML table into a data frame
+```
+
+Note: `html_table` only works on 'nicely' formatted HTML tables.
+
+## 
+
+This is a nice format? Really? Yes, really. It's the format used to render tables on webpages.
+
+```html
+<table class="wikitable">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Bielat</td>
+    <td>Adamczak</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>Blaszczyk</td>
+    <td>Kostrzewski</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Olatunkboh</td>
+    <td>Chijiaku</td>
+    <td>22</td>
+  </tr>
+</table> 
+```
+
+## 
+
+We're rarely that lucky - the data we want is not often in a `<table>` format
+
+Luckily, [selectorgadget](http://selectorgadget.com/) can help
+
+Selectorgadget is a Chrome browser extension for quickly extracting desired parts of an HTML page.
+
+With some user feedback, the gadget find out the CSS selector that returns the highlighted page elements.
+
+Let's give it a shot on Jyllands Posten's web page 
+
+## Scraping example
+
+<iframe src = 'http://jyllands-posten.dk/' height='500px'></iframe>
+
+## Scraping Jyllands Posten in `rvest`
+
+Assume we want to extract the headlines
+
+- fire up Selectorgadget
+- find the correct selector
+    - css selector: `.header`
+    - want to use xpath? look at the XPATH tool: Chrome extension "Xpath Helper" by Adam Sadovsky
+
+## 
+
+```{r, message = FALSE, warning = FALSE}
+css.selector = ".artTitle a"
+link = "http://jyllands-posten.dk/"
+
+jp.data = read_html(link) %>% 
+  html_nodes(css = css.selector) %>% 
+  html_text()
+jp.data
+```
+
+## Garbage
+
+Notice that there are still some garbage characters in the scraped text
+
+```{r}
+head(jp.data, 5)
+```
+
+So we need our string processing skills to clean the scraped data 
+
+```{r}
+library("stringr")
+jp.data.clean = jp.data %>% 
+  str_replace_all(pattern = "\\n" , replacement = " ") %>%
+  str_trim()
+```
+
+## 
+
+```{r}
+head(jp.data.clean, 15)
+```
+
+## Links
+
+What if we also wanted the links embedded in those headlines?
+
+```{r}
+jp.links = read_html(link, encoding = "UTF-8") %>% 
+  html_nodes(css = css.selector) %>%
+  html_attr(name = 'href')
+head(jp.links, 5)
+```
+
+## Looping through collection of links 
+
+We now have `jp.links`, a vector consisting of all the links to news stories from JP's front page
+
+Let's loop through them and grab all the text 
+
+Looping in R is pretty easy (although often inefficient)
+
+## Loops in R 
+
+```{r}
+for(i in 1:5){
+  print(paste("I'm now at number", i, sep = " "))
+}
+```
+
+## We need a function to grab all the text at JP
+
+Functions are easy to write (but be careful)
+
+```{r, error = TRUE}
+my.first.function = function(number){
+  return(number + 5)
+}
+my.first.function(10)
+my.first.function("hello")
+```
+
+## 
+
+```{r, error = TRUE}
+my.first.function = function(number){
+  if(!is.numeric(number)){
+      stop("your 'number' is not numeric")
+  }
+  else{
+    return(number + 5)
+  }
+}
+my.first.function(10)
+my.first.function("hello")
+```
+
+## 
+
+```{r, error = TRUE}
+my.first.function = function(number){
+  if(!is.numeric(number)){
+      number = "you did not provide a number"
+      return(print(number))
+  }
+  else{
+    return(number + 5)
+  }
+}
+my.first.function(10)
+my.first.function("hello")
+```
+
+## Returning to our example 
+
+Let's look at the first link
+
+```{r}
+jp.links[1]
+```
+
+There might be an encoding error, see actual R output
+
+Let's go to that page
+
+## Grab info from first link
+
+```{r}
+first.link = jp.links[1]
+first.link.text = read_html(first.link, encoding = "UTF-8") %>% 
+  html_nodes("#articleText p") %>% 
+  html_text()
+head(first.link.text, 3)
+```
+
+Very close...
+
+## 
+
+```{r}
+first.link.text.collapsed = paste(first.link.text, collapse = "")
+head(first.link.text.collapsed, 3)
+```
+
+## While we're at it...
+
+Let's also grab the author of the article
+
+```{r}
+read_html(first.link, encoding = "UTF-8") %>% 
+  html_nodes(".bylineAuthorName span") %>% 
+  html_text()
+```
+
+## Turning it into a function
+
+We need a function that for each new link will return the text we're interested in
+
+```{r}
+scrape_jp = function(link){
+  my.link = read_html(link, encoding = "UTF-8")
+  my.link.text = my.link %>% 
+    html_nodes("#articleText p") %>% html_text() %>% 
+    paste(collapse = "")
+  my.link.author = my.link %>% 
+    html_nodes(".bylineAuthorName span") %>% html_text()
+  return(cbind( my.link.author, link, my.link.text ))
+}
+```
+
+## 
+
+```{r}
+scrape_jp(first.link)
+```
+
+## 
+
+Now we can loop through the links and grab the data
+
+We store the data in a list that we later turn into a data frame
+
+```{r}
+my.jp.data = list() # initialize empty list
+for (i in jp.links[1:5]){
+  print(paste("processing", i, sep = " "))
+  my.jp.data[[i]] = scrape_jp(i)
+  # waiting one second between hits
+  Sys.sleep(1)
+  cat(" done!\n")
+}
+```
+
+## 
+
+transforming it into a data.frame
+
+```{r}
+library("plyr")
+df = ldply(my.jp.data)
+df$article = jp.data.clean[1:5]
+head(df, 2)
+```
+
+That's it. 
+
+# Your turn
+
+## Exercise 
+
+1. Go to http://www.econ.ku.dk/ansatte/vip/
+2. Create a vector of all links to the researcher's personal home page
+3. Go to each researchers page and grab their title
+4. Create a data frame of all researchers' names and title
+
+```{r, echo = FALSE}
+econ.link = "http://www.econ.ku.dk/ansatte/vip/"
+links = read_html(econ.link, encoding = "UTF-8") %>%
+  html_nodes("td:nth-child(1) a")%>%
+  html_attr(name = 'href')
+
+long.links = paste(econ.link, links, sep = "")
+
+econ.data = list()
+for(i in long.links[1:15]){
+  link = read_html(i, encoding = "UTF-8")
+  r.interest = link %>% html_nodes("#content .type") %>% html_text()
+  r.interest = r.interest[1]
+  name = link %>% html_nodes(".person") %>% html_text()
+  name = name[1]
+  econ.data[[i]] = cbind( name, r.interest )
+}
+
+df.econ = ldply(econ.data)
+df.econ$.id = NULL
+head(df.econ, 15)
+```
+
+# Gathering data from APIs 
+
+## API
+
+API = **A**pplication **P**rogram **I**nterface
+
+Many data sources have API's - largely for talking to other web interfaces
+
+Consists of a set of methods to search, retrieve, or submit data to, a data source
+
+We can write R code to interface with an API (lot's require authentication though)
+
+Many packages already connect to well-known API's (we'll look at a couple today)
+
+## `twitteR`
+
+`twitteR` is an R package which provides access to the Twitter API
+
+`streamR` provides access to Twitters streaming API
+
+Create an app [here](https://apps.twitter.com/) 
+
+```{r, eval = FALSE}
+library("twitteR")
+consumer_key = 'your key'
+consumer_secret = 'your secret'
+access_token = 'your access token'
+access_secret = 'your access secret'
+
+setup_twitter_oauth(consumer_key,
+                    consumer_secret,
+                    access_token,
+                    access_secret)
+
+searchTwitter("#dkpol", n=500)
+```
+
+## NYT API
+
+`rtimes` is a collection of functions to search and acquire data from various New York Times APIs.
+
+Register for your own API keys [here](http://developer.nytimes.com/apps/register)
+
+```{r, eval = FALSE}
+library("rtimes")
+out = as_search(q = "bailout", 
+                begin_date = "20081001", 
+                end_date = '20081201',
+                 key = "XXX")
+out$data[1:2]
+```
+
+## Statistics Denmark API
+
+This R package connects to the StatBank API from Statistics Denmark.
+
+```{r, eval = FALSE}
+library("devtools")
+install_github("rOpenGov/dkstat")
+```
+
+Let's you programatically work with Statistics Denmark data 
+
+## 
+
+```{r}
+library("dkstat")
+dst_search(string = "bnp", field = "text")
+```
+
+## 
+
+```{r}
+aulaar = dst_get_data(table = "AULAAR", KØN = "Total", 
+                       PERPCT = "Per cent of the labour force", 
+                       Tid = 2013,
+                       lang = "en")
+aulaar
+```
+
+
+
+
+
