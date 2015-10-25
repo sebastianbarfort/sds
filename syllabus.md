@@ -22,6 +22,7 @@ A tentative syllabus, subject to change, is below.
 |Oct 14, 2015| <font color="red">Deadline </font>| Assignment 1 | [Assignment 1](http://sebastianbarfort.github.io/sds/posts/2015/09/27/assignment-1.html)
 |Oct 19, 2015| **Data Manipulation** | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture8.html)
 |Oct 22, 2015| **Data Gathering** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
-|Oct 26, 2015| **Data Gathering** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
-|Nov 16, 2015| <font color="red">Deadline </font> | Project Description  |
+|Oct 26, 2015| **Data Gathering** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
+|Nov 9, 2015| <font color="red">Deadline </font>| Assignment 2 | Assignment 2
+|Nov 23, 2015| <font color="red">Deadline </font> | Project Description  |
 |Dec 11, 2015| <font color="red">Deadline </font> | Exam Project | |

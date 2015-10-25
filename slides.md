@@ -13,3 +13,4 @@ permalink: /slides/
 - [**Lecture 7**: Data Manipulation (split-apply-combine)](http://sebastianbarfort.github.io/sds/slides/lecture6.html)
 - [**Lecture 8**: Data Manipulation (tidy data, regular expressions)](http://sebastianbarfort.github.io/sds/slides/lecture8.html)
 - [**Lecture 9**: Data Gathering](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
+- [**Lecture 10**: Data Gathering + Assignment 1 + rmarkdown](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
