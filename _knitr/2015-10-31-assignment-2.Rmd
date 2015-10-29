@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Assignment 2: Web Scraping & Regression"
+categories: posts
+---
+
+
+  
+
