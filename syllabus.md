@@ -21,10 +21,10 @@ A tentative syllabus, subject to change, is below.
 |Oct 8, 2015| **Data Manipulation** | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture6.html)
 |Oct 14, 2015| <font color="red">Deadline </font>| Assignment 1 | [Assignment 1](http://sebastianbarfort.github.io/sds/posts/2015/09/27/assignment-1.html)
 |Oct 19, 2015| **Data Manipulation** | [Topic 3: Data Manipulation (readings)](http://sebastianbarfort.github.io/sds/homework/2015/09/21/data-manipulation-I.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture8.html)
-|Oct 22, 2015| **Data Gathering** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
-|Oct 26, 2015| **Data Gathering** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
+|Oct 22, 2015| **Web Scraping** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
+|Oct 26, 2015| **Working with APIs** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
 |Nov 2, 2015| **Git, Github & R Markdown** | Topic 5: Git, Github & R Markdown |
-|Nov 5, 2015| **Supervised Learning** | Topic 6: Statistical Learning | 
+|Nov 5, 2015| **Supervised Learning** | Topic 6: Statistical Learning |
 |Nov 9, 2015| <font color="red">Deadline </font>| Assignment 2 | Assignment 2
 |Nov 23, 2015| <font color="red">Deadline </font> | Project Description  |
 |Dec 11, 2015| <font color="red">Deadline </font> | Exam Project | |
