@@ -31,10 +31,12 @@ The overriding design goal for Markdown’s formatting syntax is to make it as r
 ## Basics
 
 Bold and italics: 
+
 - `**this text is in bold**` ->  **this text is in bold**
-- *this text is in italics* -> *this text is in italics*
+- `*this text is in italics*` -> *this text is in italics*
 
 Math: 
+
 - as in latex. 
 - `$y = X'\beta + \epsilon$` -> $y = X'\beta + \epsilon$
 
