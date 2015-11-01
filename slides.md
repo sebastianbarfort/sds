@@ -14,3 +14,4 @@ permalink: /slides/
 - [**Lecture 8**: Data Manipulation (tidy data, regular expressions)](http://sebastianbarfort.github.io/sds/slides/lecture8.html)
 - [**Lecture 9**: Data Gathering (web scraping)](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
 - [**Lecture 10**: Data Gathering (APIs, assignment 1 & rmarkdown)](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
+- [**Lecture 11**: Git, Github & R Markdown](http://sebastianbarfort.github.io/sds/slides/lecture11.html)
