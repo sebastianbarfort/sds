@@ -30,9 +30,13 @@ The overriding design goal for Markdown’s formatting syntax is to make it as r
 
 ## Basics
 
-Bold and italics: `**this text is in bold**`; ``*this text is in italics*` renders as **this text is in bold**; *this text is in italics*
+Bold and italics: 
+- `**this text is in bold**` ->  **this text is in bold**
+- *this text is in italics* -> *this text is in italics*
 
-Math: as in latex. `$y = X'\beta + \epsilon$` renders as $y = X'\beta + \epsilon$
+Math: 
+- as in latex. 
+- `$y = X'\beta + \epsilon$` -> $y = X'\beta + \epsilon$
 
 Can handle citations as well
 
@@ -50,14 +54,6 @@ lists:
         - broccoli
         - chard
 
-## rmarkdown = r + markdown
-
-`rmarkdown` let's you write code and text in the same document
-
-The program is smart enough to figure out what is what 
-
-Example
-
 ## Renders as...
 
 * fruits
@@ -69,6 +65,14 @@ Example
 * vegetables
     - broccoli
     - chard
+
+## rmarkdown = r + markdown
+
+`rmarkdown` let's you write code and text in the same document
+
+The program is smart enough to figure out what is what 
+
+Example
 
 # git & github 
 
@@ -113,6 +117,15 @@ Key terms (local):
 
 In GUI GitHub push and pull are combined into sync
 
+# Assignment 2
+
+## Discuss
+
+Assignment 2 is online 
+
+You can spend the rest of this class discussing it with your group 
+
+Kristoffer and I can help you with your overall strategy, but **not** coding
 
 
 
