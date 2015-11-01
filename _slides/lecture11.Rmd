@@ -1,0 +1,123 @@
+---
+title: "Lecture 11: rmarkdown, git & github"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "November, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+`rmarkdown` basics
+
+git & github
+
+Assignment 2
+
+
+## Markdown Basics
+
+We went over this a little bit too quick last time
+
+Markdown allows you to write using an easy-to-read, easy-to-write plain text format that can be converted into almost any format 
+
+The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible
+
+## Basics
+
+Bold and italics: `**this text is in bold**`; ``*this text is in italics*` renders as **this text is in bold**; *this text is in italics*
+
+Math: as in latex. `$y = X'\beta + \epsilon$` renders as $y = X'\beta + \epsilon$
+
+Can handle citations as well
+
+## Lists
+
+lists: 
+
+    * fruits
+        - apples
+            - macintosh
+            - red delicious
+        - pears 
+        - peaches
+    * vegetables
+        - broccoli
+        - chard
+
+## rmarkdown = r + markdown
+
+`rmarkdown` let's you write code and text in the same document
+
+The program is smart enough to figure out what is what 
+
+Example
+
+## Renders as...
+
+* fruits
+    - apples
+        - macintosh
+        - red delicious
+    - pears 
+    - peaches
+* vegetables
+    - broccoli
+    - chard
+
+# git & github 
+
+## Why version control?
+
+Detailed log of all changes.
+
+Easy to revert back to previous versions.
+
+Clear attribution of work (who contributed what).
+
+## git & github
+
+**what is `git`**?
+Git is an open source command line program for version control.
+
+**what is `github`**? 
+A company/web service that hosts Git repositories and enables 'social coding'
+
+**What is GitHub for Mac/Windows?**
+A GUI for Git.
+
+Makes it easier to use.
+
+Ultimately just does command line Git.
+
+## Getting started with Git
+
+Key terms (local):
+
+- Repository (repo): a directory where Git looks for changes
+
+- Initialize (init): have Git begin watching a directory
+
+- add: stage a file so that Git starts watching it
+
+- master: the main branch. By convention this should be the most stable version.
+
+- push: commit changes to a remotely hosted repository
+
+- pull: merge changes from a remotely hosted repository
+
+In GUI GitHub push and pull are combined into sync
+
+
+
+
+
+
+
+
+        
