@@ -28,5 +28,6 @@ A tentative syllabus, subject to change, is below.
 |Nov 9, 2015| **Supervised Learning** | Topic 6: Statistical Learning |
 || <font color="red">Deadline </font>| Assignment 2 | [Assignment 2](http://sebastianbarfort.github.io/sds/posts/2015/10/31/assignment-2.html)
 |Nov 12, 2015| **Unsupervised Learning** | Topic 6: Statistical Learning |
+|Nov 19, 2015| **Guest lecture** | [Zoltán Fazekas](http://zfazekas.github.io/): Text as Data |
 |Nov 23, 2015| <font color="red">Deadline </font> | Project Description  |
 |Dec 11, 2015| <font color="red">Deadline </font> | Exam Project | |
