@@ -24,7 +24,7 @@ A tentative syllabus, subject to change, is below.
 |Oct 22, 2015| **Web Scraping** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
 |Oct 26, 2015| **Working with APIs** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
 |Nov 2, 2015| **Git, Github & R Markdown** | Topic 5: Git, Github & R Markdown [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/01/git.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture11.html)
-|Nov 5, 2015| **Lecture** | *Big Data in Economics* [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/02/big-data.html) |
+|Nov 5, 2015| **Lecture** | *Big Data in Economics* [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/02/big-data.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture12.pdf)
 |Nov 9, 2015| **Supervised Learning** | Topic 6: Statistical Learning |
 || <font color="red">Deadline </font>| Assignment 2 | [Assignment 2](http://sebastianbarfort.github.io/sds/posts/2015/10/31/assignment-2.html)
 |Nov 12, 2015| **Unsupervised Learning** | Topic 6: Statistical Learning |
