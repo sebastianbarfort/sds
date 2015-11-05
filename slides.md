@@ -15,3 +15,4 @@ permalink: /slides/
 - [**Lecture 9**: Data Gathering (web scraping)](http://sebastianbarfort.github.io/sds/slides/lecture9.html)
 - [**Lecture 10**: Data Gathering (APIs, assignment 1 & rmarkdown)](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
 - [**Lecture 11**: Git, Github & R Markdown](http://sebastianbarfort.github.io/sds/slides/lecture11.html)
+- [**Lecture 12**: Big Data in Economics](http://sebastianbarfort.github.io/sds/slides/lecture12.pdf)
