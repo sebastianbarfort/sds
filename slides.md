@@ -16,3 +16,4 @@ permalink: /slides/
 - [**Lecture 10**: Data Gathering (APIs, assignment 1 & rmarkdown)](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
 - [**Lecture 11**: Git, Github & R Markdown](http://sebastianbarfort.github.io/sds/slides/lecture11.html)
 - [**Lecture 12**: Big Data in Economics](http://sebastianbarfort.github.io/sds/slides/lecture12.pdf)
+- [**Lecture 13**: Statistical Learning: Overview](http://sebastianbarfort.github.io/sds/slides/lecture12.html)
