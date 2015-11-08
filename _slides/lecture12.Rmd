@@ -1,0 +1,257 @@
+---
+title: "Lecture 12: Statistical Learning"
+subtitle: "Social Data Science"
+author: "Sebastian Barfort"
+date: "November, 2015"
+output:
+  ioslides_presentation:
+    widescreen: false
+    fig_caption: true
+    highlight: zenburn
+css: styles.css
+---
+
+## Today
+
+Assignment 2 
+
+Guest lecture: Zoltan Fazekas 
+
+Statistical learning
+
+## Introduction
+
+What is the objective of empirical policy research? 
+
+1. **causation**: what is the effect of a particular variable on an outcome? 
+2. **prediction**: given what we know, what is our best prediction of new outcomes? 
+
+Today: 
+
+- Short introduction 
+- key differences
+- two approaches for linking causal approaches and predictions
+    - common framework 
+    - prediction as **exploratory data analysis**
+    
+    
+# 1. Causal Inference
+
+##
+
+![](http://press.princeton.edu/images/k10363.gif)
+
+## Introduction
+
+Most econometric theory is focused on estimating **causal effects**
+
+Causal effect: what is the effect of some policy on an outcome we are interested in?
+
+Examples of causal questions:
+
+- what is the effect of immigration on native wages?
+- what is the effect of democracy on growth? 
+- what is the effect of newspaper coverage on stock prices?
+
+## Intuition
+
+Variable of interest (often called *treatment*): $D_i$
+
+Outcome of interest: $Y_i$
+
+**Potential outcome framework**
+
+$$
+Y_i = \left\{
+\begin{array}{rl}
+Y_{1i} & \text{if } D_i = 1,\\
+Y_{0i} & \text{if } D_i = 0
+\end{array} \right.
+$$
+
+The observed outcome $Y_i$ can be written in terms of potential outcomes as
+
+$$ Y_i = Y_{0i} + (Y_{1i}-Y_{0i})D_i$$
+
+$Y_{1i}-Y_{0i}$ is the *causal* effect of $D_i$ on $Y_i$. 
+
+But we never observe the same individual $i$ in both states (treated & non-treated). 
+
+This is the **fundamental problem of causal inference**. 
+
+## Selection bias
+
+We need some way of estimating the state we do not observe (the *counterfactual*)
+
+Usually, our sample contains individuals from both states
+
+So why not do a naive comparison of averages by treatment status? 
+
+$$E[Y_i|D_i = 1] - E[Y_i|D_i = 0] = \\ E[Y_{1i}|D_i = 1] - E[Y_{0i}|D_i = 1] + \\ E[Y_{0i}|D_i = 1] - E[Y_{0i}|D_i = 0]$$
+
+$E[Y_{1i}|D_i = 1] - E[Y_{0i}|D_i = 1] = E[Y_{1i} - Y_{0i}|D_i = 1]$: the average *causal* effect of $D_i$ on $Y$. 
+
+$E[Y_{0i}|D_i = 1] - E[Y_{0i}|D_i = 0]$: difference in average $Y_{0i}$ between the two groups. Likely to be different from 0 when individuals are allowed to self-select into treatment. Often referred to as *selection bias*. 
+
+## Random assignment solves the problem
+
+Random assignment of $D_i$ solves the problem because random assignment makes $D_i$ independent of potential outcomes
+
+That means that $E[Y_{0i}|D_i = 1] = E[Y_{0i}|D_i = 0]$ and thus that the selection bias term is zero
+
+Intuition: with random assignment, non-treated individuals can be used as counterfactuals for treated (*what would have happened to individual $i$ had he not received the treatment*?)
+
+This allows us to overcome the fundamental problem of causal inference
+
+## Who randomizes? 
+
+> “no causation without manipulation”
+
+*Paul Holland (1986)*
+
+As mentioned, we need to worry when individuals are allowed to self-select
+
+This means that a lot of thought has to go into the *randomization phase*
+
+Randomization into treatment groups has to be manipulated by someone 
+
+## Who manipulates?
+
+Quasi-experiments: randomization happens by "accident"
+
+- Differences in Differences
+- Regression Discontinuity Design
+- Instrumental variables
+
+Randomized controlled trials: randomization usually done by researcher
+
+- Survey experiments
+- Field experiments
+
+Note: difficult to say one is strictly better than the other. Randomization can be impractical and/or unethical. 
+
+Can you come up with an example where randomization would be unethical?
+
+## Summary
+
+Causal questions are of key interest to policy makers and academics
+
+The key focus is on *inference*: we want to know about the causal effect of $D$ on $Y$ *in the population of interest*
+
+When you are interested in a **causal question** you need to think carefully about randomization of treatment (this is often referred to as your *identification strategy*)
+
+Is causality the only thing policy makers and social scientists should be interested in?
+
+# 2. Prediction
+
+## 
+
+![](http://web.stanford.edu/~hastie/img/book/ISLR.jpg)
+
+
+## Prediction
+
+> “It's tough to make predictions, especially about the future.” 
+
+*Storm P*
+
+Many policy problems are not about causality but rather about prediction
+
+
+## Who predicts?
+
+* Local governments -> pension payments/crime/etc
+* Google -> whether you will click on an ad
+* Netflix -> what movies you will watch
+* Insurance companies -> what your risk of death is
+* You? -> will *Social Data Science* be a fun/rewarding/interesting course to follow?
+
+## Why predict? Glory!
+
+![](http://www2.pictures.zimbio.com/gi/Chris+Volinsky+Netflix+Awards+1+Million+Netflix+WOtFSoPeoOal.jpg)
+
+[Netflix Awards $1 Million Prize and Starts a New Contest](http://bits.blogs.nytimes.com/2009/09/21/netflix-awards-1-million-prize-and-starts-a-new-contest/?8au&emc=au)
+
+## Why predict? Riches!
+
+![](http://kaggle2.blob.core.windows.net/competitions/hhp/2496/logos/header.png)
+
+<br>
+
+[http://www.heritagehealthprize.com/c/hhp](http://www.heritagehealthprize.com/c/hhp)
+
+
+## Why predict? 
+
+<iframe src = 'http://www.niemanlab.org/2015/08/the-new-york-times-built-a-slack-bot-to-help-decide-which-stories-to-post-to-social-media/
+' height='500px'></iframe>
+
+
+## Prediction in practice
+
+[Building the Next New York Times Recommendation Engine](http://nyti.ms/1L492G1)
+
+## Introduction to statistical learning
+
+Standard empirical techniques are not optimized for prediction problems because they focus on **unbiasedness**
+
+Remember the Gauss-Markov theorem from Econometrics B? 
+
+**Gauss-Markov Theorem**: In a regression model where $E(u_i) = 0$ (no omitted variable bias) and $V(u_i) = \sigma^2$ (homoskedasticity), the OLS estimator is BLUE (Best Linear Unbiased Estimator). 
+
+Keywords: *unbiased* ($E(\hat{\beta}) = \beta$) and *best* (smallest variance among the class
+of all linear unbiased estimators)
+
+But what about **biased** estimators?
+
+## The bias-variance tradeoff
+
+OLS is designed to minimize *in sample error*: the error rate you get on the same
+data set you used to build your predictor.
+
+$$ \text{arg min}_{\beta} \sum_{i = 1}^{n} (y_i - \hat{y}_i)^2 $$
+
+But for prediction we are interested in minimizing *out of sample error*: the error rate you get on a new
+data set
+
+Too see this, consider a prediction at a new point, $x_0$. Our prediction for $y_0$ is then $\hat{f}(x_0)$ and the mean squared error (MSE ) can be decomposed as 
+
+$$ E[(y_0 - \hat{f}(x_0))^2] = [\text{Bias}(\hat{f}(x_0))]^2 + V(\hat{f}(x_0)) + \sigma^2$$
+
+By ensuring zero bias, OLS picks a corner solution. This is generally not optimal for prediction. 
+
+
+## Bias and variance
+
+What do we mean by the *variance* and *bias* of an estimator?
+
+$\text{Bias}(\hat{f}(x_0)) = E[\hat{f}(x_0) - f(x_0)]$: Bias refers to the error that is introduced by approximating a real-life problem with a simple model. It won't fit the new data well. 
+
+$V(\hat{f}(x_0))$: Model too complex. Small changes to the data will cause the solution to change a lot. 
+
+Machine learning techniques were developed specifically to maximize prediction performance by providing an empirical way to make this bias-variance trade off
+
+But generally, that means that all our models are somewhat biased (making inference impossible)
+
+## Statistical learning: example 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
