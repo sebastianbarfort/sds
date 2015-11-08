@@ -80,6 +80,12 @@ Example
 
 ## Why version control?
 
+> Your closest collaborator is you six months ago, but you don't reply
+> to emails.
+
+&ndash; [@gonuke](https://twitter.com/gonuke), after [@kcranstn](https://twitter.com/kcranstn)
+<http://bit.ly/motivate_git> (really from [@mtholder](https://twitter.com/mtholder))
+
 Detailed log of all changes.
 
 Easy to revert back to previous versions.
