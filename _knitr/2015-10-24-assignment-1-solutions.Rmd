@@ -1,6 +1,7 @@
 ---
+title: 'Assignment 1: Solutions'
 layout: post
-title:  "Assignment 1: Solutions"
+output: pdf_document
 categories: posts
 ---
 
