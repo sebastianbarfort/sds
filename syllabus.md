@@ -7,7 +7,7 @@ permalink: /syllabus/
 A tentative syllabus, subject to change, is below.
 
 
-|Date|Topic|Detail|Slides/Assignments|
+|Date|Topic|Detail|Slides/Exercises|
 |:----:|:-----:|:-----|:-----|
 |Aug 31, 2015| **Intro** | - | [slides](http://sebastianbarfort.github.io/sds/slides/SDS_lecture1.pdf) |
 |Sep 7, 2015| **Getting started** | [Intro I: Getting Started](http://sebastianbarfort.github.io/sds/posts/2015/08/31/getting-started.html) |
