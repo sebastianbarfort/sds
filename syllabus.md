@@ -29,7 +29,7 @@ A tentative syllabus, subject to change, is below.
 || <font color="red">Deadline </font>| Assignment 2 | [assignment 2](http://sebastianbarfort.github.io/sds/posts/2015/10/31/assignment-2.html)
 |Nov 12, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)| <font color="red"> CANCELLED </font>
 |Nov 16, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)| [slides](http://sebastianbarfort.github.io/sds/slides/lecture13.html)
-|Nov 19, 2015| **Guest lecture** | [Zoltán Fazekas](http://zfazekas.github.io/): Text as Data [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/12/text.html)|
+|Nov 19, 2015| **Guest lecture** | [Zoltán Fazekas](http://zfazekas.github.io/): Text as Data [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/12/text.html)| [slides](http://sebastianbarfort.github.io/sds/slides/zoltanslides.pdf)
 |Nov 23, 2015| <font color="red">Deadline </font> | Project Description  |
 |Nov 23, 2015| **Unsupervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)|
 |Nov 26, 2015| **Lecture** |  |
