@@ -25,13 +25,13 @@ A tentative syllabus, subject to change, is below.
 |Oct 26, 2015| **Working with APIs** | Topic 4: Data Gathering | [slides](http://sebastianbarfort.github.io/sds/slides/lecture10.html)
 |Nov 2, 2015| **Git, Github & R Markdown** | Topic 5: Git, Github & R Markdown [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/01/git.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture11.html)
 |Nov 5, 2015| **Lecture** | *Big Data in Economics* [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/02/big-data.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture12.pdf)
-|Nov 9, 2015| **Overview** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture12.html)
+|Nov 9, 2015| **Overview** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/homework/2015/11/11/statistical-learning.html) | [slides](http://sebastianbarfort.github.io/sds/slides/lecture12.html)
 || <font color="red">Deadline </font>| Assignment 2 | [assignment 2](http://sebastianbarfort.github.io/sds/posts/2015/10/31/assignment-2.html)
-|Nov 12, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)| <font color="red"> CANCELLED </font>
-|Nov 16, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)| [slides](http://sebastianbarfort.github.io/sds/slides/lecture13.html)
-|Nov 19, 2015| **Guest lecture** | [Zoltán Fazekas](http://zfazekas.github.io/): Text as Data [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/12/text.html)| [slides](http://sebastianbarfort.github.io/sds/slides/zoltanslides.pdf)
+|Nov 12, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/homework/2015/11/11/statistical-learning.html)| <font color="red"> CANCELLED </font>
+|Nov 16, 2015| **Supervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/homework/2015/11/11/statistical-learning.html)| [slides](http://sebastianbarfort.github.io/sds/slides/lecture13.html)
+|Nov 19, 2015| **Guest lecture** | [Zoltán Fazekas](http://zfazekas.github.io/): Text as Data [(readings)](http://sebastianbarfort.github.io/sds/homework/2015/11/12/text.html)| [slides](http://sebastianbarfort.github.io/sds/slides/zoltanslides.pdf)
 |Nov 23, 2015| <font color="red">Deadline </font> | Project Description  |
-|Nov 23, 2015| **Unsupervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/11/statistical-learning.html)|
+|Nov 23, 2015| **Unsupervised Learning** | Topic 6: Statistical Learning [(readings)](http://sebastianbarfort.github.io/sds/homework/2015/11/11/statistical-learning.html)|
 |Nov 26, 2015| **Lecture** |  |
 |Nov 30, 2015| **Practice Session** |  Work on Your Project |
 |Dec 11, 2015| <font color="red">Deadline </font> | Exam Project | |

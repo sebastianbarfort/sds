@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Topic 6: Statistical Learning (readings)"
-categories: posts
+categories: homework
 ---
 
 ### Causality
