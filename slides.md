@@ -19,3 +19,4 @@ permalink: /slides/
 - [**Lecture 13**: Statistical Learning: Overview](http://sebastianbarfort.github.io/sds/slides/lecture12.html)
 - [**Lecture 14**: Statistical Learning: Supervised Learning](http://sebastianbarfort.github.io/sds/slides/lecture13.html)
 - [**Lecture 15**: Text as Data (by Zoltan Fazekas)](http://sebastianbarfort.github.io/sds/slides/zoltanslides.pdf)
+- [**Lecture 16**: Unsupervised Learning](http://sebastianbarfort.github.io/sds/slides/lecture14.html)
