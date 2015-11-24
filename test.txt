@@ -1,0 +1,549 @@
+# Group 2 Project Description Sorry it is a bit late, problems with my computer. 
+
+[Group2 Project Description.pdf](https://github.com/sebastianbarfort/sds/files/42178/Group2.Project.Description.pdf)
+
+# Group 28 Project Description 
+[grp28_project.pdf](https://github.com/sebastianbarfort/sds/files/42097/grp28_project.pdf)
+
+
+# Group 6 - project discription  [pac.pdf](https://github.com/sebastianbarfort/sds/files/42059/pac.pdf)
+
+# Commitment paper, group 4 [Commitment Paper.docx](https://github.com/sebastianbarfort/sds/files/42056/Commitment.Paper.docx)
+
+# Group 14 - Project description 
+
+## **How to get a place in Copenhagen?**
+
+An analysis of the market for rented apartments and houses in Copenhagen including topics as
+
+-	Differences in neighborhoods with respect to level of rents and rate of turnover
+
+-	Prediction on price based on characteristics of the apartment
+
+-	Relationship between wording in description of the apartment and the asked rent
+
+### 1) Data Gathering
+The analysis will be based on a panel data set scraped from www.boligportalen.dk containing the variables rent, date, accommodation type, m^2, location, description, title and a dummy indicating whether or not the apartment has been reserved. 
+If possible, this data could be merged with an administrative data containing information about the different building including year of construction, information on extensive renovations etc. or with a data set containing information on distance to public goods (transportation, recreational areas etc.) which might affect the price. Data.kk.dk has several data set on public goods (play grounds, cultural centers, lakes, green areas, use of streets).  
+
+### 2) Data limitations: 
+The apartments advertised on boligportalen.dk are obviously not random. Can we argue, that this data is representative for the apartment market in Copenhagen anyway?
+Moreover, we don’t know the actual rent, we only know the demanded price. However, as we scrape the data at different days and creating a panel data set, we observe which apartments has been removed from the page and which has been marked “reserved”. This might give us an indicator for which apartments that are quickly of the marked – that is, advertised at a price that renters are willing to pay – and which apartments might be too expensive. 
+
+### 3) Data cleaning:
+As rent and kvm are numeric variables, and location and accommodation type are drop down lists on the web page, some of the data cleaning will be straight forward.  If we choose to include a textural analysis of the title and description, the process will obviously be more complicated. 
+If we want to merge the data from boligportal.dk with some kind of administrative data, we are going to spend some time making sure that the street names are spelled the same way in both data set. 
+
+#### 4) Data Visualization:
+Maps of Copenhagen showing difference in price and turnover seems obvious. Here we aim at doing both a mapping of general price levels and affordability, but possible also a mapping of our modelled predictions of changes in the prices. 
+
+Furthermore, graphical analysis of different plot types related to both data characteristics as well as the predictions models forecastings will be used in order to give a comprehensive story of rental market.
+
+### 5) Statistical Learning:
+Using a limited number of variables from boligportal.dk (postalcode, kvm, location) we could set up a relative simple prediction model designed to infer the relationship between the asked rent and this labeled data. If we manage to attach information on distance to public good or the condition of the building, these variables could be included. 
+
+A textural analysis of the relationship between the wording of the description and the rent could also be carried out. In this we would examine whether there are a specific wording used in description of highly priced rental apartments compared to lower priced, when other factors are controlled for using supervised learning algorithms such as the Ridge and Lasso.
+
+Further, unsupervised learning models might prove beneficial to provide a depicturing e.g. the decision tree deciding the rent level of an apartment, or a dimensional collapse into an index for rental markets using principal components. 
+
+# Group 16 - Project description: What makes news, news on social media
+
+Recent studies by Ethan Zuckerman suggest that the digital media of today is less representative in a global sense than the old analogue media types and that social media is even less representative. 
+Especially when considering the social media he explains how their targeting of stories suggested by algorithms to be relevant for the individual narrows our view on the global world since the media picture is focused on news close to the individual and his or hers beliefs. This along with previous results from the Reuters institute digital report (2012) implying that an increasing part of the younger generations in Britain gets the majority of their news stories from the social media is what motivates us to consider a similar investigation of the media in a Danish context. 
+The purpose of this paper is twofold: 
+First we wish to investigate the Danish media’s focus and check whether or not social media is in fact more focused on inland news than the official media websites. Since we cannot see exactly what type of news everyone gets expose to we do this comparing the same media on its official website and on their official Facebook page. This allow us to see if only a specific type of news gets into or left out of the social media platform. We compare the distribution of inland and foreign news to see how large a fraction of the Danish news concerning themselves with other parts of the world and how this differs between the official webpage and their Facebook page. In this sense we are able to see if the news media target their readers on social media narrower than their usual reader. 
+Second we wish to consider the news ending up on Facebook and use number of likes, comments and times shared as a proxy for how many individuals getting exposed to the news and investigate if a specific type of Facebook news gets more exposure than others.  
+Data
+In this analysis we are going to use data from a number of the biggest news media in Denmark. Among the selected are  Berlingske tidende and Danmarks Radio. We collect all articles published within the last year from two different platforms, the media’s official website and their corresponding Facebook page. The articles from the medias’ official websites will be scrapped by the use of a function looping through each article saving the section, title, summary, text and date. Posts from Facebook will be scrapped through Facebook’s API.
+Method
+We will analyze the words used in the articles to categorize which countries the articles is about, and if any words or categories determines if the article is posted on the media’s Facebook page.
+We will split the data in a training and a test dataset and make a regression to find out which articles theoretically would be posted on the media’s Facebook page. We will use the GLMNET approach. This will be compared to which articles actually were posted on the Facebook page.
+Literature:
+Sunstein, Cass. 2001. “Echo Chambers: Bush v. Gore, Impeachment, and Beyond”
+Zuckerman, Ethan. 2014.  “Rewire: Digital Cosmopolitans in the Age of Connection”
+
+# Group 18: Project Description 
+
+### Get by with a little help from a friend: Presidential candidates and Super PACs
+
+### 1 Idea
+The purpose of this project is to examine the Super PACs and, if possible, their influence on politics in the US. 
+
+A Super PAC is a relatively new type of political action committee that arose following two federal court decisions that found that limitations on corporate and individual contributions are unconstitutional violations of the First Amendment right to free speech. The Super PACs may raise and spend unlimited amounts of money from associations, individuals, unions and corporations to advocate for or against political candidates or parties. The Super PACs are not allowed to make donations directly to the political candidates or parties, but can engage in unlimited political spending and support independently of the political campaigns. 
+
+The size of the Super PACs varies greatly. Some of the Super PACs have raised as much as 150 million dollars over two years, which must be considered to be a large enough amount of money to influence the elections of house representatives, senators and presidents. The Super PACs are therefore relevant to examine. 
+
+This project will examine a wide range of problems:
+
+* General characteristics of the Super PACs:
+  + How many Super PACs?
+  + How much money have they raised in total?
+* Geographically differences: 
+  + Are there geographically differences in the number of Super PACs?
+  + Are there geographically differences in the amount of money raised by Super PAC’s?
+  + Are there geographically differences in the Super PACs’ political viewpoint? 
+  + Are there geographically differences in the Super PACs’ engagement in negative and positive campaigning?
+* The use of Super PACs and different viewpoints (conservative / liberal) – on country level:
+  + Are there differences in the number of Super PAC’s depending on political viewpoint?
+  + Are there differences in the amount of money raised by Super PACs depending on political viewpoint?
+  + Are there differences in the engagement in negative and positive campaigning depending on political viewpoint? 
+* The use of Super PACs and different viewpoints (conservative / liberal) - on state level:
+  + Are there differences in the number of Super PAC’s depending on political viewpoint?
+  + Are there differences in the amount of money raised by Super PACs depending on political viewpoint?
+  + Are there differences in the engagement in negative and positive campaigning depending on political viewpoint? 
+* Negative campaigning:
+  + What is the size of the contributions to negative campaigning?
+  + Where does the money come from?
+  + Where does the money go?
+  + How have these variables changed over time?
+* The Super PACs’ influence on the elections outcome:
+  + If possible we wish to analyse whether the Super PACs have had influence on elections outcome.
+
+To our knowledge such an analysis has not been made before. The Centre for Responsive Politics has made some descriptive analysis describing the Super PAC but has, as far as we know, not made the suggested analysis.  
+
+### 2 Data
+The Super PACs are required to report their donors to the Federal Election Commission on a monthly or semi-annual basis in off years, and monthly in election-years. This makes it doable to examine the Super PACs. The Centre for Responsive Politics (http://www.opensecrets.org/) has collected data for the Super PACs for the cycles of 2010, 2012, 2014 and 2016. 
+
+We will collect this data by scraping the webpage, using two loops (as in the second home assignment) for each of the four years and for every Super PAC. Each year has a separate page containing data on:
+
+1. The name of the Super PAC
+2. Who the Super PAC supports/opposes
+3. The total independent expenditure
+4. The viewpoint (conservative or liberal)
+5. The total amount of money raised. 
+
+Further, each Super PAC also has a separate page with data for every contribution made, containing information on:
+
+1. The politician the Super PAC supports/opposes 
+2. The state of the politician
+3. The party of the politician 
+4. Which office (house, senate or presidential) the politician is running for
+5. The size of the expenditure
+6. The amount of money spent on supporting or opposing the politician. 
+
+Each page also contains information about the total amount spent for and against each of the two parties (democrats and republicans). 
+
+The database does not contain information about the date of the submitted contribution or when they were spent for the elections in 2010, 2012 and 2014, which could have been a very interesting feature to add to our analysis. There are however a slightly expanded dataset for the 2016 elections where they have added independent expenditure made within the last two weeks. It includes candidate, race (house, senate or presidential), size of expenditure, the payee, whether it was for supporting or opposing, the date and a note about how the money was spent.
+
+### 3 Method
+Parts of the analysis will be descriptive and will consist of graphs, maps etc. This is relevant for all parts of the analysis except the examination of the relationship between Super PACs and the results of the election.  To examine the relationship between the use of Super PACs and political view, we will further make significant-tests. As of now, we haven’t thought of a specific estimation model since it depends on the final structure of our data. 
+
+The examination of the relationship between the support from Super PACs and the results of the elections will address problems of endogeneity. E.g. to control for vote-getting ability across candidates, we aim to examine elections in which the same two candidates face one another on more than one occasion; differing eliminates the influence of any fixed candidate or district attributes. 
+
+Also, we touch upon potential problems of reverse causation. Getting by with a little help from a friend can refer to two friends: Either it refers to the politician getting elected with the help from super PACs, more specifically the financial resources. The other interpretation, however, is equally likely. Assuming - as it often is - that political actors are rational, utility maximizing entities, super PACs might very well support Politicians in order to gain *access* after a succesfull election. Thus, reverse causation cannot be ruled out, as super PACs might simply play a *bandwagon* strategy, supporting an already popular candidate. An observation supporting the last interpretation is if data indicates that (some) super PACs support politicians on both sides of the aisle. However, as the alternative to the given politician is unknown, such behavior cannot rule out that super PACs support the most likeminded politicians.
+
+# Group 3: Project Description Jobudbud i Danmark 2004-2015
+
+Vi vil i denne opgave undersøge udviklingen i jobudbuddet i Danmark fra 2006-2015. Vi bruger Danmarks største jobmarked www.jobindex.dk til at undersøge denne udvikling. 
+På Jobindex er det muligt at tilgå alle jobopslag siden december 2003. Der er i alt tale om 2.206.434 jobopslag.
+
+På baggrund af disse data ønsker vi at undersøge hvordan jobudbuddet og konjunkturerne korrelerer. Hvordan udvikler jobudbuddet sig ved udbruddet af den finansielle krise i 2007/08? Er udviklingen på aktiemarkedet foran udviklingen i jobudbud eller omvendt? Derudover ønsker vi at undersøge om der er nogle særlige brancher/typer job/regioner rammes særligt hårdt.
+
+En mulighed vil også være at undersøge hvorvidt antallet af jobopslag kan fungere som en indikator for fremtidig vækst eller tilbagegang i økonomien. Teorien er, at virksomheder i fremgang og med forventninger til fremtidig vækst vil ønske at ansætte nye medarbejdere, og at en sådan optimisme vil komme til udtryk ved et øget antal jobopslag på Jobindex. Omvendt vil virksomheder der oplever faldende efterspørgsel og som ikke har et optimistisk syn på fremtiden i mindre grad søge nye medarbejdere.
+Dermed er det muligt at jobudbuddet kan give en information om virksomhedernes forventninger til fremtiden, som ellers ikke er tilgængelig.
+
+Vi vil hente data ved at scrape alle de 2,2 mio. arkiverede jobopslag på www.jobindex.com. Jobindex har selv inddelt jobbene i områder og kategorier og vi vil derfor relativt nemt kunne opdele jobbene på område og kategori. 
+
+
+# Group 4: Project Description [Project Description - final.pdf](https://github.com/sebastianbarfort/sds/files/41878/Project.Description.-.final.pdf)
+
+# Project description - Group 9 Project Description
+
+## Idea
+We read an article about the relationship between book ratings and the rating of their movie counterparts on Vocativ:
+http://www.vocativ.com/news/245040/the-book-is-better-than-the-movie
+The article concluded that books in general were rated better and therefore superior to the average movie adaptation. Following this idea we want to do our own examination of the relationship between ratings of books and ratings of movies adapted from said books. We want to include more variables than just the ratings however since we believe this relationship to be influenced by many other things. Also we did not agree with the direct comparison of book rating to movie rating since the book ratings in the article did not use the entire scale (e.g from 1-5 almost all books scored  at least 3), and the movies were more prone to use their 1-10 scale. So our main question is:
+
+-	In general do highly rated books turn into highly rated movies? 
+Trying to answer this we also want to look at the following:
+-	How much do other variables influence this relationship?
+-	How is the relationship between average ratings and the number of ratings - do only good books and movies get rated?
+
+## Data
+We want to scrape data using R from the two sources used in the article on Vocativ:
+-	IMDb, www.IMDb.com
+-	Goodreads, www.goodreads.com
+IMDb is a webpage where visitors are able to rate e.g. movies and TV-shows. It also contains a lot of background info. Goodreads works the same way except it is for books. 
+From IMDb we use the filter “based on novels” and want to scrape the following data for each movie:
+
+-	Title
+-	Year
+-	Movie length
+-	Avg. Rating
+-	Number of ratings
+-	Budget
+-	Gross earnings
+
+From Goodreads we choose from the list “I Saw the Movie & Read the Book” and want to scrape for each book:
+
+-	Title
+-	Author
+-	Avg. Rating
+-	Number of ratings
+
+Combining these two datasets we hopefully get a lot of overlaps between titles which make us able to do comparisons between the books and their movie counterparts. A challenge might present itself in the way titles are structured and/or shown in different languages. Also not all types of data might be available for each movie or book.
+
+## Analysis
+At first we want to look at the movie data and book data separately, e.g. what are the average ratings distributed on different kinds of variables, e.g. number of ratings, year of release and so on. Then we want to replicate the simple plot of the average ratings of a movie along the average rating of the book it is based on like on Vocativ. Following this we will discuss different ways to do a meaningful comparison of ratings that’s not just a 1:1 using the scales on each webpage.
+Hereafter we want to do some simple linear regression analysis to find possible trends in book-to-movie ratings when controlling for other variables, and see how this affects the conclusion that books supposedly are better.
+
+# Group 25: Project Description 
+#### Project Description – Social Data Science: Vote on removal of EU justice opt-out – can we predict the result?
+
+With the exam project in Social Data Science we have chosen to focus on the vote on Danish EU justice opt-out. Previously, exit polls and surveys has tried to predict outcomes of votes similar to this and other votes in Danish politics. This analysis is new in to aspects:
+-	It is the first time that there is a vote on the removal of an opt-out 
+-	Data used for the model is taken from the social media
+
+Therefore we want to explore the following: 
+
+***Can we predict the outcome of the Danish referendum in December based on Facebook data? If time allows: How do these results differ from Twitter-data and Google Trends?***
+
+*Social media as a source*
+As previously mentioned we wish to use data from the social media as input in our model to predict the outcome of the vote. 
+
+We wish to use the social media to get an unbiased look into the Danes attitudes towards the subject and use this to predict the outcome of the vote the 3. of December 2015. 
+
+The choice of Facebook as a source, is to be understood in the light that a large and broad part of the Danish population uses Facebook. According to DR’s media development report from 2015, 3,5 mio. people used Facebook monthly in 2014  (Danmarks Radio, 2015). The same report shows that 73% uses social media monthly and 59% uses the social media daily . The choice of data from the social media thus gives us the opportunity to get a broad base of the Danes attitudes towards the subject. Afterwards our results will be compared to surveys’ prediction of the election result, the final result and, if time allows, the predictions that would have been made with data from Twitter and Google Trends. 
+
+On a more theoretically note we hope that these data will give us an advantage by showing voters’ true and revealed preferences compared to surveys where people might feel pressured to lie or not answer truthfully.
+
+*Prediction*
+The model we wish to use for prediction is from a Greek prediction experiment in which the national vote was predicted (Askitas, 2015). The vote was held on 5. of July and was also a YES/NO vote. As in the Greek example, we want to have precise and time-determined data before the vote. Our model will be built on data from the month up to the election and the model is going to be a ratio between the expected no and yes votes that we estimate from the collected social media data. 
+
+*Tentative literature*
+- Askitas, N. (13. July 2015). Askitas.com. From http://www.askitas.com/wp/wp-content/uploads/2015/07/greferendum.pdf
+- Danmarks Radio. (22. Januar 2015). Medieudviklingen 2014. From Danmarks Radio: https://www.dr.dk/NR/rdonlyres/6E40D722-3E66-4304-9800-076F3F7C2FEE/6062535/DR_Medieudviklingen_2014.pdf
+
+# Group 11: Project Description Projektbeskrivelse 
+
+## Idé
+Vi har valgt at undersøge hotelmarkedet i nogle udvalgte europæiske hovedstæder. Vi vil undersøge hvilke faktorer, der påvirker hotelpriser og ligeledes sammenligne de forskellige lande. Vi finder det interessant at undersøge, hvorvidt prisen afhænger af afstand til centrum, antal stjerner og brugervurderinger. Derudover finder vi det interessant at sammenligne prisniveauet i de forskellige hovedstæder. 
+
+Umiddelbart kan vi ikke finde andre studier af disse problemstillinger.  
+
+## Data
+Vi har valgt at benytte hjemmesiden http://www.trivago.dk/, hvor vi scraper siderne for data vha. SelectorGadget og pakken ”rvest” i R. Vi udtrækker hotelnavn, pris, stjerner, antal km fra centrum og brugervurdering. Vi afgrænser med datoen d. 16.-17. januar 2016, da vi antager, at denne weekend kan opfattes som en ”basis-weekend” uden særlige arrangementer. Derudover afgrænser vi med værelsestypen dobbeltværelse, og afstand fra centrum sættes til 10 km. For at få alle hoteller med fravælges fluebenet i ”vis kun ledige hoteller”. Ydermere afgrænser vi ved at have udvalgt 15 europæiske hovedstæder, hhv. København, Oslo, Stockholm, Berlin, London, Paris, Amsterdam, Dublin, Lisabon, Madrid, Rom, Sofia, Reykjavik, Athen og Luxembourg. 
+
+## Metode
+Vi finder det svært at udvælge nogle statistiske metoder endnu, før vi har arbejdet med data og undersøgt hvad, der vil give bedst mening at benytte. Vi har dog overvejet en logit model for at undersøge om en høj og lav pris (eksempelvis over og under 500kr.) kan udledes fra stjerner og afstand til centrum. For at sammenligne prisniveauet i de forskellige lande vil vi lave et kort over Europa, hvor hvert land (repræsenteret ved deres hovedstad) er farvet efter den gennemsnitlige hotelpris.
+
+# Group 8: Exam Project: Do voting advice applications predict election outcomes? 
+
+#### Research Question
+
+Voting Advice Applications (VAAs) - applications where voters are 'matched' with candidates based on responses to a number of political questions - have a high penetration among the electorate in Denmark. More than 1 million Danish voters used the leading Danish VAA (from DR) during the 2015 General Election (Folketingsvalg), corresponding to approximately 25% of all eligible voters (Danmarks Radio, 2015).
+
+Most previous literature on VAAs has focused on whether and how VAA users (voters) are affected by their test results, based typically on surveys [e.g. Ruusuvirta 2009]. In our research project, we instead propose to examine the information content of candidates' responses directly, coupled with demographic variables and election outcomes.
+
+This dataset allows us to examine a range of questions:
+
+* Are election outcomes predictable from VAA data? 
+    + Will candidates who center around the party median (mean voter theorem) or those that are more distinct relative to their peers have a higher chance of election?
+* Do Danish parties have distinct political views? (can party affiliation be predicted from answers? For what parties?)
+* Can the Danish political spectrum meaningfully be mapped into fewer dimensions? (For example a distributional and values-based axis [see e.g. Slothuus et al. 2009])
+
+
+#### Data
+Our primary data set will consist of each candidate's response to Danmarks Radios VAA (Kandidattest) 2015. The survey consists of 15 political statements, to which the candidate (or user) must specify level of agreement, on a five-point Likert-type scale. There are recorded answers for 724 candidates - more than 90 percent. This data will be scraped from the DR website. This primary data will be matched with data on election outcomes, party affiliation, voting district, previous political history and demographic variables such as age, gender, education etc.
+
+#### Methods
+Questions 1 and 2 are, in a statistical sense, supervised learning problems, where we expect that simple decision trees as well as more complicated classification models can yield insightful results. There may be a need to create new variables from the existing set, for instance defining "political distance" to candidates with the same electorate. Question 3 is a problem of dimensionality reduction, where we propose to examine and compare several options, including e.g. Principal Component Analysis or grouping questions based on political theory. One particular objective will be to obtain a depiction of the Danish political landscape in two dimensions.
+
+#### Literature
+
+* Talonen, Sulkava (2011) Analyzing Parliamentary Elections Based on Voting Advice Application Data.
+* Ruusuvirta, O. & Rosema, M. (2009). Do online vote selectors influence electoral participation and the direction of the vote?
+* Slothuus, Rune, et al. Måling af politiske værdier og informationsbearbejdning. Nye indeks for fordelingspolitik, værdipolitik og "Need to Evaluate" blandt danske vælgere. Working paper. Department of Political Science and Government, University of Aarhus, Denmark, 2010.
+
+# Group 19: Project Description [Group-19_project-description.docx](https://github.com/sebastianbarfort/sds/files/42000/Group-19_project-description.docx)
+
+# Project Description - Group 21
+
+## What question are you trying to examine and why is it interesting? Has the question been studied before and in that case what is your contribution?
+When Pope Francis visited the United States some weeks ago, he had one main message: the "global abolition" of the death penalty. He touched upon a debate brewing across the country. In the United States, capital punishment-also called the death penalty-is a legal sentence in 31 states. Since 1976, 1419 inmates have been executed in the US and from where 530 of these have been in Texas.[^1]
+
+This has awaken our interest and we tried to find some datasets. 
+We are aware that there are many articles and papers on the executions, but (from what we have seen) not in a particularly special way, in the meaning that the usual facts are presented in the usual way of data visualization. Our aim is to focus on the people who were executed by finding answers on the following questions: Where are they from? Which occupation did they have? How old were they? Which last words did they use? Did they show regret?
+But also: who were their victims?
+
+
+## I want you to describe what kind of data you plan on using to answer the question, where the data is located and a brief outline of an approach to gathering the data. Do you plan on scraping it from a webpage, can the data be called from an API, etc.?
+
+The data used to make this analysis is scraped from the website of the 'Texas Department of Criminal Justice"[^2], which publishes information on every executed death row inmate since 1982. 
+The information is divided up into three parts: the general ones are on the main-page itself, where we just scraped it. The more detailed offender-information are on a sub-page, which we could scrape by creating a loop. We used the same way to get the data about the inmate's last statements.
+To get even more information we merged this table with data, we found on the website of the "Death Penalty Information Center". [^3] 
+
+The final data is then very detailed and contains information on their names, age when executed, date of execution, race, county, last statements and other offender information that could be interesting.
+
+## what statistical method do you plan on using? Is this a prediction problem or are you trying to do inference, and what kind of statistical model do you expect to use?
+
+We are thinking about doing some predictions on the inmates (e.g.: correlation between the time receiving the penalty to the execution, and the number of killed people; is there a difference between black/white/hispanic?). But these are just some thoughts we would like to experiment with. Is it maybe possible to do predictions on the next inmate or the next victim? Do people usually commit crimes against people of their own race/age/gender or is the opposite the case?
+
+One possibility could be to predict the race/gender/age of the executed offender based on the words used in his/her last statement. 
+
+[^1]: http://www.deathpenaltyinfo.org/number-executions-state-and-region-1976
+[^2]: http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html
+[^3]: http://www.deathpenaltyinfo.org/views-executions
+
+# Group 15: Assignment 3 ---
+## Decay rate of hashtag usage on Twitter: Terrorist Attacks, Natural Disasters and Celebrity Scandals 
+
+[Please use link for nice layout & images](http://rpubs.com/adamil/assignment3_PD)
+
+###**Idea & Motivation**###
+In response to the terrorist attacks in Paris 13th November 2015 a surge in social media attention and activity was directed towards expressing compassion to the victims of the episode. The benevolent behaviour took the form of e.g. tweeting with the hashtag #PrayForParis, #parisattacks and flagging of the french national colours on posted pictures. However, when the message has ressonated throughout the social media community the interest wears off - and the attention is turned towards politicians and decision makers to punish and prevent. Meanwhile, another attack carried out by Boko Haram in Nigeria claimed the lives of 32 people - this incident did not see a fraction of the media/social media coverage as the Paris attacks. Interestingly both episodes rapidly lost the interest of the internet-community as a whole. At the other end of the spectrum: Charlie Sheen was diagnosed with AIDS - this topic also recieved a lot of attention. This event, however, seems to have a higher degree of persistency in regards attention given by the online-community. 
+
+
+This raises the question: Which factors determine the rate of decay in interest on social media - in particular Twitter, triggered by a real-life event. A similar idea was posted to The Economist[^1]. Here the issue of differences in percieved interest is assessed: They conclude that cultural proximity is a driver for foreign attention towards a terrorist attack. They also conclude that, even when controlling for such factors as geography and cultural idiosyncracies - there still seems to be a gap in “empathy” between internet users. In investigating social media response to the Woolwich attacks, Burmap, Williams et. al., comes to the conclusion that positively sentimented tweets has a higher probability of being retweeted than negative ones. Researchers from MIT, Penn & U. of Washington have developed a mathematical model for predicting the rate of retweets. The model (Twoujia) as such, adresses the question raised above - retweets are by definition captured in the overall attention metric: Usage frequency of a particular hashtag. 
+
+###**Data**###
+Ultimately we are interested in obtaining a cross-sectional dataframe. It should contain infomration on any particular event/hashtag; date, geography of event, type of event, number of tweets/retweets, number of casualties, rate of decay(linear) amongst other variables. In doing so, we need to investigate each event as a time-series and derive constant metrics from the data to plug in to the cross-section. First step: Collect relevant hashtags based on events of interest given our problem throughout 2015. We will be gathering data using Twitters API via the R-package TwitteR. In particular the function searchTwtiter() will be utilized. We will be pairing the data obtained through Twitter with categorical data for “type of event” with e.g. three options as listed in the header - the way to go about this is to construct two dummy variables. One serious limitation to this approach is that we are cherry-picking observations/events based on our perception of “important” events - this opinion will be inherently biased due to local media coverage of global events and perhaps the reach of tweets based on geographics. We will attempt to combat these issues by picking out events based on the most objective metric we can identify. 
+
+###**Methodology**###
+When data is obtained, we are interested in prediction. Precise inference will not be of interest as we will not acquire sufficient observations - however, some externally invalid postulates may be presented in coercion with the predictive analysis. In constructing a prediciton model for the rate of depreciation of attention in Twitter hashtags, we will be relying on statistical learning techniques. We will attempt at classification and linear regression methods developed in chapters 3 & 4[^2]
+
+[^1]:
+[The Global Empathy Gap Between Paris and Beirut, November 19th 2015](http://www.economist.com/blogs/graphicdetail/2015/11/daily-chart-13?fsrc=scn%2Ffb%2Fte%2Fbl%2Fed%2Fterrorismandempathymeasuringtheglobalempathygap)
+[^2]:
+The Elements of Statistical Learning: Hastie, Tibshirani, Friedman. 
+
+# Project Description - Group 26 
+## Project Description: Social Networking Phenomena on US Presidential Candidates,
+  Based on Twitter Data
+
+### Summary
+
+By exploiting both tweet- and user-specific data we want to explore whether there are certain geographical or timeframe trends with or clear distinctions between likely supporters of either of the two most prominent presidential candidates in the US. 
+
+
+## Motivation
+
+In times where people with internet-connected devices are overwhelmed by a constant overflow of information and _social noise_ in social media and the resulting complexity of issues arising, it is often a preferred solution to look for easy answers and form bipolar prejudices. Yet this does not exactly make us smarter neither individually nor as a society, which is why we try to take advantage of the data that is available to us. With it, we want to provide an objective overview about the online conversation on the US Presidential Candidacy. After all, as many examples show, conversations held online and sentiments expressed within often differ substantially from those that traditional media suggest. So, for example, even though Donald Trump is being ridiculed by newspapers, he can still be sure of support of the _ordinary folk_, or so the thinking goes. 
+
+## Data Description
+
+The _twitteR_ package allows us to retrieve data on actual tweets based on specific dates, locations, and, most importantly, topics as materialized by hashtags. The data contains 16 variables, amongst which there is the actual tweet, its location (if not protected), its retweet count, and the respective user. From there, it is also easy to get user-specific data, such as amongst others their  followers count, their total number of tweets, the date of their profile activation, their self-indicated location, and so on. It is also possible to retrieve individual user timelines. 
+As some tweets contain links, this mere fact can also be observed and used.
+Ultimately, in case the links lead to online (newspaper) articles, the text of these can be used to identify its readability. 
+ 
+
+## Data Analysis and Desired Outcomes
+
+The analysis will focus on finding patterns from the gathered data that can illustrate general characteristics on the twitter-users using hashtags that either support Donald Trump (#DT) or Hillary Clinton (#HC) as the next president of the United States. 
+
+We are planning on doing the things listed below, however, changes can be made during the work on the project.
+
+* We will make a graphical analysis where we look for geographical patterns by plotting the location data (longi- and latitude data) on a map over the US and see if there are any locations where many users uses #DT or #HC. 
+     + This will (if possible) be combined with election-data from prior elections to see if the state from where the tweet is made is a typical republican or democratic state. 
+* We will make a semantic analysis where we search for the most common used words when making a tweet with either #DT or #HC. In doing this we will be able to describe which political issues/topics the user of either #DT or #HC are most concerned about. 
+     + Together with the individual twitter-users timelines, we can extract the most common used hashtags from these users, which will also give us some general characteristics about users in favor of DT or HC. 
+     + We also plan on using a function that evaluates sentiments of tweets, which like the other text analysis instruments will add additional info to the characteristics of the general users in favor of either DT or HC. 
+     + We also want to investigate whether there are a difference in the number of influential users that uses #DT or #HC. An influential Twitter user is measured as a user with a high number of followers, total number of tweets among other characteristics.
+
+We also want to address the potential problem of trolling when using #DT or #HC. A way to mitigate this problem could be to look for potential outlier users when looking at their characteristics. We will investigate other solutions that could make the problem of trolling less severe.
+
+Lastly, we will on the basis of the gathered characteristics build a predictive model, that predicts if users are likely to be either DT or HC followers based on their geographical location, their most common used words in tweets, their timeline of prior hashtags (sentiments in tweets, number of followers etc.). We haven't yet decided on an actual model framework.
+
+# Project description, assignment 3, group 22 
+## Assignment 3: Project Description
+
+##The Idea
+For the project we want to describe the development in housing prices in the area of Copenhagen. We want to relate this to the metro in Copenhagen. Specifically, we want to analyse whether the construction of the metro from Vanløse to Amager (opened in 2002) has had an impact on the housing prices near the metro. From this we will try to predict the development of the housing prices after the opening of the metro in 2018 (Cityringen). In our analysis we will try to include price changes with respect to distance to the metro stations and try to control for the general development of housing prices in the period we are looking at.
+
+##The Data
+We want to use data from Boliga.dk on the development of realized housing prices. We have been in contact with Boliga.dk and have received permission to use the data for the project. The webpage includes data on realized housing prices, geographic placement, the date sold, kr./, number of rooms, the type of housing, and the year the housing was built. The data further includes the date sold and the development of the price in percentage while the housing was on the market. 
+We will be scraping the data using Rvest. 
+
+##The Method
+The project will begin with a brief summary of what we will be doing in the project. After this, we will describe how the data was scraped as well as describe the data itself. The description of the data will include some graphs and tables. In order to estimate the effect of the metro from Vanløse to Amager, we will perform a difference in difference analysis comparing the development of the prices of housing near a metro to the development of the prices of housing not near the metro. Using the results from this analysis, we will try to predict the increase in the prices of housing near the new metro (Cityringen) in 2018. The analysis may also include some visualizations such as maps. 
+
+# Team 1 - projektbeskrivelse 
+
+### Problemformulering
+Hvem vinder Oscar 2016? Vi vil gerne forudsige hvem, der vinder Oscar 2016 i forskellige kategorier. Dette er ikke en ny ting, andre spekulerer i og oddser på samme spørgsmål, bl.a. http://www.farsiteforecast.com/ har lavet en rimelig præcis forudsigelse for år 2014. Sider som denne indeholder som oftest avancerede algoritmer. Vores bidrag til dette spørgsmål vil være en transparent R-kode og en analyse som indeholder overskuelige tabeller og visualiseringer. En ting er, at kunne komme med et kvalificeret bud på vinderen, men vi synes det er ligeså vigtigt, at kunne vise hvorfor lige præcis denne film vil vinde.
+
+### Data
+Vi vil scrabe IMDB’s hjemmeside lidt på samme måde som I Paid a Bribe-siden. Vi vil bruge filmdata fra de sidste 20 år og bruge dette til at undersøge hvilke interessante sammenhænge der er mellem data og oscar-vinderne. For at få så meget information/variable med for hver film, er vi nødt til at gå ind på hver films hjemmeside, hvilket kræver et ekstra loop (ift. ”I paid a bribe”). Målet er, at få så mange film med som muligt, men dette begrænses naturligvis af computerens ydeevne. Vi er nok nødt indskrænke indsamlingen lidt, da der f.eks. indtil videre er udgivet ca. 14.000 film i 2015. En mulig restriktion på data kan være at filmen skal være bedømt af mindst 10.000 bruger på IMDB, hvilket svarer til ca. 200 film. Af variable har vi i udgangspunktet titel, udgivelsesdato, genre, rating, antal brugeranmeldelser, metascore, antal reviews, antal critic reviews, antal reviews fra metacritic, instruktør, budget, indtjening, primærskuespillere, spilletid og genre. Det vil være interessant og relevant, hvis man også kan inkludere hvor filmen foregår og hvilken tidsalder filmen foregår i (fortid/nutid/fremtid), men dette kræver at resuméet kan scrabes.
+Denne analyse vil så bruge til at forsøge at forudsige 2016-vinderen, ved at se på alle de film, der er udgivet i 2015. 
+
+Spørgsmål som skal besvares i analysen
+
+-	Hvem vinder Oscar 2016?
+-	Sammenhængen mellem rating og hhv. metascore, reviews, critic reviews og spilletid – er der nogle pudsige sammenhænge? 
+-	Sammenhængen mellem reviews og critic reviews – har dem med mange reviews også mange reviews af kritikere?
+-	Sammenhængen mellem rating og udgivelsesdato – er der bedre rating, hvis filmen er udgivet først på måneden? Eller udgivet sidst på året?
+-	Map over instruktørers/skuespilleres fødested/nuværende/filming location adresse – hvor kommer højtratede films instruktører /skuespillere fra? Og har det betydning for ratingen?
+
+### Metode
+Formålet med dette projekt er at forudsige de forskellige spørgsmål ud fra hvad, vi ved, dvs. ud fra det data vi kender, bl.a. rating/metascore. Vi vil beskrive data med deskriptiv statistik, hvilket skal give en indikation af hvilke variable, der er relevante. På baggrund af denne deskriptive analyse vil vi opstille en simpel probit eller logit model, som skal beregne sandsynligheden for at en film fra 2015 kan vinde årets film 2016. Vi vil derfor slutteligt komme med et bud på lige præcist hvilken film, der vil vinde. 
+
+# Group 27 - Exam project description 
+## Group 27: Exam Project Description
+
+###Biking Behaviour and Weather in Copenhagen
+
+####The Idea
+Copenhagen is one of the most bicycle-friendly cities worldwide. The weather can be harsh and often unpredictable. People in T-Shirts bike alongside people in full rain-gear. In Denmark, weather is more than just a small talk topic. It can be decisive whether you reach your destination without getting wet. 
+
+In this assignment we want to examine how the weather and season affects peoples biking behaviour. 
+As far as we know this has not been done before. More specific we will try to come up with answers for the follow questions:
+
+- How can you characterize people's biking behaviour during a year, week, day?
+- Is people's biking behaviour correlated with the weather? And how?
+- Is it possible to predict the number of bikes passing a point given some parameters? For example rainfall, wind, weekday, season? 
+
+
+####The Data
+For our assignment we need weather data as well as the number of persons biking.
+Luckily, meteorology lives from recording and saving impressive amounts of data. We would like to use mainly the following two weatherbases: weatherbase.com, wunderground.com. These pages offer a lot of data and allow for scraping and downloading. We already started  with scraping and first data manipulations. Unfortunately, at this point we are not able to gather data on specific precipitation. Nevertheless, a lot of historic hourly weather data is availabe and seems useful for our project
+Regarding the bike data, we use records of counters which are installed on bicycle tracks on Dronning Louises Bro and Raadhuspladsen in the inner city of Copenhagen. We contacted the operators of the bike counters and they provided us  historic hourly data of the two bike counters.
+
+####Statistical Methods
+First we will explorer the data by doing some data vizualisations and tables.
+We will use two statstical methods for two different purposes:
+
+1. Inference: In order to analyze the correlation and impact of different weather conditions, weekdays and time of year.
+2. Prediction: Using a CART analysis, we will try to predict predict bike usage for specific weather observations. 
+
+Then when looking at tomorrows weather forecast, you will be able to predict tomorrows number of bikes. This might be useful for e.g the suppliers of public transportation, under the assumption that people will substitute from bikes to public transportation. 
+
+# Group 24 Final Project Proposal  ---
+
+For the final project we have decided to analyse the famous website for reviews different businesses--target more for restaurant related businesses--named "Yelp". We will first scrape the data from the "Yelp" website by using their open API then will be specifically look at these following questions in more detail. On top of it all, "Yelp" is a website used everywhere around the world, from North America all the way to Europe to Asia, scraping the data from all of these places will take a very long time therefore we will just focus on the sample space of Copenhagen, Denmark. 
+  
+  1. Reviewers are normal distributed or not?
+    - taking a closer look at the frequency of the reviewers and their rating 
+        - normally distributed
+        - left or right skewed 
+  2. Can a specific rating on a particular restaurant effect reviewers’ review 
+    - running a regression on the rating of restaurants and the reviewers' review
+        - see if there is a relationship between these two 
+            - if there is positive or negative 
+  3. Number reviews in Copenhagen --> show it on a map 
+    - analyses and see if the reviewers are just passing by or actually purposely went to the restaurant 
+  4. numbers of reviews by reviewers distributed by time 
+  5. See if there is a relationship between helpfulness of reviews and the rating of the review 
+    - running a regression on how people think if that review is helpful or not and the rating the reviewer 
+        - to see if there is a relationship between these two variable 
+  6. Does people write longer reviewer when they are not satisfy with the service or satisfy?  
+    - Running a regression to see if there is a relationship between word count and the rating of the review (heavily depends on if we are able to get "word count" data)
+  7. Are there more positive reviews on higher pricing restaurants? 
+    - people tends to think price the restaurant better the service 
+        - running a regression with price data and reviewers' rating and see if there is a relationship between them 
+
+# Group 17: Assignment 3 Assignment 3
+Our topic to our exam project is housing for sale. We want to scrape data from www.boligsiden.dk where we get the information about the houses and apartment there is for sale right now. In the data set we want to know the price, the size, how many rooms, days on market(DOM) and where the location is. If possible we would like to scrape the archive function on www.boligsiden.dk for houses and apartments that have been on sale. 
+We think this topic about the housing market is very interesting right now because we have a much divided housing market. In the big cities we observe rising prices and very low DOM and in the rural areas we see houses with a low price and a relative high DOM. 
+We know the topic studied before and is continuously studied, but as everybody needs housing and the housing market changes all the time it is always interesting to look into patterns in housing trends. Normally when looking at house prices in Denmark the prediction is made on houses that have already been sold and that delays the house price index with approximately 6 months. We look at house prices in real time before the houses are sold. 
+We want to look if there is a correlation between the total number of apartments for sale and the adults between 18-90 years?  A possible aspect could be to look into how many people that live alone in the Copenhagen area and put it up to the data from KK about how many apartments there are in KBH. The new trend in housing is that more people live alone compared to 20 and 50 years ago. It reflects the the change in our society and that the family is no longer the center of attention. We could look at historic data for families in Denmark using statistikbanken.dk
+We want to see in which area the houses/apartments are sold fastest, and look what kind of houses/apartment that has a high DOM. We would like to predict the DOM for different apartments with certain criterias as location, number of rooms and price per square meter.  When looking at DOM we would like to use the archive function on boligsiden.dk
+If possible we would like to predict house prices for the bigger cities depending on size, number of rooms, location.
+The main problem with scraping data from boligsiden.dk is that we can only see what the house is listed for and not what it is sold for, so we will have some bias on the actual price of housing. 
+We expect to look into the differences in prices in all of Denmark and the development in family types and single household. We also want to predict DOM and house prices in two big cities and compare the differences. 
+
+# Group 10: project description 
+
+#### *Idea*
+Previous literature, such as [The World Bank](https://www.wdronline.worldbank.org/bitstream/handle/10986/22172/Business0regulations0and0growth.pdf?sequence=1) and [Doing Business](http://www.doingbusiness.org/research/starting-a-business) have found that reducing the time and cost of firm registration and reducing business regulations in general are correlated with firm creation. It is also argued that simplification of regulations can make it easier and faster to start a new business, and that new businesses have a positive effect on growth and also a shifting of informal firms to the formal economy.  Motivated by this we are interested in analyzing the following main question:
+ What determines the number of days to start a new business? 
+Data shows that there exist large differences across countries in the number of days it takes to start a new business, so it is relevant to study what characterize these countries. Possible explaining factors could be government regulations, available technology such as the Internet, economic freedom, political freedom, level of trust in the society etc. 
+
+
+#### *Data*
+The World Bank 
+The data will be called from an API and be merged with additional data containing potential determining factors (data on “dealing with construction permits”, “getting electricity”, “registering property”, “getting credit”, “protecting minority investors”, “paying taxes”, “trading across borders”, “enforcing contracts”, “resolving insolvency”).
+Data for the number of days it takes to register a business exists as a time series. Using the time series,  another question of interest could be, if the number of days is negatively correlated with number of business created. 
+
+#### *Method* 
+- Descriptive statistics
+ - Development over time
+ - Ranking of the countries
+ - Mapping
+- Linear regression model
+ - Response variable: Number of days to start a new business
+ - Regressors: All available data, that could determine the number of days to start a new business
+
+
+# Project description - group 7
+
+Project idea
+-------------
+
+
+In this project we have chosen to consider the highly important economic factor of unemployment. A classic problem that has always impeded traditional unemployment statistics is the lack of dynamic perspective regarding the current unemployment situation. In Denmark, we are limited by the fact that our AUK-unemployment data[^1] is only published once every three months, at the end of each quarter, thus impairing any finer analysis of immediate unemployment. In this context, it is worth considering whether it might be possible to harness the enormous amounts of information present on the internet to somehow build up a better and more *up-to-date* model forecasting/predicting unemployment. The potential of such statistical enhancement is particularly interesting at times of economic crisis where traditional flows of information are too slow (lagged) in order to provide a sound basis for policy-makers implementing decisions. As mentioned earlier, traditional (official) statistical data is published only infrequently, but another problem is that the data also does not accurately reflect structural changes in the economy. In our project, we will be focusing on applying Google search data to establish or calculate more informative unemployment statistics. We hope that these variables will be useful for improving the unemployment forecast.
+
+This approach has previously been employed in a paper by Nikos Askitas and Kalus F. Zimmerman *Google econometrics and unemployment*[^2]. Our contribution will be to see whether it is possible to improve forecasts of monthly unemployment by applying social data science tools and methods, facilitating the inclusion of up-to-date data sources, such as Google search data, in a Danish context.
+
+[^1]:Danmarks statistik
+[^2]:http://ftp.iza.org/dp4201.pdf.
+
+
+Data collection
+------------------
+The project has two main data sources. The first one is Statistics Denmark, where the data on unemployment will be gathered using their API.
+
+The second source is Google Trends, which can be scraped using the package "RGoogleTrends". There seems to be many different ways to approach the data scraping, so this is just one suggestion.
+
+Furthermore, it might be useful to look at data from social networks. It could be scraping from a Facebook-group with people searching for jobs, the twitter feed with $\#jobdk$ or maybe something from LinkedIn.
+ 
+
+Statistical method and models
+----------------------
+
+
+The main line of the statistical approach will be to use a time series $\{y_t\}_{t=1}^T$ of traditional unemployment statistics supplied by Danmarks Statistik. For the series under consideration we will choose an ARMA(p,q) model and use this model to forecast the series. For simplicity let us imagine that the chosen model is AR(1):
+
+$$y_t = \mu + \rho y_{t-1} + \epsilon_t$$
+
+Using Google Trends data resources we will then construct an index series $\{x_t\}_{t=1}^T$ which we will use in an expansion of the ARMA(p,q) model as an external regressor. In the case of the AR(1) we then have the model:
+
+$$y_t = \mu + \rho y_{t-1} + \beta x_{t-1} + \epsilon_t$$
+
+The statistical models will then be compared with respect to forecast capability - for example by using a Diebold Marino test. Another possible expansion would be to include a variance model in order to capture possible ARCH-effects and see how this influences the comparison of model forecasts.
+
+# Project description - Group 23
+
+## Carpooling in Denmark
+In our exam project we will analyse the carpooling in Denmark, by using data from the service GoMore, which facilitates shared rides between users and allows for users to rent out their car to other users.
+### Data
+For the project we will use data from GoMore.dk. Each registered user has entered information on their hometown, profession and the site shows data on number of shared trips, number of created trips among other things. The profiles are publicly available and by scraping the more than 900.000 profiles, we will be able to obtain a very nice dataset on carpooling in Denmark.
+For each ride offered on gomore.dk, there is a site with information on that ride. These can also be scraped to obtain a dataset with distance, start/stop destination, number of people riding along and price for each ride on gomore.dk. This information is limited to recent rides. 
+### Analysis
+In the project we will analyze several things from out dataset. Among these we want to examine which regions of Denmark are the most active carpoolers, how many trips the users go on in different regions, and the rate between listed trips and trips that actually have other users on them.
+With the information from the dataset on rides, we want to use a regression model to predict 1) the price level on certain routes at certain times, and 2) the probability that a user offering a ride, will find someone to ride along. 
+### Project
+The project will be divided into several different parts:
+
+-Introduction
+This chapter will serve to introduce the problem and the data source, providing key background info for the project
+-Method
+This chapter will describe the method used to scrape and clean the data from GoMore.dk
+-Analysis
+This chapter will include the different analyses of the project, along with figures to show the results
+-Conclusion
+This chapter will include concluding remarks of the analysis
+
+# Project description - Group 13 
+## Predicting Unemployment:
+
+Project Description:
+We would like to estimate and predict the unemployment rate in Denmark. 
+In order to do this, we are going to use data from two different sources, Statistics Denmark and Google Trends. 
+We are going to examine if we can find certain correlations between the unemployment rate and the search trends for Danish words for ‘Unemployment benefits’ (‘dagpenge’, ‘kontanthjælp’) and words revealing job search, e.g. ‘jobindex’ (a webpage for jobsearch). 
+Our hypothesis is that an increase in searches of those kind of terms will be correlated with unemployment. Since we have earlier access to the search results, we would be able to predict unemployment in Denmark. 
+Our inspiration is the flu prediction model, where the flu outbreak is predicted based on google search terms.
+
+The approach on this project 
+
+1.	Denmark’s unemployment rate as our target
+a.	Our team will extract the data from Statistics Denmark as a basis for unemployment.
+2.	Use of Google trend for correlation 
+a.	We think that we can find a correlation between unemployment rate and certain Google search words such as ‘Unemployment Benefits’ (in Danish), within specific period.
+
+Why we want to do this project 
+
+1.	Unemployment rate  as a good economic indicator
+a.	As mentioned above, Unemployment rate is an important economic indicator to show the condition of Economy and Community problem. It will be great if we can predict the unemployment rate in the future for better policy making.
+2.	Technology Advancement
+a.	In the age of Big Data, it is not such difficult to gather data from Internet to do statistical analysis and develop the model to do the predictive analysis. For example, in our project, we will just use the data from Statistics Denmark and Google Trend so that we can make a correlation between the word searches, e.g. ‘Unemployment benefits’ with the actual unemployment rate during specific periods. By showing that we can make certain prediction models, people might be able to use the models in way that can be beneficial for everyone. 
+
