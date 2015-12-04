@@ -35,4 +35,5 @@ A tentative syllabus, subject to change, is below.
 |Nov 26, 2015| **Lecture** |  *Privacy and Ethics* [(readings)](http://sebastianbarfort.github.io/sds/posts/2015/11/24/ethics.html)| [slides](http://sebastianbarfort.github.io/sds/slides/privacy.pdf)
 |Nov 30, 2015| **Practice Session** |  Work on Your Project / Project feedback |
 |Dec 3, 2015| **Practice Session** |  Brainstorm Challenges Related to Project |
+|Dec 7, 2015| **Practice Session** |  Brainstorm Challenges Related to Project |
 |Dec 15, 2015| <font color="red">Deadline </font> | Exam Project |
