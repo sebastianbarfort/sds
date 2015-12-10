@@ -36,4 +36,5 @@ A tentative syllabus, subject to change, is below.
 |Nov 30, 2015| **Practice Session** |  Work on Your Project / Project feedback |
 |Dec 3, 2015| **Practice Session** |  Brainstorm Challenges Related to Project |
 |Dec 7, 2015| **Practice Session** |  Brainstorm Challenges Related to Project |
+|Dec 14, 2015| **Practice Session** |  Work on Challenges Related to Project |
 |Dec 15, 2015| <font color="red">Deadline </font> | Exam Project |
