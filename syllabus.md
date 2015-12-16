@@ -38,4 +38,4 @@ A tentative syllabus, subject to change, is below.
 |Dec 7, 2015| **Practice Session** |  Brainstorm Challenges Related to Project |
 |Dec 14, 2015| **Practice Session** |  Work on Challenges Related to Project |
 |Dec 15, 2015| <font color="red">Deadline </font> | Exam Project |
-|Dec 15, 2015| |  ---------------  <font color="red"> End of course </font> --------------- |
+|| |  ---------------  <font color="red"> End of course </font> --------------- |
