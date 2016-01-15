@@ -5,5 +5,8 @@ A nice walk-through about how to clean up and improve your basic charts. http://
 Concepts in computing with data
 https://github.com/gastonstat/stat133
 
-Data Visualization at The New York Times (Amanda Cox) 
+Data Visualization at The New York Times (Amanda Cox)
 https://www.youtube.com/watch?v=IBfjEEkK3lk
+
+Jenny Brian on git for useR
+https://github.com/jennybc/2016-01-15_austin-hadley-friends
