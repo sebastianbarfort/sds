@@ -10,3 +10,6 @@ https://www.youtube.com/watch?v=IBfjEEkK3lk
 
 Jenny Brian on git for useR
 https://github.com/jennybc/2016-01-15_austin-hadley-friends
+
+Dissolving polygons
+http://rpubs.com/hrbrmstr/dissolvingpolygons
