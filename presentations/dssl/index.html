@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif|PT+Serif:b|PT+Serif:i);
+
+section {
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  font-family: "PT Serif", Baskerville, Georgia;
+}
+
+#follow {
+  background: none;
+}
+
+.grey {
+  color: grey;
+}
+
+.orange {
+  color: orange;
+}
+
+a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+</style>
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:120%;"><b><a href="http://sebastianbarfort.github.io/sds/">Digitale Metoder & Social Data Science</a></b> <p style="font-size:100%;"> Digital Social Science Lab <br>
+       Marts 2016.
+</section>
+
+<section style="padding:3em 6em">
+  <p> Sebastian Barfort
+    <p class="grey"> Ph.D, Postdoc <br>
+      Økonomisk Institut, Københavns Universitet.
+    <br>  <p <i>@sbarfort</i> /sebastianbarfort.github.io
+</section>
+
+<section style="padding:3em 6em">
+  <p> Forsker i politisk økonomi og public finance
+    <br> Primært register- og survey data (+ text data, netværk, etc.)
+    <br> Studeret statistik, programmering og digitale metoder på Columbia, NYU, University of South Carolina, DTU, etc.
+    <br> <br> Underviser i <i><a href="http://sebastianbarfort.github.io/sds/">Social Data Science</a></i> med David Dreyer Lassen
+    <br> Vejleder BA/MA opgaver i digitale metoder
+</section>
+
+<section>
+   <img src="lassen.png" />
+</section>
+
+<section style="padding:3em 6em">
+  <p class="orange" > Social Data Science
+    <p> Nyt fag på Økonomisk Institut (første gang E15)
+    <br> Introduktion til "moderne" digitale metoder
+    <br> Åbent for BA, MA og Ph.D og <i> alle </i> studier på CSS
+    <br> Stor efterspørgsel: +100 studerende
+    <br> Introducerende: fokus på metoder for <i> small </i> data (< 500 GB)
+    <br> Undervisning i <i> R </i>, shell, git og Github
+    <br> Eksamen: opgave + mundtligt forsvar
+</section>
+
+<section>
+   <img src="mentalmodel.png" />
+</section>
+
+<!-- <section style="padding:1em 6em">
+  <p class="orange"> Struktur
+    <p> <i> Generér: </i> Web scraping, API
+    <br> <i> Visualisér: </i> Grammar of Graphics
+    <br> <i> Manipulér: </i> Grammar of Data Manipulation
+    <br> <i> Forudsé: </i> Prædiktive modeller (text + numerisk data)
+    <br> <i> Reproducér: </i> Git/Github
+
+    <br> <br> <i> Tænk: </i> etiske overvejelser om privacy etc.
+        <br> Hvilke typer spørgsmål kan forskellige typer data besvare?
+</section> -->
+
+<section>
+   <img src="struktur.png" />
+</section>
+
+<section style=style="padding:3em 6em">
+  <p> <a href="http://runemadsen.com/">Rune Madsen</a>
+    <img style="float:right" src="rune.jpg">
+    <br>Director of Software Development, O’Reilly Media
+    <br>Adjunct Professor, ITP, New York University
+    <br> Tidligere Developer på New York Times
+    <br> Gæsteforelæsning om datavisualisering på NYT
+</section>
+
+<section>
+   <img src="rune2.png" />
+</section>
+
+<section style="padding:3em 6em">
+  <p class="orange"> Eksempel fra E15 eksamensopgave I
+    <p> <i> What makes news on social media? </i>
+      <br> Scrape alle artikler fra 2015 fra DR og Politiken (ca 80.000)
+      <br> Hvilke af disse ender på Facebook?
+      <br> Resultat: klar bias. Udenlandske nyheder markant underrepræsenteret.
+</section>
+
+<section style="padding:3em 6em">
+  <p class="orange"> Eksempel fra E15 eksamensopgave II
+    <p> <i> Hvad er værdien af metroen for ejendomspriser i KBH? </i>
+      <br> Scrape data for alle boligsalg tilbage til 1991
+      <br> Beregn afstand til nærmeste metrostation
+      <br> Benyt statistiske modeller til at isolere "metroeffekten"
+      <br> tl;dr: Du vil <i> gerne </i> bo tæt på en metro (men ikke for tæt)
+</section>
+
+<section>
+   <img src="metro.png" />
+</section>
+
+<section style="padding:3em 6em">
+  <p class="orange"> Opsummering
+    <p> <i> Stor </i> studenterinteresse for digitale metoder
+      <br> <i> Stor </i> interesse fra den private sektor
+      <br> Åbenlyst tværfaglig område
+      <br> Studerende har begrænset programmeringserfaring
+      <br> Vi vil gerne endnu længere med de prædiktive metoder ("Social Data Science: Advanced Topics")
+</section>
+
+<section style="padding:3em 6em">
+  <p class="orange"> Interesseret?
+    <p> Læs mere om Social Data Science <a href="http://sebastianbarfort.github.io/sds/">her</a>
+    <br> Kører som sommerskole i august 2016 (tilmelding <a href="http://www.economics.ku.dk/programmes/summerschool/">her</a>)
+    <br> Mangler SDS noget essentielt? Contribute på <a href="https://github.com/sebastianbarfort/sds">github</a>
+
+    <br>  <p class="grey"> - Tak for Jeres tid!
+</section>
+
+<script src="d3.v3.min.js"></script>
+<script src="stack.v1.min.js"></script>
+<script>
+
+var mystack = stack()
+    .on("activate", activate)
+    .on("deactivate", deactivate);
+
+var section = d3.selectAll("section"),
+    follow = d3.select("#follow"),
+    followAnchor = d3.select("#follow-anchor"),
+    lorenz = d3.select("#lorenz"),
+    followIndex = section[0].indexOf(follow.node()),
+    lorenzIndex = section[0].indexOf(lorenz.node());
+
+function refollow() {
+  followAnchor.style("top", (followIndex + (1 - mystack.scrollRatio()) / 2 - d3.event.offset) * 100 + "%");
+}
+
+function activate(d, i) {
+  if (i === followIndex) mystack.on("scroll.follow", refollow);
+  if (i === lorenzIndex) startLorenz();
+}
+
+function deactivate(d, i) {
+  if (i === followIndex) mystack.on("scroll.follow", null);
+  if (i === lorenzIndex) stopLorenz();
+}
+
+var lorenzInterval;
+
+function startLorenz() {
+  var δτ = 0.003,
+      ρ = 28,
+      σ = 10,
+      β = 8 / 3,
+      x = .5,
+      y = .5,
+      z = 10,
+      n = 30;
+
+  var width = 1280,
+      height = 720;
+
+  var canvas = d3.select("canvas")
+      .style("position", "absolute")
+      .style("top", 0)
+      .style("left", 0)
+      .style("width", "100%")
+      .style("height", "100%")
+      .attr("width", width)
+      .attr("height", height);
+
+  var color = d3.scale.linear()
+      .domain([0, 20, 30, 50])
+      .range(["yellow", "orange", "brown", "purple"])
+      .interpolate(d3.interpolateHcl);
+
+  var context = canvas.node().getContext("2d");
+
+  context.lineWidth = .2;
+  context.fillStyle = "rgba(0,0,0,.03)";
+
+  d3.timer(function() {
+    context.save();
+    context.globalCompositeOperation = "lighter";
+    context.translate(width / 2, height / 2);
+    context.scale(12, 14);
+    context.rotate(30);
+    for (var i = 0; i < n; ++i) {
+      context.strokeStyle = color(z);
+      context.beginPath();
+      context.moveTo(x, y);
+      x += δτ * σ * (y - x);
+      y += δτ * (x * (ρ - z) - y);
+      z += δτ * (x * y - β * z);
+      context.lineTo(x, y);
+      context.stroke();
+    }
+    context.restore();
+    return !lorenzInterval;
+  });
+
+  lorenzInterval = setInterval(function() {
+    context.fillRect(0, 0, width, height);
+  }, 100);
+}
+
+function stopLorenz() {
+  lorenzInterval = clearInterval(lorenzInterval);
+}
+
+</script>
